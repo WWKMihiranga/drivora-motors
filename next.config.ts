@@ -1,10 +1,20 @@
 import type { NextConfig } from "next";
 
-const immutable = "public, max-age=31536000, immutable";
+/*
+ * Fivora / DENEB contract (https://deneb.fivora.site/docs/setup-fivora):
+ * the site is built as a static export into `out/`, and Fivora serves each merchant's
+ * copy under a sub-path given by NEXT_PUBLIC_SITE_BASE_PATH (empty = served from root).
+ * Static export cannot use `headers()`, so the cache/security headers live in vercel.json.
+ */
+const basePath = (process.env.NEXT_PUBLIC_SITE_BASE_PATH ?? "").replace(/\/$/, "");
 
 const nextConfig: NextConfig = {
-  cacheComponents: true,
-  partialPrefetching: true,
+  output: "export",
+  basePath: basePath || undefined,
+  assetPrefix: basePath ? `${basePath}/` : undefined,
+  trailingSlash: true,
+  // cacheComponents / partialPrefetching are off: they need a Next.js server, and a static
+  // export has none (they also block `dynamic = "force-static"` on robots/sitemap/manifest).
   poweredByHeader: false,
   compress: true,
   images: {
@@ -18,21 +28,6 @@ const nextConfig: NextConfig = {
   },
   experimental: {
     optimizePackageImports: ["lucide-react", "motion"],
-  },
-  async headers() {
-    return [
-      { source: "/models/:path*", headers: [{ key: "Cache-Control", value: immutable }] },
-      { source: "/draco/:path*", headers: [{ key: "Cache-Control", value: immutable }] },
-      { source: "/lottie/:path*", headers: [{ key: "Cache-Control", value: immutable }] },
-      {
-        source: "/:path*",
-        headers: [
-          { key: "X-Content-Type-Options", value: "nosniff" },
-          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-          { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
-        ],
-      },
-    ];
   },
   turbopack: {
     rules: {

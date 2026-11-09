@@ -390,3 +390,43 @@ html.splash-on:not(.splash-lite) [data-hero-in] { animation-delay: 2.05s !import
   animation: hero-progress 6.5s linear forwards;
 }
 @keyframes hero-progress { to { transform: scaleX(1); } }
+
+/*
+ * ── DENEB / Fivora theme guard ─────────────────────────────────────────────────────────────
+ * DENEB's SiteDataProvider (the Fivora live-edit bridge) injects its own :root theme tokens and an
+ * html/body background. A few of those names collide with FlyonUI / our tokens, and unchecked they
+ * would repaint the site (blue primary, white dark-mode surfaces, `--border` turned into a colour).
+ * These rules win on specificity and put our own values back. Keep the values in sync with the
+ * "drivora" / "drivora-dark" themes above if you change the palette.
+ * Trade-off: Fivora's generic theme colour controls do not restyle Drivora; the design stays ours.
+ */
+html:root:not([data-theme="drivora-dark"]) {
+  --color-primary: #0e1116;
+  --color-secondary: #c2410c;
+  --color-accent: #c2410c;
+  --color-surface: #f3f4f6;
+}
+html:root[data-theme="drivora-dark"] {
+  --color-primary: #eceef2;
+  --color-secondary: #e8662a;
+  --color-accent: #e8662a;
+  --color-surface: #171a20;
+}
+html:root {
+  --border: 1px;
+  /* DENEB-only tokens we never set: make them "unset" again so var() fallbacks behave as before. */
+  --link-color: initial;
+  --card-border: initial;
+  --card-shadow: initial;
+  --input-color: initial;
+  background-color: transparent;
+  color: CanvasText;
+}
+html:root body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+}
+/* DENEB makes every <main> / [data-preview-page-key] a flex column; ours is a normal block. */
+html:root main#main {
+  display: block;
+}

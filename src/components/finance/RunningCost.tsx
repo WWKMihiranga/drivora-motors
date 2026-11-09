@@ -2,43 +2,50 @@
 
 import { useState } from "react";
 import { rs } from "@/lib/format";
+import { Field, useList, useText } from "@/lib/site-data";
+
+type CarType = { name: string; efficiency: number; unit: string; energy: string };
 
 /*
- * Fuel and electricity prices change often, so every number here is an editable
- * input with a clearly labelled sample default rather than a "live" figure.
+ * Fuel and electricity prices change often, so every number here is an editable input with a
+ * clearly labelled sample default rather than a "live" figure. Defaults, car types and wording are
+ * editable in Fivora (site-data.json `finance.running`).
  */
 export function RunningCost() {
-  const [km, setKm] = useState(1200);
-  const [petrolPrice, setPetrolPrice] = useState(300);
-  const [unitPrice, setUnitPrice] = useState(55);
+  const text = useText();
+  const types = useList<CarType>("finance.running.types");
+  const [km, setKm] = useState(() => Number(text("finance.running.kmDefault")) || 1200);
+  const [petrolPrice, setPetrolPrice] = useState(() => Number(text("finance.running.petrolDefault")) || 300);
+  const [unitPrice, setUnitPrice] = useState(() => Number(text("finance.running.unitDefault")) || 55);
 
-  const rows = [
-    { name: "Petrol car", eff: 12, unit: "km/l", cost: (km / 12) * petrolPrice },
-    { name: "Hybrid", eff: 20, unit: "km/l", cost: (km / 20) * petrolPrice },
-    { name: "Electric", eff: 6.5, unit: "km/kWh", cost: (km / 6.5) * unitPrice },
-  ];
-  const max = Math.max(...rows.map((r) => r.cost));
+  const rows = types.map((t) => ({
+    ...t,
+    cost: (km / (t.efficiency || 1)) * (t.energy === "electric" ? unitPrice : petrolPrice),
+  }));
+  const max = Math.max(1, ...rows.map((r) => r.cost));
 
   return (
     <div className="grid gap-6 rounded-[1.75rem] border border-line p-5 md:p-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-10">
       <div className="grid gap-4">
-        <Num id="rc-km" label="Kilometres per month" value={km} set={setKm} suffix="km" />
-        <Num id="rc-p" label="Petrol price per litre (sample)" value={petrolPrice} set={setPetrolPrice} suffix="Rs" />
-        <Num id="rc-e" label="Electricity per unit at home (sample)" value={unitPrice} set={setUnitPrice} suffix="Rs" />
-        <p className="text-xs leading-relaxed text-muted">
-          Efficiency figures are typical real-world averages for the car types. Change the prices to today&apos;s rates.
-        </p>
+        <Num id="rc-km" label={<Field data-preview-field-path="finance.running.kmLabel" />} value={km} set={setKm} suffix={<Field data-preview-field-path="finance.running.kmSuffix" />} />
+        <Num id="rc-p" label={<Field data-preview-field-path="finance.running.petrolLabel" />} value={petrolPrice} set={setPetrolPrice} suffix={<Field data-preview-field-path="common.business.currency" />} />
+        <Num id="rc-e" label={<Field data-preview-field-path="finance.running.unitLabel" />} value={unitPrice} set={setUnitPrice} suffix={<Field data-preview-field-path="common.business.currency" />} />
+        <Field as="p" className="text-xs leading-relaxed text-muted" data-preview-field-path="finance.running.note" />
       </div>
-      <ul className="space-y-5 self-center">
-        {rows.map((r) => (
-          <li key={r.name}>
+      <ul className="space-y-5 self-center" data-preview-list-path="finance.running.types">
+        {rows.map((r, i) => (
+          <li key={`${r.name}-${i}`} data-preview-item-path={`finance.running.types[${i}]`}>
             <div className="flex items-baseline justify-between text-sm">
               <span className="font-medium">
-                {r.name} <span className="text-muted">· {r.eff} {r.unit}</span>
+                <Field data-preview-field-path={`finance.running.types[${i}].name`} />{" "}
+                <span className="text-muted">
+                  · <Field data-preview-field-path={`finance.running.types[${i}].efficiency`} />{" "}
+                  <Field data-preview-field-path={`finance.running.types[${i}].unit`} />
+                </span>
               </span>
-              <span className="font-display text-lg font-semibold" data-num>
+              <span className="font-display text-lg font-semibold" data-num data-preview-static="Calculated from the values entered">
                 {rs(r.cost)}
-                <span className="text-xs font-normal text-muted">/mo</span>
+                <span className="text-xs font-normal text-muted">{text("finance.running.perMonth")}</span>
               </span>
             </div>
             <div className="mt-2 h-2.5 overflow-hidden rounded-full bg-surface">
@@ -54,7 +61,19 @@ export function RunningCost() {
   );
 }
 
-function Num({ id, label, value, set, suffix }: { id: string; label: string; value: number; set: (n: number) => void; suffix: string }) {
+function Num({
+  id,
+  label,
+  value,
+  set,
+  suffix,
+}: {
+  id: string;
+  label: React.ReactNode;
+  value: number;
+  set: (n: number) => void;
+  suffix: React.ReactNode;
+}) {
   return (
     <div>
       <label htmlFor={id} className="field-label">

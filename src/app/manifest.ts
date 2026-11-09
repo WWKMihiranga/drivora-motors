@@ -1,4 +1,7 @@
 import type { MetadataRoute } from "next";
+
+// Required by `output: "export"` (static export for Fivora): prerender this file at build time.
+export const dynamic = "force-static";
 import { site } from "@/config/site";
 
 export default function manifest(): MetadataRoute.Manifest {

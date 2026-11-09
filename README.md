@@ -61,3 +61,35 @@ src/app/                  routes: / cars cars/[slug] finance compare saved sell 
 ## Credits
 
 Photos: Unsplash (Unsplash License). 3D model: Ferrari 458 Italia by vicent091036, from the three.js examples (demo only).
+
+## Fivora template (DENEB UI)
+
+The site is a [Fivora](https://deneb.fivora.site) template: a dealer edits every word, photo, car and setting in
+Fivora's visual editor. It passes DENEB's strict preflight (`pnpm validate`).
+
+| What | Where |
+| --- | --- |
+| All content (business details, pages, cars, reviews, posts, FAQs, labels, settings, translations) | `src/data/site-data.json` |
+| Template manifest (pages, editor schema, side-panel-only fields) | `fivora-template.json` (generated) |
+| Live-edit bridge (loads DENEB only inside the Fivora editor iframe) | `src/lib/site-data.tsx`, `src/lib/site-data-bridge.tsx` |
+| Guard that keeps DENEB's injected theme from restyling the site | end of `src/app/globals.css` |
+
+How it works:
+
+- Every visible value is rendered through `<Field data-preview-field-path="…" />` (or carries the marker on its
+  element), so clicking it in the editor edits that path of `site-data.json`. Write paths literally; list items use
+  `` `vehicles[${i}].make` ``.
+- Values that never show as text (alt text, link targets, settings, Sinhala/Tamil translations under `translations`)
+  are edited in the side panel. Computed numbers (calculator results, counts) are marked `data-preview-static`.
+- Sinhala/Tamil: any path can be translated at `translations.si.<path>` / `translations.ta.<path>`.
+
+Workflow after changing content structure or components:
+
+```bash
+pnpm build && pnpm fivora:manifest   # regenerate the editor schema and side-panel list (runs 3 builds)
+pnpm validate                        # DENEB strict preflight
+pnpm lab                             # local visual-editing lab (localhost:3001)
+pnpm validate-and-zip                # creates fivora-template.zip for the Fivora Developer Portal
+```
+
+Upload `fivora-template.zip` with a 16:9 WebP thumbnail (`preview.png` is a 1600×900 screenshot to convert).

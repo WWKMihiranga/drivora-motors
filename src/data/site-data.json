@@ -1,0 +1,3238 @@
+{
+  "project": {
+    "title": "Drivora Motors"
+  },
+  "requirements": {
+    "requiredPages": [
+      "home",
+      "cars",
+      "finance",
+      "sell",
+      "book",
+      "about",
+      "contact",
+      "faq",
+      "blog",
+      "compare",
+      "saved"
+    ]
+  },
+  "content": {
+    "common": {
+      "logoUrl": "",
+      "business": {
+        "name": "Drivora Motors",
+        "shortName": "Drivora",
+        "tagline": "Verified cars. Honest prices.",
+        "description": "Reconditioned, used and brand-new cars in Sri Lanka with verified history, auction sheets and a leasing calculator that follows Central Bank rules.",
+        "phone": "+94 11 234 5678",
+        "whatsapp": "94771234567",
+        "email": "hello@drivora.lk",
+        "addressLine1": "214 High Level Road",
+        "city": "Nugegoda",
+        "region": "Western Province",
+        "postcode": "10250",
+        "hours": "Mon–Sat 9.00–18.00 · Sun 10.00–14.00",
+        "hoursShort": "Open today · 9–6",
+        "registration": "PV 00264189 (demo)",
+        "founded": 2011,
+        "mapEmbedUrl": "https://www.google.com/maps?q=High+Level+Road+Nugegoda+Sri+Lanka&output=embed",
+        "currency": "Rs",
+        "currencyCode": "LKR",
+        "priceRange": "Rs 6,000,000 – Rs 100,000,000",
+        "openingHoursSchema": "Mo-Sa 09:00-18:00, Su 10:00-14:00"
+      },
+      "socials": {
+        "facebook": "https://facebook.com",
+        "instagram": "https://instagram.com",
+        "youtube": "https://youtube.com",
+        "tiktok": "https://tiktok.com"
+      },
+      "ui": {
+        "cars": "Cars",
+        "finance": "Leasing",
+        "sell": "Sell / Trade-in",
+        "about": "About",
+        "contact": "Contact",
+        "book": "Book a test drive",
+        "bookShort": "Book",
+        "call": "Call",
+        "whatsapp": "WhatsApp",
+        "browse": "Browse all cars",
+        "calc": "Leasing calculator",
+        "saved": "Saved",
+        "menu": "Menu",
+        "closeMenu": "Close menu",
+        "ask": "Ask",
+        "skipToContent": "Skip to content",
+        "mainNavLabel": "Main",
+        "mobileNavLabel": "Mobile",
+        "languageLabel": "Language",
+        "darkMode": "Dark mode",
+        "switchToLight": "Switch to light mode",
+        "switchToDark": "Switch to dark mode",
+        "homeLinkLabel": "Drivora Motors home",
+        "savedLinkLabel": "Saved cars",
+        "demoNote": "Demo site · sample data",
+        "breadcrumbLabel": "Breadcrumb",
+        "breadcrumbHome": "Home",
+        "splashLoading": "Loading Drivora Motors",
+        "splashSkip": "Skip",
+        "splashSkipLabel": "Skip intro",
+        "splashWord": "DRIVORA",
+        "splashSub": "MOTORS",
+        "logoWord": "DRIVORA",
+        "logoSub": "MOTORS",
+        "langEn": "EN",
+        "langSi": "සිං",
+        "langTa": "தமி"
+      },
+      "nav": [
+        {
+          "label": "Cars",
+          "href": "/cars"
+        },
+        {
+          "label": "Leasing",
+          "href": "/finance"
+        },
+        {
+          "label": "Sell / Trade-in",
+          "href": "/sell"
+        },
+        {
+          "label": "About",
+          "href": "/about"
+        },
+        {
+          "label": "Contact",
+          "href": "/contact"
+        }
+      ],
+      "messages": {
+        "whatsappGeneral": "Hi Drivora, I'd like to ask about a car.",
+        "whatsappHello": "Hi Drivora!"
+      },
+      "footer": {
+        "blurb": "Reconditioned, used and brand-new cars, each one inspected and documented before it reaches this website. Nugegoda, since",
+        "columns": [
+          {
+            "title": "Buy",
+            "links": [
+              {
+                "label": "All cars",
+                "href": "/cars"
+              },
+              {
+                "label": "Reconditioned",
+                "href": "/cars?condition=reconditioned"
+              },
+              {
+                "label": "Used",
+                "href": "/cars?condition=used"
+              },
+              {
+                "label": "Brand new",
+                "href": "/cars?condition=brand-new"
+              },
+              {
+                "label": "Electric",
+                "href": "/cars?fuel=electric"
+              }
+            ]
+          },
+          {
+            "title": "Tools",
+            "links": [
+              {
+                "label": "Leasing calculator",
+                "href": "/finance"
+              },
+              {
+                "label": "Compare cars",
+                "href": "/compare"
+              },
+              {
+                "label": "Sell or trade in",
+                "href": "/sell"
+              },
+              {
+                "label": "Book a test drive",
+                "href": "/book"
+              },
+              {
+                "label": "Saved cars",
+                "href": "/saved"
+              }
+            ]
+          },
+          {
+            "title": "Company",
+            "links": [
+              {
+                "label": "About us",
+                "href": "/about"
+              },
+              {
+                "label": "Guides & news",
+                "href": "/blog"
+              },
+              {
+                "label": "FAQ",
+                "href": "/faq"
+              },
+              {
+                "label": "Contact",
+                "href": "/contact"
+              },
+              {
+                "label": "Dealer view (demo)",
+                "href": "/admin"
+              }
+            ]
+          }
+        ],
+        "visitTitle": "Visit",
+        "whatsappCta": "Chat on WhatsApp",
+        "copyrightPrefix": "©",
+        "copyrightNote": "Demo website with sample cars and prices. Reg.",
+        "bottomLinks": [
+          {
+            "label": "Photo & 3D credits",
+            "href": "/credits"
+          },
+          {
+            "label": "Privacy (PDPA)",
+            "href": "/faq"
+          }
+        ],
+        "newsletter": {
+          "label": "New arrivals, every Friday",
+          "placeholder": "you@example.com",
+          "subscribe": "Subscribe",
+          "note": "One email a week. Unsubscribe any time.",
+          "thanks": "Thanks! You're on the list (demo, nothing was sent)."
+        }
+      },
+      "chat": {
+        "launcher": "Ask Drivora",
+        "launcherClose": "Close",
+        "launcherCloseLabel": "Close chat",
+        "dialogLabel": "Chat with Drivora assistant"
+      },
+      "compareBar": {
+        "removeLabel": "Remove {car} from compare",
+        "countSuffix": "of 3 to compare",
+        "clear": "Clear",
+        "cta": "Compare",
+        "href": "/compare"
+      },
+      "links": {
+        "book": "/book",
+        "saved": "/saved",
+        "home": "/"
+      },
+      "units": {
+        "km": "km",
+        "kwh": "kWh",
+        "cc": "cc",
+        "lakhs": "lakhs",
+        "perMonth": "/mo"
+      },
+      "vehicleCard": {
+        "monthlyFrom": "from {amount}/mo*",
+        "saveLabel": "Save {car}",
+        "unsaveLabel": "Remove {car} from saved",
+        "compare": "Compare",
+        "compareFull": "Max {max} cars",
+        "verified": "Verified",
+        "verifiedTitle": "Documents checked by Drivora",
+        "photoAlt": "{colour} {make} {model}"
+      }
+    },
+    "additionalPages": [],
+    "vehicles": [
+      {
+        "id": "v01",
+        "make": "Land Rover",
+        "model": "Defender 110",
+        "grade": "D300 X-Dynamic SE",
+        "yom": 2023,
+        "condition": "reconditioned",
+        "status": "available",
+        "mileageKm": 18200,
+        "mileageSource": "auction-sheet",
+        "fuel": "diesel",
+        "transmission": "auto",
+        "engineCc": 2996,
+        "bodyType": "suv",
+        "colour": "Santorini Black",
+        "seats": 5,
+        "location": "Nugegoda",
+        "priceLkr": 98500000,
+        "vehicleClass": "car",
+        "images": [
+          "https://images.unsplash.com/photo-1753030505007-98ceef668415",
+          "https://images.unsplash.com/photo-1753030148324-d42f168825ef",
+          "https://images.unsplash.com/photo-1753030148276-75f09f40e6d9",
+          "https://images.unsplash.com/photo-1753030148206-4f6cd95e7512",
+          "https://images.unsplash.com/photo-1753030148352-af2657e5621d",
+          "https://images.unsplash.com/photo-1741905358565-5ae6835ac172"
+        ],
+        "verified": true,
+        "auctionGrade": "4.5",
+        "features": [
+          "Air suspension",
+          "Meridian sound",
+          "360° camera",
+          "Panoramic roof",
+          "Heated seats",
+          "Terrain Response 2"
+        ],
+        "highlights": [
+          "Grade 4.5, interior A",
+          "Full UK dealer history before export",
+          "Black pack with 20\" wheels"
+        ],
+        "description": "A properly specced Defender that has only done 18,200 km. It came through auction at grade 4.5 with an A-grade interior, and the paint reads factory thickness on every panel. Air suspension, the Meridian system and the 360° camera all work as they should. Duty is paid, so it is ready for first registration in your name.",
+        "listedDaysAgo": 3,
+        "badge": "Just landed",
+        "slug": "land-rover-defender-110-2023",
+        "documents": [
+          {
+            "type": "auction-sheet",
+            "label": "Japanese auction sheet",
+            "note": "Grade 4.5 · mileage confirmed at 18,200 km · translated to English"
+          },
+          {
+            "type": "inspection",
+            "label": "Drivora 150-point inspection",
+            "note": "Passed · underbody, paint depth, hybrid battery health checked"
+          },
+          {
+            "type": "cr",
+            "label": "Customs clearance papers",
+            "note": "Duty paid · ready for first registration"
+          }
+        ]
+      },
+      {
+        "id": "v02",
+        "make": "BYD",
+        "model": "Seal",
+        "grade": "Premium",
+        "yom": 2025,
+        "condition": "brand-new",
+        "status": "available",
+        "mileageKm": 0,
+        "mileageSource": "new",
+        "fuel": "electric",
+        "transmission": "auto",
+        "batteryKwh": 82.5,
+        "bodyType": "sedan",
+        "colour": "Aurora White",
+        "seats": 5,
+        "location": "Nugegoda",
+        "priceLkr": 24900000,
+        "vehicleClass": "car",
+        "images": [
+          "https://images.unsplash.com/photo-1728469876516-17a32611eb24",
+          "https://images.unsplash.com/photo-1728469876498-60596cfe2c0b",
+          "https://images.unsplash.com/photo-1727098353953-929512ce7b90",
+          "https://images.unsplash.com/photo-1728469876515-6c983cb5fcce",
+          "https://images.unsplash.com/photo-1728469876495-3733de812b7b",
+          "https://images.unsplash.com/photo-1728469877659-af24d1014059"
+        ],
+        "verified": true,
+        "features": [
+          "Blade battery",
+          "Heat pump",
+          "Rotating 15.6\" screen",
+          "Vehicle-to-load",
+          "Adaptive cruise",
+          "Glass roof"
+        ],
+        "highlights": [
+          "Zero kilometres",
+          "Wall charger installation can be arranged",
+          "Agent warranty"
+        ],
+        "description": "Brand new and unregistered. The Seal suits buyers who mostly drive in and around Colombo and can charge at home overnight. We can arrange a home wall charger survey before delivery, and walk you through the app and charging settings at handover.",
+        "listedDaysAgo": 6,
+        "badge": "Popular",
+        "slug": "byd-seal-2025",
+        "documents": [
+          {
+            "type": "inspection",
+            "label": "Pre-delivery inspection",
+            "note": "Completed by the authorised agent"
+          },
+          {
+            "type": "service",
+            "label": "Agent warranty booklet",
+            "note": "Warranty starts on registration"
+          }
+        ]
+      },
+      {
+        "id": "v03",
+        "make": "Toyota",
+        "model": "Yaris",
+        "grade": "1.3 G sedan",
+        "yom": 2018,
+        "yor": 2019,
+        "condition": "used",
+        "status": "available",
+        "mileageKm": 68400,
+        "mileageSource": "service-log",
+        "fuel": "petrol",
+        "transmission": "auto",
+        "engineCc": 1329,
+        "bodyType": "sedan",
+        "colour": "Super White",
+        "seats": 5,
+        "location": "Nugegoda",
+        "priceLkr": 8950000,
+        "previousPriceLkr": 9250000,
+        "vehicleClass": "car",
+        "owners": 1,
+        "images": [
+          "https://images.unsplash.com/photo-1749058983232-59b967855b18",
+          "https://images.unsplash.com/photo-1749058983469-11eaef8d7bc5",
+          "https://images.unsplash.com/photo-1749058983925-0cb49aec5d9f",
+          "https://images.unsplash.com/photo-1749058983952-c7ce95258535",
+          "https://images.unsplash.com/photo-1749058982892-b6239fec4ad6",
+          "https://images.unsplash.com/photo-1749058982844-2b156ba4df52"
+        ],
+        "verified": true,
+        "features": [
+          "Reverse camera",
+          "Push start",
+          "Android head unit",
+          "Alloy wheels",
+          "Dual airbags"
+        ],
+        "highlights": [
+          "One owner from new",
+          "Every service at the agent",
+          "New tyres in March"
+        ],
+        "description": "A one-owner Yaris that has been serviced at the agent every 5,000 km, with the stamps to prove it. It is an honest, economical first car or office runabout. Four new tyres were fitted in March and the AC was regassed at the last service.",
+        "listedDaysAgo": 18,
+        "badge": "Price drop",
+        "slug": "toyota-yaris-2018",
+        "documents": [
+          {
+            "type": "cr",
+            "label": "Certificate of registration",
+            "note": "Owner details masked · no finance outstanding"
+          },
+          {
+            "type": "service",
+            "label": "Service history",
+            "note": "Stamped book and agent invoices, mileage consistent"
+          },
+          {
+            "type": "inspection",
+            "label": "Drivora 150-point inspection",
+            "note": "Passed · report available on request"
+          }
+        ]
+      },
+      {
+        "id": "v04",
+        "make": "Mazda",
+        "model": "CX-5",
+        "grade": "25S L Package",
+        "yom": 2019,
+        "yor": 2019,
+        "condition": "used",
+        "status": "available",
+        "mileageKm": 54900,
+        "mileageSource": "service-log",
+        "fuel": "petrol",
+        "transmission": "auto",
+        "engineCc": 2488,
+        "bodyType": "suv",
+        "colour": "Jet Black",
+        "seats": 5,
+        "location": "Nugegoda",
+        "priceLkr": 17800000,
+        "vehicleClass": "car",
+        "owners": 2,
+        "images": [
+          "https://images.unsplash.com/photo-1743114713466-f12a85992a75",
+          "https://images.unsplash.com/photo-1743114713506-eaa60831ddfe",
+          "https://images.unsplash.com/photo-1743114713491-133c9211e7e5",
+          "https://images.unsplash.com/photo-1743114713503-b698b8433f03",
+          "https://images.unsplash.com/photo-1743114713456-0d53a90182aa"
+        ],
+        "verified": true,
+        "features": [
+          "Leather seats",
+          "Bose audio",
+          "Head-up display",
+          "Power tailgate",
+          "Blind-spot monitor"
+        ],
+        "highlights": [
+          "L Package with leather",
+          "Bose sound system",
+          "Two careful owners"
+        ],
+        "description": "The L Package CX-5, which adds leather, the Bose system and a head-up display. It drives tighter than most SUVs in its class. Two owners, both in Colombo, with a clean service record.",
+        "listedDaysAgo": 9,
+        "slug": "mazda-cx-5-2019",
+        "documents": [
+          {
+            "type": "cr",
+            "label": "Certificate of registration",
+            "note": "Owner details masked · no finance outstanding"
+          },
+          {
+            "type": "service",
+            "label": "Service history",
+            "note": "Stamped book and agent invoices, mileage consistent"
+          },
+          {
+            "type": "inspection",
+            "label": "Drivora 150-point inspection",
+            "note": "Passed · report available on request"
+          }
+        ]
+      },
+      {
+        "id": "v05",
+        "make": "Honda",
+        "model": "Vezel",
+        "grade": "e:HEV Z",
+        "yom": 2024,
+        "condition": "reconditioned",
+        "status": "available",
+        "mileageKm": 12400,
+        "mileageSource": "auction-sheet",
+        "fuel": "hybrid",
+        "transmission": "auto",
+        "engineCc": 1496,
+        "bodyType": "suv",
+        "colour": "Platinum White Pearl",
+        "seats": 5,
+        "location": "Nugegoda",
+        "priceLkr": 17500000,
+        "vehicleClass": "car",
+        "images": [
+          "https://images.unsplash.com/photo-1630051191354-932e27e318fe"
+        ],
+        "verified": true,
+        "auctionGrade": "4.5",
+        "features": [
+          "Honda Sensing",
+          "LED headlights",
+          "Wireless charger",
+          "Power tailgate",
+          "Ventilated seats"
+        ],
+        "highlights": [
+          "Grade 4.5 auction sheet",
+          "Hybrid battery health 98%",
+          "Z grade with Honda Sensing"
+        ],
+        "description": "Our most asked-about model. This Z grade e:HEV landed last month with 12,400 km, confirmed on the auction sheet. We tested the hybrid battery at 98% health. The Honda Sensing safety suite is fully functional.",
+        "listedDaysAgo": 12,
+        "badge": "Popular",
+        "slug": "honda-vezel-2024",
+        "documents": [
+          {
+            "type": "auction-sheet",
+            "label": "Japanese auction sheet",
+            "note": "Grade 4.5 · mileage confirmed at 12,400 km · translated to English"
+          },
+          {
+            "type": "inspection",
+            "label": "Drivora 150-point inspection",
+            "note": "Passed · underbody, paint depth, hybrid battery health checked"
+          },
+          {
+            "type": "cr",
+            "label": "Customs clearance papers",
+            "note": "Duty paid · ready for first registration"
+          }
+        ]
+      },
+      {
+        "id": "v06",
+        "make": "Toyota",
+        "model": "Land Cruiser 200",
+        "grade": "ZX",
+        "yom": 2015,
+        "yor": 2016,
+        "condition": "used",
+        "status": "available",
+        "mileageKm": 112000,
+        "mileageSource": "service-log",
+        "fuel": "diesel",
+        "transmission": "auto",
+        "engineCc": 4461,
+        "bodyType": "suv",
+        "colour": "Black",
+        "seats": 8,
+        "location": "Nugegoda",
+        "priceLkr": 62000000,
+        "vehicleClass": "car",
+        "owners": 2,
+        "images": [
+          "https://images.unsplash.com/photo-1650530579355-7ad9d4766043"
+        ],
+        "verified": true,
+        "features": [
+          "KDSS",
+          "Cool box",
+          "Sunroof",
+          "Rear entertainment",
+          "Multi-terrain select"
+        ],
+        "highlights": [
+          "ZX grade, V8 diesel",
+          "Timing and injectors done at 100,000 km",
+          "Agent-maintained"
+        ],
+        "description": "The V8 diesel ZX, the one everyone wants. It has 112,000 km with agent service records throughout, and the 100,000 km major service was completed including injectors. It is a big, quiet, indestructible family car.",
+        "listedDaysAgo": 27,
+        "slug": "toyota-land-cruiser-200-2015",
+        "documents": [
+          {
+            "type": "cr",
+            "label": "Certificate of registration",
+            "note": "Owner details masked · no finance outstanding"
+          },
+          {
+            "type": "service",
+            "label": "Service history",
+            "note": "Stamped book and agent invoices, mileage consistent"
+          },
+          {
+            "type": "inspection",
+            "label": "Drivora 150-point inspection",
+            "note": "Passed · report available on request"
+          }
+        ]
+      },
+      {
+        "id": "v07",
+        "make": "Toyota",
+        "model": "RAV4",
+        "grade": "Hybrid G",
+        "yom": 2020,
+        "yor": 2021,
+        "condition": "used",
+        "status": "available",
+        "mileageKm": 41200,
+        "mileageSource": "service-log",
+        "fuel": "hybrid",
+        "transmission": "auto",
+        "engineCc": 2487,
+        "bodyType": "suv",
+        "colour": "Attitude Black",
+        "seats": 5,
+        "location": "Nugegoda",
+        "priceLkr": 26500000,
+        "vehicleClass": "car",
+        "owners": 1,
+        "images": [
+          "https://images.unsplash.com/photo-1706509234538-9831b1b33d66"
+        ],
+        "verified": true,
+        "features": [
+          "E-Four AWD",
+          "Toyota Safety Sense",
+          "Apple CarPlay",
+          "Power seats",
+          "LED lights"
+        ],
+        "highlights": [
+          "One owner",
+          "Hybrid AWD",
+          "41,200 km"
+        ],
+        "description": "A one-owner RAV4 Hybrid with E-Four all-wheel drive, which helps on the wet hill-country roads. It averages around 18 km/l in mixed driving, according to the owner's own log.",
+        "listedDaysAgo": 14,
+        "slug": "toyota-rav4-2020",
+        "documents": [
+          {
+            "type": "cr",
+            "label": "Certificate of registration",
+            "note": "Owner details masked · no finance outstanding"
+          },
+          {
+            "type": "service",
+            "label": "Service history",
+            "note": "Stamped book and agent invoices, mileage consistent"
+          },
+          {
+            "type": "inspection",
+            "label": "Drivora 150-point inspection",
+            "note": "Passed · report available on request"
+          }
+        ]
+      },
+      {
+        "id": "v08",
+        "make": "Suzuki",
+        "model": "Swift",
+        "grade": "Hybrid MZ",
+        "yom": 2024,
+        "condition": "reconditioned",
+        "status": "available",
+        "mileageKm": 9800,
+        "mileageSource": "auction-sheet",
+        "fuel": "hybrid",
+        "transmission": "auto",
+        "engineCc": 1197,
+        "bodyType": "hatchback",
+        "colour": "Frontier Blue",
+        "seats": 5,
+        "location": "Nugegoda",
+        "priceLkr": 9450000,
+        "vehicleClass": "car",
+        "images": [
+          "https://images.unsplash.com/photo-1699862335489-36f7dec55c0e"
+        ],
+        "verified": true,
+        "auctionGrade": "4.5",
+        "features": [
+          "Adaptive cruise",
+          "Lane keep assist",
+          "Keyless entry",
+          "Climate control"
+        ],
+        "highlights": [
+          "New-shape Swift",
+          "Grade 4.5",
+          "Around 24 km/l claimed"
+        ],
+        "description": "The latest-shape Swift in Frontier Blue, with 9,800 km on the auction sheet. It is easy to park, cheap to run and still feels fun on a winding road.",
+        "listedDaysAgo": 2,
+        "badge": "New arrival",
+        "slug": "suzuki-swift-2024",
+        "documents": [
+          {
+            "type": "auction-sheet",
+            "label": "Japanese auction sheet",
+            "note": "Grade 4.5 · mileage confirmed at 9,800 km · translated to English"
+          },
+          {
+            "type": "inspection",
+            "label": "Drivora 150-point inspection",
+            "note": "Passed · underbody, paint depth, hybrid battery health checked"
+          },
+          {
+            "type": "cr",
+            "label": "Customs clearance papers",
+            "note": "Duty paid · ready for first registration"
+          }
+        ]
+      },
+      {
+        "id": "v09",
+        "make": "Hyundai",
+        "model": "Tucson",
+        "grade": "1.6 T-GDi Hybrid",
+        "yom": 2025,
+        "condition": "brand-new",
+        "status": "arriving",
+        "mileageKm": 0,
+        "mileageSource": "new",
+        "fuel": "hybrid",
+        "transmission": "auto",
+        "engineCc": 1598,
+        "bodyType": "suv",
+        "colour": "Amazon Grey",
+        "seats": 5,
+        "location": "Arriving in Colombo port",
+        "priceLkr": 22900000,
+        "vehicleClass": "car",
+        "images": [
+          "https://images.unsplash.com/photo-1706082072635-d19df8f0f3fb"
+        ],
+        "verified": true,
+        "features": [
+          "Panoramic roof",
+          "Digital cluster",
+          "Wireless CarPlay",
+          "Smart power tailgate"
+        ],
+        "highlights": [
+          "Arriving in about 3 weeks",
+          "Reserve now with a refundable deposit"
+        ],
+        "description": "Brand-new Tucson Hybrid on its way from the agent's shipment. Reserve it now and we will confirm the exact arrival date and the final price including registration.",
+        "listedDaysAgo": 1,
+        "slug": "hyundai-tucson-2025",
+        "documents": [
+          {
+            "type": "inspection",
+            "label": "Pre-delivery inspection",
+            "note": "Completed by the authorised agent"
+          },
+          {
+            "type": "service",
+            "label": "Agent warranty booklet",
+            "note": "Warranty starts on registration"
+          }
+        ]
+      },
+      {
+        "id": "v10",
+        "make": "Kia",
+        "model": "Sportage",
+        "grade": "GT-Line",
+        "yom": 2023,
+        "yor": 2023,
+        "condition": "used",
+        "status": "available",
+        "mileageKm": 22600,
+        "mileageSource": "service-log",
+        "fuel": "petrol",
+        "transmission": "auto",
+        "engineCc": 1598,
+        "bodyType": "suv",
+        "colour": "Black Pearl",
+        "seats": 5,
+        "location": "Nugegoda",
+        "priceLkr": 21200000,
+        "vehicleClass": "car",
+        "owners": 1,
+        "images": [
+          "https://images.unsplash.com/photo-1649921777129-a28a26031a03"
+        ],
+        "verified": true,
+        "features": [
+          "Curved twin screens",
+          "Ventilated seats",
+          "Surround view",
+          "Smart cruise"
+        ],
+        "highlights": [
+          "GT-Line trim",
+          "Under agent warranty until 2028"
+        ],
+        "description": "A nearly-new Sportage GT-Line that is still under the agent warranty. It has the twin curved screens and ventilated front seats.",
+        "listedDaysAgo": 20,
+        "slug": "kia-sportage-2023",
+        "documents": [
+          {
+            "type": "cr",
+            "label": "Certificate of registration",
+            "note": "Owner details masked · no finance outstanding"
+          },
+          {
+            "type": "service",
+            "label": "Service history",
+            "note": "Stamped book and agent invoices, mileage consistent"
+          },
+          {
+            "type": "inspection",
+            "label": "Drivora 150-point inspection",
+            "note": "Passed · report available on request"
+          }
+        ]
+      },
+      {
+        "id": "v11",
+        "make": "Mitsubishi",
+        "model": "Montero Sport",
+        "grade": "GLS 4WD",
+        "yom": 2017,
+        "yor": 2017,
+        "condition": "used",
+        "status": "available",
+        "mileageKm": 88500,
+        "mileageSource": "service-log",
+        "fuel": "diesel",
+        "transmission": "auto",
+        "engineCc": 2442,
+        "bodyType": "suv",
+        "colour": "Sterling Silver",
+        "seats": 7,
+        "location": "Nugegoda",
+        "priceLkr": 19500000,
+        "vehicleClass": "car",
+        "owners": 2,
+        "images": [
+          "https://images.unsplash.com/photo-1596429924638-d1f8a252df7d"
+        ],
+        "verified": true,
+        "features": [
+          "Super Select 4WD II",
+          "Seven seats",
+          "Paddle shifters",
+          "Reverse camera"
+        ],
+        "highlights": [
+          "Seven seats",
+          "Proper 4WD",
+          "Recent suspension bushes"
+        ],
+        "description": "A seven-seat 4WD for families who travel up-country. We replaced the suspension bushes and serviced the transfer case during our inspection.",
+        "listedDaysAgo": 31,
+        "slug": "mitsubishi-montero-sport-2017",
+        "documents": [
+          {
+            "type": "cr",
+            "label": "Certificate of registration",
+            "note": "Owner details masked · no finance outstanding"
+          },
+          {
+            "type": "service",
+            "label": "Service history",
+            "note": "Stamped book and agent invoices, mileage consistent"
+          },
+          {
+            "type": "inspection",
+            "label": "Drivora 150-point inspection",
+            "note": "Passed · report available on request"
+          }
+        ]
+      },
+      {
+        "id": "v12",
+        "make": "Toyota",
+        "model": "Hilux",
+        "grade": "Revo 2.4 Double Cab",
+        "yom": 2021,
+        "yor": 2021,
+        "condition": "used",
+        "status": "available",
+        "mileageKm": 74300,
+        "mileageSource": "service-log",
+        "fuel": "diesel",
+        "transmission": "manual",
+        "engineCc": 2393,
+        "bodyType": "pickup",
+        "colour": "Silver Metallic",
+        "seats": 5,
+        "location": "Nugegoda",
+        "priceLkr": 21500000,
+        "vehicleClass": "commercial",
+        "owners": 1,
+        "images": [
+          "https://images.unsplash.com/photo-1631377875413-b1e3e660bfa2"
+        ],
+        "verified": true,
+        "features": [
+          "Diff lock",
+          "Tow bar",
+          "Bed liner",
+          "Cruise control"
+        ],
+        "highlights": [
+          "Company-maintained",
+          "Commercial leasing (up to 60%)"
+        ],
+        "description": "An ex-company Hilux, maintained on schedule by the fleet. As a commercial vehicle it qualifies for a higher leasing limit.",
+        "listedDaysAgo": 22,
+        "slug": "toyota-hilux-2021",
+        "documents": [
+          {
+            "type": "cr",
+            "label": "Certificate of registration",
+            "note": "Owner details masked · no finance outstanding"
+          },
+          {
+            "type": "service",
+            "label": "Service history",
+            "note": "Stamped book and agent invoices, mileage consistent"
+          },
+          {
+            "type": "inspection",
+            "label": "Drivora 150-point inspection",
+            "note": "Passed · report available on request"
+          }
+        ]
+      },
+      {
+        "id": "v13",
+        "make": "Toyota",
+        "model": "Prius",
+        "grade": "S Touring",
+        "yom": 2017,
+        "yor": 2017,
+        "condition": "used",
+        "status": "available",
+        "mileageKm": 71500,
+        "mileageSource": "service-log",
+        "fuel": "hybrid",
+        "transmission": "auto",
+        "engineCc": 1797,
+        "bodyType": "hatchback",
+        "colour": "Thermo Teal",
+        "seats": 5,
+        "location": "Nugegoda",
+        "priceLkr": 13250000,
+        "vehicleClass": "car",
+        "owners": 2,
+        "images": [
+          "https://images.unsplash.com/photo-1791793730227-389236b0c183"
+        ],
+        "verified": true,
+        "features": [
+          "Head-up display",
+          "Smart entry",
+          "Toyota Safety Sense",
+          "Alloy wheels"
+        ],
+        "highlights": [
+          "Hybrid battery tested 94%",
+          "Touring package"
+        ],
+        "description": "The fourth-generation Prius in a colour you will not see every day. We tested the hybrid battery at 94% health.",
+        "listedDaysAgo": 16,
+        "slug": "toyota-prius-2017",
+        "documents": [
+          {
+            "type": "cr",
+            "label": "Certificate of registration",
+            "note": "Owner details masked · no finance outstanding"
+          },
+          {
+            "type": "service",
+            "label": "Service history",
+            "note": "Stamped book and agent invoices, mileage consistent"
+          },
+          {
+            "type": "inspection",
+            "label": "Drivora 150-point inspection",
+            "note": "Passed · report available on request"
+          }
+        ]
+      },
+      {
+        "id": "v14",
+        "make": "Mercedes-Benz",
+        "model": "C200",
+        "grade": "AMG Line",
+        "yom": 2019,
+        "yor": 2019,
+        "condition": "used",
+        "status": "available",
+        "mileageKm": 39800,
+        "mileageSource": "service-log",
+        "fuel": "petrol",
+        "transmission": "auto",
+        "engineCc": 1497,
+        "bodyType": "sedan",
+        "colour": "Iridium Silver",
+        "seats": 5,
+        "location": "Nugegoda",
+        "priceLkr": 33000000,
+        "vehicleClass": "car",
+        "owners": 1,
+        "images": [
+          "https://images.unsplash.com/photo-1551836989-b4622a17a792",
+          "https://images.unsplash.com/photo-1625690180114-5530b1304127"
+        ],
+        "verified": true,
+        "features": [
+          "EQ Boost mild hybrid",
+          "Burmester audio",
+          "Ambient lighting",
+          "Digital cockpit"
+        ],
+        "highlights": [
+          "AMG Line",
+          "One owner",
+          "Agent service history"
+        ],
+        "description": "A one-owner C200 AMG Line with the EQ Boost mild-hybrid system and full agent service history.",
+        "listedDaysAgo": 11,
+        "slug": "mercedes-benz-c200-2019",
+        "documents": [
+          {
+            "type": "cr",
+            "label": "Certificate of registration",
+            "note": "Owner details masked · no finance outstanding"
+          },
+          {
+            "type": "service",
+            "label": "Service history",
+            "note": "Stamped book and agent invoices, mileage consistent"
+          },
+          {
+            "type": "inspection",
+            "label": "Drivora 150-point inspection",
+            "note": "Passed · report available on request"
+          }
+        ]
+      },
+      {
+        "id": "v15",
+        "make": "BMW",
+        "model": "318i",
+        "grade": "M Sport",
+        "yom": 2019,
+        "yor": 2020,
+        "condition": "used",
+        "status": "available",
+        "mileageKm": 44100,
+        "mileageSource": "service-log",
+        "fuel": "petrol",
+        "transmission": "auto",
+        "engineCc": 1499,
+        "bodyType": "sedan",
+        "colour": "Alpine White",
+        "seats": 5,
+        "location": "Nugegoda",
+        "priceLkr": 24200000,
+        "vehicleClass": "car",
+        "owners": 1,
+        "images": [
+          "https://images.unsplash.com/photo-1555215695-3004980ad54e",
+          "https://images.unsplash.com/photo-1583573278124-e8d4fd3edf3c"
+        ],
+        "verified": true,
+        "features": [
+          "M Sport package",
+          "Live Cockpit",
+          "Parking assistant",
+          "LED headlights"
+        ],
+        "highlights": [
+          "M Sport",
+          "BMW service inclusive used until 2024"
+        ],
+        "description": "Alpine White 318i M Sport. It sits on the M Sport suspension and steers the way a 3 Series should.",
+        "listedDaysAgo": 24,
+        "slug": "bmw-318i-2019",
+        "documents": [
+          {
+            "type": "cr",
+            "label": "Certificate of registration",
+            "note": "Owner details masked · no finance outstanding"
+          },
+          {
+            "type": "service",
+            "label": "Service history",
+            "note": "Stamped book and agent invoices, mileage consistent"
+          },
+          {
+            "type": "inspection",
+            "label": "Drivora 150-point inspection",
+            "note": "Passed · report available on request"
+          }
+        ]
+      },
+      {
+        "id": "v16",
+        "make": "Nissan",
+        "model": "Leaf",
+        "grade": "G 40 kWh",
+        "yom": 2019,
+        "yor": 2020,
+        "condition": "used",
+        "status": "available",
+        "mileageKm": 52000,
+        "mileageSource": "odometer",
+        "fuel": "electric",
+        "transmission": "auto",
+        "batteryKwh": 40,
+        "bodyType": "hatchback",
+        "colour": "Pearl White",
+        "seats": 5,
+        "location": "Nugegoda",
+        "priceLkr": 9800000,
+        "vehicleClass": "car",
+        "owners": 1,
+        "images": [
+          "https://images.unsplash.com/photo-1557775209-f28ede453ae3",
+          "https://images.unsplash.com/photo-1557775209-a640976a712f"
+        ],
+        "verified": true,
+        "features": [
+          "ProPILOT",
+          "e-Pedal",
+          "Bose audio",
+          "Around-view monitor"
+        ],
+        "highlights": [
+          "Battery state of health 11/12 bars",
+          "Home charger included"
+        ],
+        "description": "An affordable way into electric driving. The battery shows 11 of 12 health bars, and the owner's home charger is included in the price.",
+        "listedDaysAgo": 40,
+        "slug": "nissan-leaf-2019",
+        "documents": [
+          {
+            "type": "cr",
+            "label": "Certificate of registration",
+            "note": "Owner details masked · no finance outstanding"
+          },
+          {
+            "type": "service",
+            "label": "Service history",
+            "note": "Stamped book and agent invoices, mileage consistent"
+          },
+          {
+            "type": "inspection",
+            "label": "Drivora 150-point inspection",
+            "note": "Passed · report available on request"
+          }
+        ]
+      },
+      {
+        "id": "v17",
+        "make": "Toyota",
+        "model": "Corolla",
+        "grade": "Altis 1.8",
+        "yom": 2019,
+        "yor": 2019,
+        "condition": "used",
+        "status": "available",
+        "mileageKm": 61300,
+        "mileageSource": "service-log",
+        "fuel": "petrol",
+        "transmission": "auto",
+        "engineCc": 1798,
+        "bodyType": "sedan",
+        "colour": "Super White",
+        "seats": 5,
+        "location": "Nugegoda",
+        "priceLkr": 14500000,
+        "vehicleClass": "car",
+        "owners": 1,
+        "images": [
+          "https://images.unsplash.com/photo-1623869675781-80aa31012a5a"
+        ],
+        "verified": true,
+        "features": [
+          "Leather interior",
+          "Sunroof",
+          "Cruise control",
+          "Reverse camera"
+        ],
+        "highlights": [
+          "Agent-serviced",
+          "Doctor-owned, garage-kept"
+        ],
+        "description": "A garage-kept Corolla Altis from a single owner, serviced at the agent throughout.",
+        "listedDaysAgo": 8,
+        "slug": "toyota-corolla-2019",
+        "documents": [
+          {
+            "type": "cr",
+            "label": "Certificate of registration",
+            "note": "Owner details masked · no finance outstanding"
+          },
+          {
+            "type": "service",
+            "label": "Service history",
+            "note": "Stamped book and agent invoices, mileage consistent"
+          },
+          {
+            "type": "inspection",
+            "label": "Drivora 150-point inspection",
+            "note": "Passed · report available on request"
+          }
+        ]
+      },
+      {
+        "id": "v18",
+        "make": "Suzuki",
+        "model": "Alto",
+        "grade": "L",
+        "yom": 2024,
+        "condition": "reconditioned",
+        "status": "available",
+        "mileageKm": 7900,
+        "mileageSource": "auction-sheet",
+        "fuel": "petrol",
+        "transmission": "auto",
+        "engineCc": 658,
+        "bodyType": "hatchback",
+        "colour": "Pearl White",
+        "seats": 4,
+        "location": "Nugegoda",
+        "priceLkr": 6250000,
+        "vehicleClass": "car",
+        "images": [
+          "https://images.unsplash.com/photo-1709538513947-5d4d838d3452"
+        ],
+        "verified": true,
+        "auctionGrade": "4",
+        "features": [
+          "Dual sensor brake support",
+          "Keyless entry",
+          "Auto AC"
+        ],
+        "highlights": [
+          "Our lowest monthly payment",
+          "Grade 4"
+        ],
+        "description": "The simplest, cheapest way into a nearly-new car. It is easy to park anywhere in town.",
+        "listedDaysAgo": 5,
+        "slug": "suzuki-alto-2024",
+        "documents": [
+          {
+            "type": "auction-sheet",
+            "label": "Japanese auction sheet",
+            "note": "Grade 4 · mileage confirmed at 7,900 km · translated to English"
+          },
+          {
+            "type": "inspection",
+            "label": "Drivora 150-point inspection",
+            "note": "Passed · underbody, paint depth, hybrid battery health checked"
+          },
+          {
+            "type": "cr",
+            "label": "Customs clearance papers",
+            "note": "Duty paid · ready for first registration"
+          }
+        ]
+      },
+      {
+        "id": "v19",
+        "make": "Honda",
+        "model": "CR-V",
+        "grade": "e:HEV EX",
+        "yom": 2020,
+        "yor": 2021,
+        "condition": "used",
+        "status": "available",
+        "mileageKm": 48700,
+        "mileageSource": "service-log",
+        "fuel": "hybrid",
+        "transmission": "auto",
+        "engineCc": 1993,
+        "bodyType": "suv",
+        "colour": "Platinum White",
+        "seats": 5,
+        "location": "Nugegoda",
+        "priceLkr": 24800000,
+        "vehicleClass": "car",
+        "owners": 1,
+        "images": [
+          "https://images.unsplash.com/photo-1681697390363-1142eb46b76d"
+        ],
+        "verified": true,
+        "features": [
+          "Honda Sensing",
+          "Power tailgate",
+          "Leather seats",
+          "Sunroof"
+        ],
+        "highlights": [
+          "Hybrid",
+          "One owner"
+        ],
+        "description": "A one-owner CR-V Hybrid with a spacious cabin and a big boot. It suits a family of five comfortably.",
+        "listedDaysAgo": 13,
+        "slug": "honda-cr-v-2020",
+        "documents": [
+          {
+            "type": "cr",
+            "label": "Certificate of registration",
+            "note": "Owner details masked · no finance outstanding"
+          },
+          {
+            "type": "service",
+            "label": "Service history",
+            "note": "Stamped book and agent invoices, mileage consistent"
+          },
+          {
+            "type": "inspection",
+            "label": "Drivora 150-point inspection",
+            "note": "Passed · report available on request"
+          }
+        ]
+      },
+      {
+        "id": "v20",
+        "make": "Nissan",
+        "model": "X-Trail",
+        "grade": "Hybrid 20Xi",
+        "yom": 2019,
+        "yor": 2019,
+        "condition": "used",
+        "status": "reserved",
+        "mileageKm": 69900,
+        "mileageSource": "service-log",
+        "fuel": "hybrid",
+        "transmission": "auto",
+        "engineCc": 1997,
+        "bodyType": "suv",
+        "colour": "Gun Grey",
+        "seats": 5,
+        "location": "Nugegoda",
+        "priceLkr": 16400000,
+        "vehicleClass": "car",
+        "owners": 2,
+        "images": [
+          "https://images.unsplash.com/photo-1551817280-6d59c77ce1b8"
+        ],
+        "verified": true,
+        "features": [
+          "ProPILOT",
+          "Intelligent 4x4",
+          "Waterproof seats",
+          "Around-view monitor"
+        ],
+        "highlights": [
+          "Reserved with deposit",
+          "Ask us for a similar car"
+        ],
+        "description": "Reserved by a customer from Kandy. If you were after an X-Trail, ask us and we will find you a similar one.",
+        "listedDaysAgo": 19,
+        "slug": "nissan-x-trail-2019",
+        "documents": [
+          {
+            "type": "cr",
+            "label": "Certificate of registration",
+            "note": "Owner details masked · no finance outstanding"
+          },
+          {
+            "type": "service",
+            "label": "Service history",
+            "note": "Stamped book and agent invoices, mileage consistent"
+          },
+          {
+            "type": "inspection",
+            "label": "Drivora 150-point inspection",
+            "note": "Passed · report available on request"
+          }
+        ]
+      },
+      {
+        "id": "v21",
+        "make": "Lexus",
+        "model": "RX 450h",
+        "grade": "F Sport",
+        "yom": 2018,
+        "yor": 2018,
+        "condition": "used",
+        "status": "sold",
+        "mileageKm": 58200,
+        "mileageSource": "service-log",
+        "fuel": "hybrid",
+        "transmission": "auto",
+        "engineCc": 3456,
+        "bodyType": "suv",
+        "colour": "Sonic White",
+        "seats": 5,
+        "location": "Nugegoda",
+        "priceLkr": 44000000,
+        "vehicleClass": "car",
+        "owners": 1,
+        "images": [
+          "https://images.unsplash.com/photo-1779983625011-e9c207710d11"
+        ],
+        "verified": true,
+        "features": [
+          "Mark Levinson audio",
+          "Adaptive variable suspension",
+          "Head-up display"
+        ],
+        "highlights": [
+          "Sold in 9 days"
+        ],
+        "description": "Sold. We keep sold cars listed for a few weeks so you can see what we stock and what it went for.",
+        "listedDaysAgo": 35,
+        "slug": "lexus-rx-450h-2018",
+        "documents": [
+          {
+            "type": "cr",
+            "label": "Certificate of registration",
+            "note": "Owner details masked · no finance outstanding"
+          },
+          {
+            "type": "service",
+            "label": "Service history",
+            "note": "Stamped book and agent invoices, mileage consistent"
+          },
+          {
+            "type": "inspection",
+            "label": "Drivora 150-point inspection",
+            "note": "Passed · report available on request"
+          }
+        ]
+      },
+      {
+        "id": "v22",
+        "make": "Toyota",
+        "model": "C-HR",
+        "grade": "G LED Hybrid",
+        "yom": 2018,
+        "yor": 2018,
+        "condition": "used",
+        "status": "available",
+        "mileageKm": 63000,
+        "mileageSource": "service-log",
+        "fuel": "hybrid",
+        "transmission": "auto",
+        "engineCc": 1797,
+        "bodyType": "suv",
+        "colour": "Metal Stream",
+        "seats": 5,
+        "location": "Nugegoda",
+        "priceLkr": 14800000,
+        "vehicleClass": "car",
+        "owners": 1,
+        "images": [
+          "https://images.unsplash.com/photo-1706117948467-91727d5ef03c"
+        ],
+        "verified": true,
+        "features": [
+          "Toyota Safety Sense",
+          "LED package",
+          "Leather-trim seats"
+        ],
+        "highlights": [
+          "G LED grade",
+          "Hybrid battery 96%"
+        ],
+        "description": "The C-HR in G LED trim. It has a distinctive shape and is very easy to live with.",
+        "listedDaysAgo": 7,
+        "slug": "toyota-c-hr-2018",
+        "documents": [
+          {
+            "type": "cr",
+            "label": "Certificate of registration",
+            "note": "Owner details masked · no finance outstanding"
+          },
+          {
+            "type": "service",
+            "label": "Service history",
+            "note": "Stamped book and agent invoices, mileage consistent"
+          },
+          {
+            "type": "inspection",
+            "label": "Drivora 150-point inspection",
+            "note": "Passed · report available on request"
+          }
+        ]
+      },
+      {
+        "id": "v23",
+        "make": "Honda",
+        "model": "Civic",
+        "grade": "1.5 VTEC Turbo",
+        "yom": 2018,
+        "yor": 2018,
+        "condition": "used",
+        "status": "available",
+        "mileageKm": 58700,
+        "mileageSource": "service-log",
+        "fuel": "petrol",
+        "transmission": "auto",
+        "engineCc": 1498,
+        "bodyType": "sedan",
+        "colour": "Crystal Black",
+        "seats": 5,
+        "location": "Nugegoda",
+        "priceLkr": 13900000,
+        "vehicleClass": "car",
+        "owners": 2,
+        "images": [
+          "https://images.unsplash.com/photo-1761315087712-4b1bd53ce39b"
+        ],
+        "verified": true,
+        "features": [
+          "LaneWatch camera",
+          "Remote start",
+          "Dual-zone climate"
+        ],
+        "highlights": [
+          "Turbo",
+          "Clean, unmodified"
+        ],
+        "description": "An unmodified Civic turbo, which is rarer than it should be. It is quick, comfortable and reliable.",
+        "listedDaysAgo": 29,
+        "slug": "honda-civic-2018",
+        "documents": [
+          {
+            "type": "cr",
+            "label": "Certificate of registration",
+            "note": "Owner details masked · no finance outstanding"
+          },
+          {
+            "type": "service",
+            "label": "Service history",
+            "note": "Stamped book and agent invoices, mileage consistent"
+          },
+          {
+            "type": "inspection",
+            "label": "Drivora 150-point inspection",
+            "note": "Passed · report available on request"
+          }
+        ]
+      },
+      {
+        "id": "v24",
+        "make": "Toyota",
+        "model": "Land Cruiser Prado",
+        "grade": "TX-L",
+        "yom": 2016,
+        "yor": 2016,
+        "condition": "used",
+        "status": "available",
+        "mileageKm": 96300,
+        "mileageSource": "service-log",
+        "fuel": "diesel",
+        "transmission": "auto",
+        "engineCc": 2755,
+        "bodyType": "suv",
+        "colour": "Silver Metallic",
+        "seats": 7,
+        "location": "Nugegoda",
+        "priceLkr": 38500000,
+        "vehicleClass": "car",
+        "owners": 2,
+        "images": [
+          "https://images.unsplash.com/photo-1603094543704-64cdce2d2532"
+        ],
+        "verified": true,
+        "features": [
+          "Crawl control",
+          "Seven seats",
+          "Leather",
+          "Sunroof"
+        ],
+        "highlights": [
+          "TX-L grade",
+          "Well maintained"
+        ],
+        "description": "A TX-L Prado with seven seats and the dependable 2.8 diesel. It has been looked after by two careful owners.",
+        "listedDaysAgo": 21,
+        "slug": "toyota-land-cruiser-prado-2016",
+        "documents": [
+          {
+            "type": "cr",
+            "label": "Certificate of registration",
+            "note": "Owner details masked · no finance outstanding"
+          },
+          {
+            "type": "service",
+            "label": "Service history",
+            "note": "Stamped book and agent invoices, mileage consistent"
+          },
+          {
+            "type": "inspection",
+            "label": "Drivora 150-point inspection",
+            "note": "Passed · report available on request"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "id": "r1",
+        "name": "Dilshan Perera",
+        "town": "Maharagama",
+        "rating": 5,
+        "text": "They sent me the auction sheet on WhatsApp before I even visited, and the car matched it exactly. The leasing paperwork took two days instead of two weeks.",
+        "car": "Honda Vezel e:HEV Z",
+        "image": "https://images.unsplash.com/photo-1630051191354-932e27e318fe",
+        "monthsAgo": 1
+      },
+      {
+        "id": "r2",
+        "name": "Nadeesha Wickramasinghe",
+        "town": "Kandy",
+        "rating": 5,
+        "text": "I was nervous buying from Colombo while living in Kandy. Kasun did a video walk-around, answered every question and they delivered the car to my door.",
+        "car": "Toyota Yaris 1.3 G",
+        "image": "https://images.unsplash.com/photo-1749058983469-11eaef8d7bc5",
+        "monthsAgo": 2
+      },
+      {
+        "id": "r3",
+        "name": "Arun Kumaran",
+        "town": "Jaffna",
+        "rating": 5,
+        "text": "Fair trade-in price for my old Axio, no haggling games. The price on the website was the price on the invoice.",
+        "car": "Toyota C-HR G LED",
+        "image": "https://images.unsplash.com/photo-1706117948467-91727d5ef03c",
+        "monthsAgo": 3
+      },
+      {
+        "id": "r4",
+        "name": "Fathima Rizvi",
+        "town": "Dehiwala",
+        "rating": 4,
+        "text": "Good choice of hybrids and very patient staff. Only wish the showroom had more parking on Saturdays.",
+        "car": "Suzuki Swift Hybrid MZ",
+        "image": "https://images.unsplash.com/photo-1699862335489-36f7dec55c0e",
+        "monthsAgo": 4
+      },
+      {
+        "id": "r5",
+        "name": "Kasun Jayasuriya",
+        "town": "Kurunegala",
+        "rating": 5,
+        "text": "Bought our first EV here. They explained charging, installed the wall box with an electrician they trust, and called a week later to check in.",
+        "car": "BYD Seal Premium",
+        "image": "https://images.unsplash.com/photo-1728469876498-60596cfe2c0b",
+        "monthsAgo": 2
+      },
+      {
+        "id": "r6",
+        "name": "Tharushi Mendis",
+        "town": "Galle",
+        "rating": 5,
+        "text": "The 150-point inspection report was detailed, and they fixed two small things before handover without me asking.",
+        "car": "Mazda CX-5 25S L",
+        "image": "https://images.unsplash.com/photo-1743114713466-f12a85992a75",
+        "monthsAgo": 5
+      }
+    ],
+    "posts": [
+      {
+        "slug": "reconditioned-vs-used-auction-sheet",
+        "title": "Reconditioned or used? What the auction sheet really tells you",
+        "excerpt": "How to read a Japanese auction sheet, which grades to trust, and why a used car's service book matters just as much.",
+        "category": "Guide",
+        "image": "https://images.unsplash.com/photo-1692406069831-0bb7ea297645",
+        "readMins": 6,
+        "date": "2026-10-28",
+        "body": [
+          {
+            "text": "Reconditioned cars are pre-owned imports, mostly from Japan, that have not yet been registered in Sri Lanka. Used cars are already registered here. Each has its own paper trail, and that trail is the best protection you have against a rolled-back odometer."
+          },
+          {
+            "heading": "Reading the grade",
+            "text": "The overall grade runs from 1 to 6, with S for nearly new. Most good imports sit at 4 or 4.5. The interior grade (A to E) tells you how the cabin has been treated. A 4.5/B car is usually a better buy than a 5/C one."
+          },
+          {
+            "heading": "The map of the body",
+            "text": "The small car diagram shows every mark the inspector found. A1 is a tiny scratch, U2 a dent the size of a coin, W1 a repair wave that is hard to see. A few A1s are normal. Several W marks on one side deserve a question."
+          },
+          {
+            "heading": "Mileage",
+            "text": "The auction sheet records the odometer reading on the day of sale. We print that number on every listing and next to our own reading at handover, so you can see they match."
+          },
+          {
+            "heading": "For used cars",
+            "text": "Ask for the service book and agent invoices. Mileage should rise steadily from one stamp to the next. If a car has done 15,000 km a year for five years and then 2,000 km for three, ask why."
+          }
+        ]
+      },
+      {
+        "slug": "leasing-2026-ltv-rules",
+        "title": "Leasing in 2026: the Central Bank's new limits, explained",
+        "excerpt": "Since 25 May 2026 lenders can finance only 40% of an unregistered car. Here is what that means for your down payment.",
+        "category": "Leasing",
+        "image": "https://images.unsplash.com/photo-1710006548781-eff5670376fa",
+        "readMins": 4,
+        "date": "2026-10-12",
+        "body": [
+          {
+            "text": "On 25 May 2026 the Central Bank of Sri Lanka lowered the maximum loan-to-value (LTV) ratios for motor vehicle loans and leases. Every bank, finance company and leasing company has to follow them."
+          },
+          {
+            "heading": "The limits",
+            "text": "For cars, SUVs and vans that are unregistered or registered for less than a year, the lender can finance up to 40% of the value, so you put down at least 60%. Commercial vehicles in the same situation can be financed up to 60%. Any vehicle registered and used for more than a year can be financed up to 60%."
+          },
+          {
+            "heading": "Flat rate vs reducing balance",
+            "text": "Many leasing offers quote a flat rate, charged on the original amount for the whole term. The reducing-balance rate shows the true cost, because interest is charged only on what you still owe. Our calculator shows both, so you can compare offers fairly."
+          },
+          {
+            "heading": "What we do",
+            "text": "We work with several lenders and send your application to the ones most likely to approve it. Figures on this site are estimates; the lender confirms the final rate."
+          }
+        ]
+      },
+      {
+        "slug": "is-an-ev-right-for-sri-lanka",
+        "title": "Is an EV right for Sri Lankan roads?",
+        "excerpt": "Charging at home, range in the hill country, battery health checks and the questions we ask every EV buyer.",
+        "category": "EV",
+        "image": "https://images.unsplash.com/photo-1593941707874-ef25b8b4a92b",
+        "readMins": 5,
+        "date": "2026-09-30",
+        "body": [
+          {
+            "text": "Electric cars now lead brand-new car registrations in Sri Lanka. They make the most sense if you can charge at home and mostly drive within a predictable radius."
+          },
+          {
+            "heading": "Home charging",
+            "text": "A 7 kW wall box fills most batteries overnight. Before delivery we arrange an electrician to check your supply and earthing."
+          },
+          {
+            "heading": "Up-country trips",
+            "text": "Climbing to Nuwara Eliya uses more energy, but you get some back coming down. Plan a top-up on longer trips and you will be fine."
+          },
+          {
+            "heading": "Used EVs",
+            "text": "For a used EV the battery state of health matters more than the odometer. We test and print it on every listing."
+          }
+        ]
+      },
+      {
+        "slug": "our-150-point-inspection",
+        "title": "Our 150-point inspection, step by step",
+        "excerpt": "From paint-depth readings to a hybrid battery test: what happens to every car before it goes on this website.",
+        "category": "Guide",
+        "image": "https://images.unsplash.com/photo-1625047509248-ec889cbff17f",
+        "readMins": 3,
+        "date": "2026-09-12",
+        "body": [
+          {
+            "text": "Every car we list goes through the same inspection, carried out by our own technicians and signed off by the workshop manager."
+          },
+          {
+            "heading": "Body and paint",
+            "text": "We measure paint depth on every panel to find repaints, and check the underbody for flood or accident repairs."
+          },
+          {
+            "heading": "Mechanical",
+            "text": "We road-test the car, scan the engine and gearbox for stored faults, check suspension and brakes, and test the hybrid or EV battery."
+          },
+          {
+            "heading": "Paperwork",
+            "text": "We match the chassis number to the documents, confirm there is no outstanding finance, and check that the mileage history is consistent."
+          }
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the difference between reconditioned and used?",
+        "a": "Reconditioned cars are pre-owned imports, mostly from Japan, that have not yet been registered in Sri Lanka. Used cars are already registered here and have local owners on record."
+      },
+      {
+        "q": "How much down payment do I need for leasing?",
+        "a": "Since 25 May 2026, lenders can finance up to 40% of an unregistered or newly registered car, so you need at least 60% down. For cars registered and used over a year, and for commercial vehicles, they can finance up to 60%. Our calculator applies these rules automatically."
+      },
+      {
+        "q": "Can I see the auction sheet before visiting?",
+        "a": "Yes. Every reconditioned car has its auction sheet and an English translation on the listing, and we can send the original on WhatsApp."
+      },
+      {
+        "q": "Do you accept trade-ins?",
+        "a": "Yes. Send us your car's details and a few photos through the Sell or trade-in page and we will reply with a price range, usually the same day."
+      },
+      {
+        "q": "Can you deliver outside Colombo?",
+        "a": "We deliver island-wide. Delivery within 30 km of Nugegoda is free; further away we charge the driver's cost only."
+      },
+      {
+        "q": "Is the price on the website the final price?",
+        "a": "The listed price includes all duties and our fees. Registration (for reconditioned and brand-new cars) and insurance are extra and we tell you the exact amount up front."
+      },
+      {
+        "q": "Do your cars come with a warranty?",
+        "a": "Brand-new cars carry the agent warranty. Reconditioned and used cars come with our 6-month engine and gearbox cover, and you can extend it."
+      },
+      {
+        "q": "How do I reserve a car?",
+        "a": "Pay a refundable deposit of Rs 100,000 and we hold the car for 5 days while your finance is approved."
+      },
+      {
+        "q": "Can I bring my own mechanic?",
+        "a": "Of course. Book a viewing and bring whoever you trust. We will put the car on a lift for them."
+      },
+      {
+        "q": "What documents do I need to buy?",
+        "a": "Your NIC or passport and proof of address. For leasing, the lender will also ask for proof of income."
+      }
+    ],
+    "translations": {
+      "si": {
+        "common": {
+          "ui": {
+            "cars": "වාහන",
+            "finance": "ලීසිං",
+            "sell": "විකුණන්න / හුවමාරු",
+            "about": "අප ගැන",
+            "contact": "සම්බන්ධ වන්න",
+            "book": "ටෙස්ට් ඩ්‍රයිව් එකක් වෙන් කරන්න",
+            "bookShort": "වෙන් කරන්න",
+            "call": "අමතන්න",
+            "whatsapp": "WhatsApp",
+            "browse": "සියලු වාහන බලන්න",
+            "calc": "ලීසිං ගණකය",
+            "saved": "සුරැකි",
+            "menu": "මෙනුව"
+          },
+          "nav": {
+            "0": {
+              "label": "වාහන"
+            },
+            "1": {
+              "label": "ලීසිං"
+            },
+            "2": {
+              "label": "විකුණන්න / හුවමාරු"
+            },
+            "3": {
+              "label": "අප ගැන"
+            },
+            "4": {
+              "label": "සම්බන්ධ වන්න"
+            }
+          }
+        }
+      },
+      "ta": {
+        "common": {
+          "ui": {
+            "cars": "வாகனங்கள்",
+            "finance": "லீசிங்",
+            "sell": "விற்க / மாற்ற",
+            "about": "எங்களைப் பற்றி",
+            "contact": "தொடர்பு",
+            "book": "சோதனை ஓட்டம் முன்பதிவு",
+            "bookShort": "முன்பதிவு",
+            "call": "அழைக்க",
+            "whatsapp": "WhatsApp",
+            "browse": "அனைத்து வாகனங்களும்",
+            "calc": "லீசிங் கணிப்பான்",
+            "saved": "சேமித்தவை",
+            "menu": "மெனு"
+          },
+          "nav": {
+            "0": {
+              "label": "வாகனங்கள்"
+            },
+            "1": {
+              "label": "லீசிங்"
+            },
+            "2": {
+              "label": "விற்க / மாற்ற"
+            },
+            "3": {
+              "label": "எங்களைப் பற்றி"
+            },
+            "4": {
+              "label": "தொடர்பு"
+            }
+          }
+        }
+      }
+    },
+    "home": {
+      "hero": {
+        "carouselLabel": "Featured",
+        "chooseSlideLabel": "Choose slide",
+        "slideLabel": "Slide {n}: {title}",
+        "playLabel": "Play slideshow",
+        "pauseLabel": "Pause slideshow",
+        "prevLabel": "Previous slide",
+        "nextLabel": "Next slide",
+        "inStockLabel": "In stock",
+        "browseHref": "/cars",
+        "browseLabel": "Browse cars",
+        "slides": [
+          {
+            "image": "https://images.unsplash.com/photo-1741905358565-5ae6835ac172",
+            "alt": "Black Land Rover Defender 110 lit in a dark studio",
+            "carHref": "/cars/land-rover-defender-110-2023",
+            "carLabel": "Land Rover Defender 110 · 2023",
+            "eyebrow": "Reconditioned · grade 4 and above",
+            "title": "Cars with nothing to hide.",
+            "text": "Every car comes with its auction sheet or service history, a 150-point inspection, and a price that doesn't change at the desk.",
+            "linkHref": "/cars?condition=reconditioned",
+            "linkLabel": "Reconditioned stock"
+          },
+          {
+            "image": "https://images.unsplash.com/photo-1650530579355-7ad9d4766043",
+            "alt": "Dark grey Toyota Land Cruiser 200 parked in afternoon sun",
+            "carHref": "/cars/toyota-land-cruiser-200-2015",
+            "carLabel": "Toyota Land Cruiser 200 · 2015",
+            "eyebrow": "Central Bank rules, built in",
+            "title": "Know your monthly payment first.",
+            "text": "Our leasing calculator applies the 2026 down-payment limits, and shows both the flat and the true rate.",
+            "linkHref": "/finance",
+            "linkLabel": "Open the calculator"
+          },
+          {
+            "image": "https://images.unsplash.com/photo-1727098353953-929512ce7b90",
+            "alt": "White BYD Seal electric saloon at night, headlights on",
+            "carHref": "/cars/byd-seal-2025",
+            "carLabel": "BYD Seal · 2025",
+            "eyebrow": "EV and hybrid",
+            "title": "Electric, without the guesswork.",
+            "text": "Battery health is tested and printed on every listing, and we arrange your home charger before delivery.",
+            "linkHref": "/cars?fuel=electric",
+            "linkLabel": "Electric cars"
+          }
+        ],
+        "stats": [
+          {
+            "value": "15+",
+            "label": "years in Nugegoda"
+          },
+          {
+            "value": "2,400+",
+            "label": "cars sold"
+          },
+          {
+            "value": "98%",
+            "label": "would buy again"
+          }
+        ]
+      },
+      "quickSearch": {
+        "formLabel": "Quick search",
+        "makeLabel": "Make",
+        "makePlaceholder": "Make",
+        "budgetLabel": "Budget",
+        "budgetPlaceholder": "Budget",
+        "budgets": [
+          {
+            "max": 7000000,
+            "label": "Under Rs 7M"
+          },
+          {
+            "max": 10000000,
+            "label": "Under Rs 10M"
+          },
+          {
+            "max": 15000000,
+            "label": "Under Rs 15M"
+          },
+          {
+            "max": 25000000,
+            "label": "Under Rs 25M"
+          },
+          {
+            "max": 40000000,
+            "label": "Under Rs 40M"
+          }
+        ],
+        "bodyLabel": "Body type",
+        "bodyPlaceholder": "Body type",
+        "bodyOptions": [
+          "suv",
+          "sedan",
+          "hatchback",
+          "pickup"
+        ],
+        "conditionLabel": "Condition",
+        "conditionPlaceholder": "Condition",
+        "conditionOptions": [
+          "reconditioned",
+          "used",
+          "brand-new"
+        ],
+        "submit": "Show {count} cars",
+        "resultsHref": "/cars"
+      },
+      "benefits": {
+        "sectionLabel": "Why buy here",
+        "items": [
+          {
+            "icon": "file-check",
+            "title": "Verified history",
+            "text": "Auction sheet or service book on every car"
+          },
+          {
+            "icon": "calculator",
+            "title": "Clear leasing",
+            "text": "Real monthly figures, CBSL limits built in"
+          },
+          {
+            "icon": "truck",
+            "title": "Island-wide delivery",
+            "text": "Free within 30 km of Nugegoda"
+          },
+          {
+            "icon": "wrench",
+            "title": "6-month cover",
+            "text": "Engine and gearbox, on every used car"
+          }
+        ]
+      },
+      "stock": {
+        "eyebrow": "In stock now",
+        "title": "Fresh on the forecourt",
+        "linkLabel": "All cars",
+        "linkHref": "/cars",
+        "tablistLabel": "Filter stock",
+        "seeAll": "See all {count} {label}",
+        "tabs": [
+          {
+            "label": "All",
+            "filter": "all",
+            "href": "/cars",
+            "seeAllLabel": "cars"
+          },
+          {
+            "label": "Reconditioned",
+            "filter": "reconditioned",
+            "href": "/cars?condition=reconditioned",
+            "seeAllLabel": "reconditioned"
+          },
+          {
+            "label": "Used",
+            "filter": "used",
+            "href": "/cars?condition=used",
+            "seeAllLabel": "used"
+          },
+          {
+            "label": "Brand new",
+            "filter": "brand-new",
+            "href": "/cars?condition=brand-new",
+            "seeAllLabel": "brand new"
+          },
+          {
+            "label": "EV & hybrid",
+            "filter": "green",
+            "href": "/cars?fuel=hybrid,electric",
+            "seeAllLabel": "ev & hybrid"
+          }
+        ]
+      },
+      "spotlight": {
+        "vehicleId": "v01",
+        "eyebrow": "Spotlight · just landed",
+        "priceLabel": "Drive-away price",
+        "photoAlt": "{colour} {make} {model} in a dark studio",
+        "yearLabel": "Year",
+        "mileageLabel": "Verified mileage",
+        "gradeLabel": "Auction grade",
+        "seatsLabel": "Seats",
+        "viewLabel": "View this car",
+        "bookLabel": "Book a viewing",
+        "bookHref": "/book"
+      },
+      "how": {
+        "eyebrow": "How buying works",
+        "title": "Five steps, no surprises",
+        "steps": [
+          {
+            "icon": "car",
+            "title": "Choose",
+            "text": "Shortlist online, or tell us your budget on WhatsApp."
+          },
+          {
+            "icon": "file-search",
+            "title": "Check the papers",
+            "text": "Auction sheet, service book and our inspection report, before you visit."
+          },
+          {
+            "icon": "hand-coins",
+            "title": "Leasing & offer",
+            "text": "We send your file to the lenders most likely to approve it."
+          },
+          {
+            "icon": "scroll",
+            "title": "Paperwork",
+            "text": "Transfer, registration and insurance handled for you."
+          },
+          {
+            "icon": "key",
+            "title": "Handover",
+            "text": "Collect from Nugegoda, or we deliver to your door."
+          }
+        ]
+      },
+      "studio": {
+        "eyebrow": "3D studio · preview",
+        "title": "Walk around a car before you visit.",
+        "text": "Drag to turn it, pinch or scroll to zoom, and try a colour. We can add 3D scans of selected stock for your showroom. This model is a demonstration.",
+        "paintLabel": "Paint",
+        "modelLabel": "Interactive 3D car model",
+        "loading": "Loading model… {percent}%",
+        "error": "3D isn't available on this device. Photos are on every car page.",
+        "loadButton": "Load 3D model · 1.7 MB",
+        "lowPowerNote": "Data saver is on, so we waited for your tap.",
+        "dragHint": "Drag to rotate",
+        "zoomHint": "Pinch to zoom",
+        "paints": [
+          {
+            "name": "Signal orange",
+            "hex": "#c2410c"
+          },
+          {
+            "name": "Ink black",
+            "hex": "#14171c"
+          },
+          {
+            "name": "Pearl white",
+            "hex": "#e8e8e4"
+          },
+          {
+            "name": "Graphite",
+            "hex": "#555b66"
+          },
+          {
+            "name": "Lagoon blue",
+            "hex": "#1f4f7a"
+          }
+        ]
+      },
+      "leasing": {
+        "eyebrow": "Leasing",
+        "title": "See your monthly payment before you fall for the car",
+        "linkLabel": "Full calculator",
+        "linkHref": "/finance",
+        "priceLabel": "Car price",
+        "priceMinLabel": "Rs 5M",
+        "priceMaxLabel": "Rs 60M",
+        "priceMin": 5000000,
+        "priceMax": 60000000,
+        "priceDefault": 15000000,
+        "registrationLabel": "Registration",
+        "unregisteredLabel": "Recon / brand new",
+        "registeredLabel": "Registered 1+ year",
+        "termLabel": "Term",
+        "terms": [
+          24,
+          36,
+          48,
+          60
+        ],
+        "termDefault": 60,
+        "termSuffix": "{n} mo",
+        "monthlyLabel": "Estimated monthly payment",
+        "minDownLabel": "Minimum down payment",
+        "minDownHint": "{percent}% under CBSL rules",
+        "financedLabel": "Amount financed",
+        "rateLabel": "Sample rate (reducing)",
+        "rateValue": "{rate}% p.a.",
+        "cta": "Full calculator",
+        "disclaimer": "Estimate only. LTV limits per CBSL directions effective {date}."
+      },
+      "whyUs": {
+        "image": "https://images.unsplash.com/photo-1769961236211-3046cbcc474d",
+        "imageAlt": "A new red car decorated with a garland at handover",
+        "cardTitle": "Every handover, a small celebration",
+        "cardText": "Garland, a full tank and a walk-through of every switch.",
+        "eyebrow": "Why Drivora",
+        "title": "Buying a car shouldn't feel like a negotiation you're losing.",
+        "reasons": [
+          {
+            "title": "The price is the price",
+            "text": "What you see online is what goes on the invoice. Registration and insurance are quoted separately, up front."
+          },
+          {
+            "title": "Leasing in days, not weeks",
+            "text": "We prepare your file and send it to the lenders most likely to say yes, usually within 48 hours."
+          },
+          {
+            "title": "We buy your old car",
+            "text": "Fair trade-in prices based on recent sales, not a number pulled out of the air."
+          },
+          {
+            "title": "Someone picks up",
+            "text": "Real people on WhatsApp seven days a week, and a follow-up call a week after delivery."
+          }
+        ]
+      },
+      "offer": {
+        "image": "https://images.unsplash.com/photo-1706509240407-7f3aa19ae740",
+        "imageAlt": "",
+        "eyebrow": "Hybrid month · until 30 November",
+        "title": "A free first-year service plan on every hybrid.",
+        "text": "Includes two services, a hybrid battery health report and a wheel alignment. On cars delivered this month.",
+        "ctaLabel": "See hybrids",
+        "ctaHref": "/cars?fuel=hybrid"
+      },
+      "reviews": {
+        "eyebrow": "Buyers, in their words",
+        "title": "What people say after the handover",
+        "note": "Demo reviews, shown with the car each buyer chose.",
+        "starsLabel": "{rating} out of 5 stars",
+        "photoAlt": "{name}'s {car}",
+        "boughtPrefix": "Bought a"
+      },
+      "guides": {
+        "eyebrow": "Guides & news",
+        "title": "Read before you buy",
+        "linkLabel": "All articles",
+        "linkHref": "/blog",
+        "readTime": "{n} min read"
+      },
+      "closing": {
+        "image": "https://images.unsplash.com/photo-1743114713492-ab7d94a7f082",
+        "imageAlt": "",
+        "eyebrow": "Not sure yet?",
+        "title": "Tell us your budget. We'll send three good options within the hour.",
+        "whatsappMessage": "Hi Drivora! My budget is Rs ___ and I'm looking for a ___.",
+        "whatsappLabel": "Message on WhatsApp",
+        "chatLabel": "Ask the assistant"
+      }
+    },
+    "labels": {
+      "condition": {
+        "brand-new": "Brand new",
+        "reconditioned": "Reconditioned",
+        "used": "Used"
+      },
+      "fuel": {
+        "petrol": "Petrol",
+        "diesel": "Diesel",
+        "hybrid": "Hybrid",
+        "plug-in-hybrid": "Plug-in hybrid",
+        "electric": "Electric"
+      },
+      "body": {
+        "hatchback": "Hatchback",
+        "sedan": "Sedan",
+        "suv": "SUV",
+        "pickup": "Pick-up",
+        "coupe": "Coupé"
+      },
+      "status": {
+        "available": "Available",
+        "reserved": "Reserved",
+        "sold": "Sold",
+        "arriving": "Arriving soon"
+      },
+      "transmission": {
+        "auto": "Auto",
+        "manual": "Manual"
+      },
+      "transmissionLong": {
+        "auto": "Automatic",
+        "manual": "Manual"
+      },
+      "mileageSource": {
+        "auction-sheet": "Japanese auction sheet",
+        "service-log": "Stamped service history",
+        "odometer": "Odometer photo at intake",
+        "new": "Brand new, zero kilometres"
+      }
+    },
+    "financeSettings": {
+      "ltvEffectiveDate": "25 May 2026",
+      "ltvSource": "CBSL macroprudential directions on motor vehicle LTV ratios",
+      "ltvRegisteredOverOneYear": 0.6,
+      "ltvNewOrRecentCar": 0.4,
+      "ltvNewOrRecentCommercial": 0.6,
+      "flatAnnualRate": 0.12,
+      "reducingAnnualRate": 0.155
+    },
+    "cars": {
+      "seo": {
+        "title": "Cars for sale",
+        "description": "Reconditioned, used and brand-new cars in Nugegoda with auction sheets, service history and leasing estimates."
+      },
+      "header": {
+        "eyebrow": "{count} cars in stock",
+        "title": "Every car, checked and documented",
+        "text": "Filter by budget, body type or fuel. Each listing shows its auction sheet or service history and an estimated monthly payment.",
+        "crumbLabel": "Cars",
+        "crumbHref": "/cars"
+      },
+      "explorer": {
+        "filtersTitle": "Filters",
+        "clearAll": "Clear all",
+        "searchLabel": "Search cars",
+        "searchPlaceholder": "Search make, model or colour",
+        "filtersButton": "Filters",
+        "sortLabel": "Sort by",
+        "sorts": [
+          {
+            "key": "recommended",
+            "label": "Best match"
+          },
+          {
+            "key": "newest",
+            "label": "Newest listings"
+          },
+          {
+            "key": "price-asc",
+            "label": "Price: low to high"
+          },
+          {
+            "key": "price-desc",
+            "label": "Price: high to low"
+          },
+          {
+            "key": "mileage",
+            "label": "Lowest mileage"
+          },
+          {
+            "key": "year",
+            "label": "Newest year"
+          }
+        ],
+        "viewLabel": "View",
+        "gridView": "grid view",
+        "listView": "list view",
+        "carOne": "car",
+        "carMany": "cars",
+        "removeChip": "remove",
+        "chipFrom": "From {currency} {n}M",
+        "chipTo": "Up to {currency} {n}M",
+        "chipYear": "{year}+",
+        "chipKm": "≤ {km} km",
+        "chipSold": "Including sold",
+        "emptyAnimationLabel": "Searching",
+        "emptyTitle": "No cars match those filters",
+        "emptyText": "Try removing a filter, or tell us what you want. We often have cars arriving that aren't listed yet.",
+        "emptyClear": "Clear filters",
+        "emptyAskLabel": "Ask us to find one",
+        "emptyAskHref": "/contact",
+        "sheetTitle": "Filters",
+        "sheetClear": "Clear",
+        "sheetCloseLabel": "Close filters",
+        "sheetShow": "Show {count} {cars}"
+      },
+      "filters": {
+        "condition": "Condition",
+        "price": "Price (Rs)",
+        "minPriceLabel": "Minimum price",
+        "maxPriceLabel": "Maximum price",
+        "noMin": "No min",
+        "noMax": "No max",
+        "priceStepLabel": "{n}M",
+        "priceSteps": [
+          5,
+          7,
+          10,
+          15,
+          20,
+          25,
+          35,
+          50,
+          75,
+          100
+        ],
+        "body": "Body type",
+        "fuel": "Fuel",
+        "make": "Make",
+        "yearFrom": "Year from",
+        "anyYear": "Any year",
+        "yearOption": "{year} or newer",
+        "yearOptions": [
+          2024,
+          2022,
+          2020,
+          2018,
+          2016
+        ],
+        "mileage": "Mileage up to",
+        "mileageLabel": "Maximum mileage",
+        "anyMileage": "Any mileage",
+        "mileageOption": "{km} km",
+        "mileageOptions": [
+          10000,
+          25000,
+          50000,
+          75000,
+          100000
+        ],
+        "gearbox": "Gearbox",
+        "showSold": "Show sold cars"
+      }
+    },
+    "forms": {
+      "common": {
+        "nameLabel": "Your name",
+        "phoneLabel": "Mobile number",
+        "phonePlaceholder": "077 123 4567",
+        "errorName": "Please enter your name.",
+        "errorPhone": "Enter a Sri Lankan number, e.g. 077 123 4567.",
+        "errorConsent": "Please tick to continue.",
+        "consentText": "I agree that Drivora may contact me about this request and store my details as described in the",
+        "privacyLabel": "privacy notice",
+        "privacyHref": "/faq",
+        "demoNote": "Demo form: your details stay in this browser and are not sent anywhere.",
+        "successAnimationLabel": "Done"
+      },
+      "enquiry": {
+        "defaultMessage": "Hi, is the {vehicle} still available? I'd like to know more.",
+        "messageLabel": "Message",
+        "submit": "Send enquiry",
+        "successTitle": "Thanks, we've got it",
+        "successText": "A salesperson will call you about the {vehicle}, usually within 10 minutes during opening hours.",
+        "whatsappLabel": "Faster on WhatsApp"
+      },
+      "tradeIn": {
+        "makeLabel": "Make",
+        "makes": [
+          "Toyota",
+          "Honda",
+          "Suzuki",
+          "Nissan",
+          "Mitsubishi",
+          "Mazda",
+          "Hyundai",
+          "Kia",
+          "Daihatsu",
+          "Perodua",
+          "Micro",
+          "BMW",
+          "Mercedes-Benz",
+          "Other"
+        ],
+        "modelLabel": "Model",
+        "modelPlaceholder": "e.g. Axio, Vitz, Fit",
+        "errorModel": "Which model is it?",
+        "yearLabel": "Year of manufacture",
+        "yearNewest": 2025,
+        "yearCount": 20,
+        "kmLabel": "Mileage (km)",
+        "conditionLabel": "Condition",
+        "conditions": [
+          {
+            "key": "excellent",
+            "title": "Excellent",
+            "text": "Like new, no repairs needed",
+            "factor": 1
+          },
+          {
+            "key": "good",
+            "title": "Good",
+            "text": "Normal wear, small marks",
+            "factor": 0.92
+          },
+          {
+            "key": "fair",
+            "title": "Fair",
+            "text": "Needs some work",
+            "factor": 0.8
+          }
+        ],
+        "photosLabel": "Photos (optional)",
+        "photoAlt": "Your upload",
+        "removePhotoLabel": "Remove photo",
+        "addPhoto": "Add",
+        "photosNote": "Front, back, both sides, dashboard with mileage. Photos stay on your device in this demo.",
+        "submit": "Get my estimate",
+        "resultText": "Our first estimate for your {car}. A buyer will call to confirm after a quick 20-minute inspection. Demo figure only.",
+        "nextCarLabel": "Choose your next car",
+        "nextCarHref": "/cars",
+        "againLabel": "Value another car",
+        "estimateBasePrice": 9500000,
+        "estimateYear": 2026
+      },
+      "booking": {
+        "slots": [
+          "09:30",
+          "10:30",
+          "11:30",
+          "13:30",
+          "14:30",
+          "15:30",
+          "16:30"
+        ],
+        "sundayCutoff": "14:00",
+        "daysAhead": 10,
+        "errorTime": "Pick a time.",
+        "successTitle": "You're booked in",
+        "successText": "{car} · {date} at {time} · {where}. We'll confirm on WhatsApp.",
+        "successWhereHome": "we'll bring it to you",
+        "calendarTitle": "Test drive: {car}",
+        "calendarFile": "drivora-test-drive.ics",
+        "calendarLabel": "Add to calendar",
+        "whatsappMessage": "Hi, I booked a test drive of the {car} on {date} at {time}.",
+        "whatsappLabel": "Confirm on WhatsApp",
+        "step1": "Which car?",
+        "carLabel": "Car",
+        "step2": "Where?",
+        "showroomTitle": "At our showroom",
+        "showroomText": "{city}, with a 20-minute route",
+        "homeTitle": "At your home or office",
+        "homeText": "Within 30 km of Nugegoda, free",
+        "step3": "When?",
+        "dayLabel": "Day",
+        "timeLabel": "Time",
+        "sundayNote": "till 2",
+        "step4": "Your details",
+        "nameLabel": "Name",
+        "phoneHint": "We confirm on WhatsApp",
+        "summaryDay": "Day",
+        "summaryTime": "Time",
+        "summaryWhere": "Where",
+        "summaryHome": "Your place",
+        "summaryShowroom": "Showroom",
+        "submit": "Confirm booking",
+        "viewCar": "View car details"
+      }
+    },
+    "carDetail": {
+      "seo": {
+        "notFound": "Car not found",
+        "description": "{condition} {title}, {km} km, {fuel}. {price}. {highlights}."
+      },
+      "breadcrumbCars": "Cars",
+      "breadcrumbCarsHref": "/cars",
+      "photoAlt": "{colour} {title}",
+      "statYear": "Year",
+      "statYearReg": "Year · reg. {year}",
+      "statMileage": "Mileage",
+      "statBattery": "Battery",
+      "statEngine": "Engine",
+      "statSeats": "Seats",
+      "aboutTitle": "About this car",
+      "specsTitle": "Specifications",
+      "specCondition": "Condition",
+      "specMakeModel": "Make / model",
+      "specGrade": "Grade",
+      "specYom": "Year of manufacture",
+      "specFirstReg": "First registered",
+      "specNotRegistered": "Not yet registered",
+      "specMileage": "Mileage",
+      "specFuel": "Fuel",
+      "specGearbox": "Gearbox",
+      "specBattery": "Battery",
+      "specEngine": "Engine",
+      "specBody": "Body",
+      "specColour": "Colour",
+      "specSeats": "Seats",
+      "specLocation": "Location",
+      "featuresTitle": "Features",
+      "leasingEyebrow": "Leasing estimate",
+      "leasingTitle": "What would this cost per month?",
+      "enquireTitle": "Ask about this car",
+      "enquireText": "We reply by phone or WhatsApp, usually within 10 minutes.",
+      "similarTitle": "Similar cars"
+    },
+    "gallery": {
+      "thumbLabel": "Photo {n}",
+      "photoAlt": "{alt}, photo {n} of {total}",
+      "prevLabel": "Previous photo",
+      "nextLabel": "Next photo",
+      "openLabel": "Open photo {n} full screen",
+      "dialogLabel": "Photos",
+      "closeLabel": "Close"
+    },
+    "trust": {
+      "eyebrow": "Trust & paperwork",
+      "title": "What we checked on this car",
+      "verifiedBadge": "Documents verified",
+      "mileageTitle": "Mileage",
+      "sourceLabel": "Source:",
+      "gradeLabel": "Auction grade:",
+      "ownersLabel": "Previous owners:",
+      "mileageNote": "We record our own odometer reading at handover, so you can check the two match.",
+      "viewLabel": "View",
+      "closeLabel": "Close",
+      "demoNote": "Demo preview. On a live site this opens the scanned original, with personal details masked.",
+      "sheet": {
+        "overallLabel": "Overall",
+        "interiorLabel": "Interior",
+        "exteriorLabel": "Exterior",
+        "interiorGrade": "B",
+        "exteriorGrade": "B",
+        "mileageLabel": "Mileage at auction",
+        "marksLabel": "Marks",
+        "marksValue": "A1 front bumper · U1 rear door",
+        "translationLabel": "Translation",
+        "translationValue": "English, by Drivora",
+        "marks": {
+          "first": {
+            "code": "A1",
+            "label": "Tiny scratch, front bumper",
+            "x": 18,
+            "y": 30
+          },
+          "second": {
+            "code": "U1",
+            "label": "Small dent, rear door",
+            "x": 62,
+            "y": 64
+          }
+        }
+      },
+      "docVehicleLabel": "Vehicle",
+      "docChassisLabel": "Chassis no.",
+      "docChassisValue": "•••• •••• {id}7 (masked)"
+    },
+    "carActions": {
+      "lakhsSuffix": "{lakhs} · all duties paid",
+      "leasingFrom": "Leasing from",
+      "leasingFromValue": "{amount}/month*",
+      "leasingAnchor": "#leasing",
+      "similarLabel": "See similar cars",
+      "bookLabel": "Book a test drive",
+      "bookShort": "Test drive",
+      "bookHref": "/book",
+      "whatsappLabel": "Ask on WhatsApp",
+      "whatsappMessage": "Hi Drivora, I'm interested in the {car} ({price}). {url}",
+      "reserveLabel": "Reserve for {deposit}",
+      "depositAmount": 100000,
+      "reserve": {
+        "dialogLabel": "Reserve this car",
+        "title": "Reserve {car}",
+        "closeLabel": "Close",
+        "successTitle": "Reserved for 5 days",
+        "successText": "We'll hold the car while your finance is approved. The deposit is fully refundable if the lender says no.",
+        "doneLabel": "Done",
+        "depositLabel": "Refundable deposit",
+        "payWith": "Pay with",
+        "gatewayNote": "On the live site this opens a Central Bank–approved payment gateway (e.g. PayHere). This demo does not take any payment.",
+        "submit": "Simulate payment",
+        "leadName": "Website visitor",
+        "methodLabels": {
+          "card": "Card",
+          "lankaqr": "LANKAQR",
+          "bank": "Bank transfer"
+        }
+      }
+    },
+    "calc": {
+      "priceLabel": "Vehicle price",
+      "maxPrice": 500000000,
+      "defaultPrice": 15000000,
+      "typeLabel": "Vehicle type",
+      "typeCar": "Car, SUV or van",
+      "typeCommercial": "Commercial (truck, single cab)",
+      "regLabel": "Registration",
+      "regUnregistered": "Unregistered (recon / brand new)",
+      "regUnder1": "Registered less than 1 year",
+      "regOver1": "Registered over 1 year",
+      "downLabel": "Down payment",
+      "downStep": 50000,
+      "belowMin": "Lenders can't go below {min} for this vehicle. We've used the minimum.",
+      "minNote": "Minimum {min}: lenders can finance up to {ltv} under CBSL rules ({date}).",
+      "termLabel": "Term",
+      "termValue": "{n} months",
+      "termYears": "({n} yrs)",
+      "termMin": 12,
+      "termMax": 60,
+      "termDefault": 60,
+      "rateTypeLabel": "Rate quoted as",
+      "reducing": "Reducing balance",
+      "flat": "Flat rate",
+      "rateLabel": "Annual rate (%)",
+      "monthlyLabel": "Monthly instalment",
+      "forTerm": "for {n} months on {amount} financed",
+      "downRow": "Down payment",
+      "financedRow": "Amount financed",
+      "interestRow": "Total interest",
+      "totalRow": "Total you pay",
+      "flatNote": "A {rate}% flat rate costs the same as about {effective} on a reducing balance. Use this figure to compare lenders fairly.",
+      "disclaimer": "Estimate only. The lender confirms the final rate, fees and approval. Sample rates are for illustration.",
+      "chartLabel": "Outstanding balance falling to zero over the term",
+      "chartOwed": "Owed today {amount}",
+      "chartPaidOff": "Paid off in {n} months"
+    },
+    "finance": {
+      "seo": {
+        "title": "Leasing calculator",
+        "description": "Work out your monthly lease payment with the Central Bank's 2026 loan-to-value limits built in. Compare flat and reducing-balance rates."
+      },
+      "header": {
+        "eyebrow": "Leasing",
+        "title": "Your real monthly payment, before you visit",
+        "text": "Built around the Central Bank of Sri Lanka's loan-to-value limits effective {date}. Switch between flat and reducing-balance rates to compare offers fairly.",
+        "crumbLabel": "Leasing",
+        "crumbHref": "/finance"
+      },
+      "rules": [
+        {
+          "value": "40%",
+          "title": "Max financing",
+          "text": "Cars, SUVs and vans that are unregistered or registered under a year"
+        },
+        {
+          "value": "60%",
+          "title": "Max financing",
+          "text": "Commercial vehicles that are unregistered or registered under a year"
+        },
+        {
+          "value": "60%",
+          "title": "Max financing",
+          "text": "Any vehicle registered and used in Sri Lanka for over a year"
+        }
+      ],
+      "rulesSource": "Source: {source}, effective {date}. Lenders may apply stricter limits.",
+      "budgetEyebrow": "Budget finder",
+      "budgetTitle": "Work backwards from what you can pay",
+      "runningEyebrow": "Running costs",
+      "runningTitle": "Petrol, hybrid or electric: what you'd spend each month",
+      "budget": {
+        "monthlyLabel": "Monthly budget",
+        "monthlyMin": 40000,
+        "monthlyMax": 600000,
+        "monthlyStep": 5000,
+        "monthlyDefault": 150000,
+        "cashLabel": "Cash for down payment",
+        "cashMin": 1000000,
+        "cashMax": 40000000,
+        "cashStep": 250000,
+        "cashDefault": 6000000,
+        "unregisteredLabel": "Recon / brand new",
+        "registeredLabel": "Used (registered)",
+        "resultLabel": "You could look at cars up to",
+        "cashLimit": "Your cash is the limit here: lenders can finance only {percent}% of this type of car.",
+        "monthlyLimit": "Your monthly budget is the limit here, over 60 months at our sample rate.",
+        "cta": "See {count} matching {cars}",
+        "carOne": "car",
+        "carMany": "cars",
+        "resultsHref": "/cars"
+      },
+      "running": {
+        "kmLabel": "Kilometres per month",
+        "kmDefault": 1200,
+        "kmSuffix": "km",
+        "petrolLabel": "Petrol price per litre (sample)",
+        "petrolDefault": 300,
+        "unitLabel": "Electricity per unit at home (sample)",
+        "unitDefault": 55,
+        "note": "Efficiency figures are typical real-world averages for the car types. Change the prices to today's rates.",
+        "perMonth": "/mo",
+        "types": [
+          {
+            "name": "Petrol car",
+            "efficiency": 12,
+            "unit": "km/l",
+            "energy": "petrol"
+          },
+          {
+            "name": "Hybrid",
+            "efficiency": 20,
+            "unit": "km/l",
+            "energy": "petrol"
+          },
+          {
+            "name": "Electric",
+            "efficiency": 6.5,
+            "unit": "km/kWh",
+            "energy": "electric"
+          }
+        ]
+      }
+    },
+    "sell": {
+      "seo": {
+        "title": "Sell or trade in your car",
+        "description": "Get a same-day price range for your car, then sell it to us or trade it in against your next one."
+      },
+      "header": {
+        "eyebrow": "Sell or trade in",
+        "title": "A fair price for your car, the same day",
+        "text": "Tell us about your car and we'll send a price range. Sell it outright, or trade it in and we'll take it off your next car's price.",
+        "crumbLabel": "Sell or trade in",
+        "crumbHref": "/sell"
+      },
+      "points": [
+        {
+          "icon": "clock",
+          "title": "Same-day reply",
+          "text": "Most estimates go out within a few hours during opening hours."
+        },
+        {
+          "icon": "file-check",
+          "title": "We do the paperwork",
+          "text": "Transfer forms, finance settlement and the RMV visit."
+        },
+        {
+          "icon": "banknote",
+          "title": "Paid on the spot",
+          "text": "Bank transfer while you wait, once the papers are signed."
+        }
+      ]
+    },
+    "book": {
+      "seo": {
+        "title": "Book a test drive",
+        "description": "Pick a car, a day and a time. Test drives at our Nugegoda showroom or at your home."
+      },
+      "header": {
+        "eyebrow": "Test drive",
+        "title": "Book a test drive in under a minute",
+        "text": "At our showroom, or we bring the car to you within 30 km of Nugegoda. Bring your licence; we handle the rest.",
+        "crumbLabel": "Book a test drive",
+        "crumbHref": "/book"
+      }
+    },
+    "saved": {
+      "seo": {
+        "title": "Saved cars"
+      },
+      "header": {
+        "eyebrow": "Saved",
+        "title": "Your shortlist",
+        "crumbLabel": "Saved",
+        "crumbHref": "/saved"
+      },
+      "view": {
+        "emptyTitle": "No saved cars yet",
+        "emptyText": "Tap the heart on any car to keep it here. Saved cars stay on this device.",
+        "browseLabel": "Browse cars",
+        "browseHref": "/cars",
+        "recentTitle": "Recently viewed"
+      }
+    },
+    "compare": {
+      "seo": {
+        "title": "Compare cars"
+      },
+      "header": {
+        "eyebrow": "Compare",
+        "title": "Side by side, no spreadsheet needed",
+        "crumbLabel": "Compare",
+        "crumbHref": "/compare"
+      },
+      "view": {
+        "emptyTitle": "Nothing to compare yet",
+        "emptyText": "Tick “Compare” on up to three cars and they'll line up here, side by side.",
+        "browseLabel": "Browse cars",
+        "browseHref": "/cars",
+        "caption": "Car comparison",
+        "removeLabel": "Remove {car}",
+        "addLabel": "Add a car",
+        "addHref": "/cars",
+        "best": "best",
+        "footnote": "*Minimum legal down payment, 60 months, sample reducing-balance rate.",
+        "rowPrice": "Price",
+        "rowMonthly": "Monthly from*",
+        "rowCondition": "Condition",
+        "rowYear": "Year",
+        "rowMileage": "Mileage (km)",
+        "rowFuel": "Fuel",
+        "rowEngine": "Engine / battery",
+        "rowGearbox": "Gearbox",
+        "rowSeats": "Seats",
+        "rowGrade": "Auction grade",
+        "rowOwners": "Owners",
+        "ownersNew": "0 in Sri Lanka",
+        "rowColour": "Colour"
+      }
+    },
+    "about": {
+      "seo": {
+        "title": "About us",
+        "description": "Drivora Motors has sold reconditioned and used cars from Nugegoda since 2011."
+      },
+      "header": {
+        "eyebrow": "Since {year}",
+        "title": "A car yard that shows its paperwork",
+        "text": "We started with a simple rule: if we wouldn't sell a car to our own family, it doesn't go on the forecourt. Fifteen years later the rule hasn't changed.",
+        "crumbLabel": "About",
+        "crumbHref": "/about"
+      },
+      "heroImage": "https://images.unsplash.com/photo-1692406069831-0bb7ea297645",
+      "heroImageAlt": "Our showroom floor",
+      "stats": [
+        {
+          "value": "15",
+          "label": "years in business"
+        },
+        {
+          "value": "2,400",
+          "label": "cars sold"
+        },
+        {
+          "value": "150",
+          "label": "point inspection"
+        },
+        {
+          "value": "98%",
+          "label": "would buy again"
+        }
+      ],
+      "storyEyebrow": "Our story",
+      "storyTitle": "Fifteen years, one rule",
+      "timeline": [
+        {
+          "year": "2011",
+          "text": "Opened with six cars on High Level Road."
+        },
+        {
+          "year": "2015",
+          "text": "Started publishing auction sheets for every import."
+        },
+        {
+          "year": "2019",
+          "text": "Built our own inspection bay and 150-point checklist."
+        },
+        {
+          "year": "2025",
+          "text": "Imports reopened; added EV and hybrid battery testing."
+        },
+        {
+          "year": "2026",
+          "text": "Leasing calculator updated for the new CBSL limits."
+        }
+      ],
+      "storyImage": "https://images.unsplash.com/photo-1625047509248-ec889cbff17f",
+      "storyImageAlt": "A technician inspecting an engine bay",
+      "teamEyebrow": "The team",
+      "teamTitle": "People you'll actually talk to",
+      "team": [
+        {
+          "name": "Ruwan Fernando",
+          "role": "Founder",
+          "text": "Has bought cars at Japanese auctions since 2009."
+        },
+        {
+          "name": "Kasun Silva",
+          "role": "Sales",
+          "text": "The one who answers WhatsApp at 9 pm."
+        },
+        {
+          "name": "Nilmini Perera",
+          "role": "Leasing",
+          "text": "Knows every lender's paperwork by heart."
+        },
+        {
+          "name": "Suresh Kumar",
+          "role": "Workshop",
+          "text": "Runs the 150-point inspection."
+        }
+      ],
+      "teamNote": "Team names are placeholders for the demo.",
+      "ctaLabel": "Visit the showroom",
+      "ctaHref": "/contact"
+    },
+    "contact": {
+      "seo": {
+        "title": "Contact",
+        "description": "Visit Drivora Motors at 214 High Level Road, Nugegoda, or message us on WhatsApp."
+      },
+      "header": {
+        "eyebrow": "Contact",
+        "title": "Come and see the cars, or ask from your sofa",
+        "text": "The quickest way to reach us is WhatsApp. If you're visiting, there's parking behind the showroom.",
+        "crumbLabel": "Contact",
+        "crumbHref": "/contact"
+      },
+      "callLabel": "Call",
+      "whatsappLabel": "WhatsApp",
+      "whatsappText": "Usually replies in 10 minutes",
+      "emailLabel": "Email",
+      "showroomLabel": "Showroom",
+      "showroomMapUrl": "https://maps.google.com/?q=High+Level+Road+Nugegoda",
+      "hoursLabel": "Hours",
+      "formTitle": "Send us a message",
+      "formText": "Looking for a specific car? Tell us and we'll source it.",
+      "formVehicle": "a car not listed yet",
+      "map": {
+        "image": "https://images.unsplash.com/photo-1623595289196-007a22dd8560",
+        "imageAlt": "Colombo skyline with the Lotus Tower",
+        "directions": "Five minutes from Nugegoda junction, opposite the bus depot.",
+        "button": "Show map",
+        "iframeTitle": "Map to {name}"
+      }
+    },
+    "faq": {
+      "seo": {
+        "title": "FAQ",
+        "description": "Reconditioned vs used, leasing down payments under the 2026 CBSL rules, trade-ins, delivery and privacy."
+      },
+      "header": {
+        "eyebrow": "FAQ",
+        "title": "Questions buyers ask us every week",
+        "crumbLabel": "FAQ",
+        "crumbHref": "/faq"
+      },
+      "privacyQuestion": "How do you handle my personal data?",
+      "privacyAnswer": "We only use your details to answer your enquiry, arrange viewings and prepare leasing applications you ask for, in line with the Personal Data Protection Act No. 9 of 2022. You can ask us to see or delete your data at any time. On this demo site, nothing you type leaves your browser.",
+      "asideTitle": "Still unsure?",
+      "asideText": "Ask our assistant. It knows our stock and the leasing rules.",
+      "asideButton": "Ask a question"
+    },
+    "blog": {
+      "seo": {
+        "title": "Guides & news",
+        "description": "Buying guides, leasing rules and EV advice for Sri Lankan car buyers."
+      },
+      "header": {
+        "eyebrow": "Guides & news",
+        "title": "Read before you buy",
+        "crumbLabel": "Guides",
+        "crumbHref": "/blog"
+      },
+      "readShort": "{n} min",
+      "readLong": "{n} min read",
+      "post": {
+        "notFound": "Article not found",
+        "backLabel": "All guides",
+        "backHref": "/blog",
+        "ctaTitle": "Want to see what this looks like on a real car?",
+        "ctaText": "Every listing shows its documents and a leasing estimate.",
+        "ctaLabel": "Browse cars",
+        "ctaHref": "/cars"
+      }
+    },
+    "credits": {
+      "seo": {
+        "title": "Credits"
+      },
+      "header": {
+        "eyebrow": "Credits",
+        "title": "Photos, 3D model and libraries",
+        "crumbLabel": "Credits",
+        "crumbHref": "/credits"
+      },
+      "sections": [
+        {
+          "title": "Photography",
+          "text": "All photos are from",
+          "linkLabel": "Unsplash",
+          "linkHref": "https://unsplash.com",
+          "textAfter": "and used under the Unsplash License. Thank you to the photographers. Photos illustrate the type of car listed and are not the actual vehicles."
+        },
+        {
+          "title": "3D model",
+          "text": "Demonstration model “Ferrari 458 Italia” by vicent091036, distributed with the three.js examples. Used only to show the 3D viewer; it is not stock for sale.",
+          "linkLabel": "",
+          "linkHref": "",
+          "textAfter": ""
+        },
+        {
+          "title": "Software",
+          "text": "Next.js, React, Tailwind CSS, FlyonUI, Lucide icons, Motion, three.js, lottie-web and Zustand, all under open-source licences.",
+          "linkLabel": "",
+          "linkHref": "",
+          "textAfter": ""
+        },
+        {
+          "title": "About this demo",
+          "text": "Drivora Motors is a fictional dealer. Cars, prices, reviews and people are illustrative. Leasing limits follow the Central Bank of Sri Lanka directions effective 25 May 2026; rates are samples.",
+          "linkLabel": "",
+          "linkHref": "",
+          "textAfter": ""
+        }
+      ]
+    },
+    "notFound": {
+      "title": "This road doesn't go anywhere.",
+      "text": "The page may have moved, or the car has already found a new home.",
+      "carsLabel": "Browse cars",
+      "carsHref": "/cars",
+      "homeLabel": "Home",
+      "homeHref": "/"
+    },
+    "admin": {
+      "seo": {
+        "title": "Dealer view (demo)"
+      },
+      "brand": "DEALER VIEW",
+      "nav": [
+        {
+          "icon": "dashboard",
+          "label": "Overview",
+          "tab": "overview"
+        },
+        {
+          "icon": "car",
+          "label": "Stock",
+          "tab": "stock"
+        },
+        {
+          "icon": "message",
+          "label": "Leads inbox",
+          "tab": ""
+        },
+        {
+          "icon": "chart",
+          "label": "Reports",
+          "tab": ""
+        },
+        {
+          "icon": "settings",
+          "label": "Settings",
+          "tab": ""
+        }
+      ],
+      "sidebarNote": "Read-only preview with demo data.",
+      "eyebrow": "Dealer view · demo",
+      "greeting": "Good afternoon, Ruwan",
+      "tabOverview": "overview",
+      "tabStock": "stock",
+      "kpiLeads": "Leads this week",
+      "kpiLeadsDelta": "+18% vs last week",
+      "kpiReply": "Median first reply",
+      "kpiReplyValue": "4 min",
+      "kpiReplyDelta": "Target ≤ 5 min",
+      "kpiDrives": "Test drives booked",
+      "kpiDrivesDelta": "this week",
+      "kpiDrivesBase": 6,
+      "kpiStock": "Cars in stock",
+      "kpiStockDelta": "avg {days} days listed",
+      "pipelineTitle": "Lead pipeline",
+      "justNow": "just now",
+      "hoursAgo": "{n}h ago",
+      "daysAgo": "{n}d ago",
+      "today": "today {time}",
+      "sourcesTitle": "Leads by source",
+      "sourcesNote": "Website leads are the ones this site captures. Try a form, then refresh this page.",
+      "colCar": "Car",
+      "colPrice": "Price",
+      "colStatus": "Status",
+      "colDays": "Days listed",
+      "colDocs": "Docs",
+      "viewLabel": "View",
+      "stageLabels": {
+        "new": "New",
+        "contacted": "Contacted",
+        "testDrive": "Test drive",
+        "negotiation": "Negotiation",
+        "won": "Won"
+      }
+    },
+    "chat": {
+      "title": "Drivora assistant",
+      "status": "Answers from our live stock · demo",
+      "closeLabel": "Close chat",
+      "placeholder": "e.g. hybrid SUV under 20m",
+      "inputLabel": "Message",
+      "sendLabel": "Send",
+      "welcome": "Hi, I'm the Drivora assistant. Tell me your budget and the kind of car you need and I'll check our stock.",
+      "quickReplies": "Hybrid SUV under 20m | Cars under 10m | Electric cars | Leasing help | Talk to a person",
+      "greeting": "Hello! Tell me your budget and what kind of car you want, for example \"hybrid SUV under 20m\".",
+      "handover": "Of course. Tap below to continue on WhatsApp with our sales team. They usually reply within 10 minutes during opening hours.",
+      "handoverLabel": "Continue on WhatsApp",
+      "handoverMessage": "Hi Drivora, I was chatting on your website:",
+      "found": "I found {count} {what}{under}. Here are the best matches:",
+      "under": "under {amount}",
+      "carWord": "car",
+      "pluralSuffix": "s",
+      "seeAll": "See all {count}",
+      "none": "Nothing {filters}in stock right now. Want our team to source one for you?",
+      "noneQuickReplies": "Talk to a person | Show all cars",
+      "stock": "Here's everything we have in stock.",
+      "stockLinkLabel": "Browse all cars",
+      "stockLinkHref": "/cars",
+      "fallback": "I'm a simple demo assistant, so I might have missed that. Try a budget or car type, or ask about leasing, trade-ins or delivery.",
+      "kmShort": "{n}k km",
+      "answers": {
+        "leasing": {
+          "keywords": "lease|leasing|loan|finance|down payment|downpayment|ltv|instal",
+          "text": "Since 25 May 2026, lenders can finance up to 40% of an unregistered or newly registered car, so you need at least 60% down. Cars registered over a year and commercial vehicles can be financed up to 60%. The leasing calculator works it out for you.",
+          "linkHref": "/finance",
+          "linkLabel": "Open the leasing calculator"
+        },
+        "tradeIn": {
+          "keywords": "trade|sell my|exchange|swap",
+          "text": "Yes, we take trade-ins. Send a few photos and details and we usually reply with a price range the same day.",
+          "linkHref": "/sell",
+          "linkLabel": "Get a trade-in price"
+        },
+        "history": {
+          "keywords": "auction sheet|grade|mileage|odometer|rollback|history",
+          "text": "Every reconditioned car has its auction sheet and English translation on the listing, and we print the verified mileage. For used cars we show the service history.",
+          "linkHref": "",
+          "linkLabel": ""
+        },
+        "delivery": {
+          "keywords": "deliver|delivery|outside colombo|kandy|galle|jaffna|kurunegala",
+          "text": "We deliver island-wide. Within 30 km of Nugegoda it's free; further away we only charge the driver's cost.",
+          "linkHref": "",
+          "linkLabel": ""
+        },
+        "warranty": {
+          "keywords": "warranty|guarantee",
+          "text": "Brand-new cars carry the agent warranty. Reconditioned and used cars come with our 6-month engine and gearbox cover.",
+          "linkHref": "",
+          "linkLabel": ""
+        },
+        "location": {
+          "keywords": "where|location|address|open|hours|time",
+          "text": "We're at 214 High Level Road, Nugegoda. Open Mon–Sat 9.00–18.00 and Sun 10.00–14.00.",
+          "linkHref": "/contact",
+          "linkLabel": "Directions"
+        },
+        "reserve": {
+          "keywords": "reserve|deposit|hold",
+          "text": "A refundable Rs 100,000 deposit holds a car for 5 days while your finance is approved.",
+          "linkHref": "",
+          "linkLabel": ""
+        },
+        "testDrive": {
+          "keywords": "test drive|testdrive|visit|view|see the car",
+          "text": "Happy to arrange that. Pick a car and a time slot and we'll confirm on WhatsApp.",
+          "linkHref": "/book",
+          "linkLabel": "Book a test drive"
+        }
+      }
+    }
+  }
+}

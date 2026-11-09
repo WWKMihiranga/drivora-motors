@@ -4,33 +4,45 @@ import Link from "next/link";
 import { Plus, X } from "lucide-react";
 import { vehicles } from "@/data/vehicles";
 import { Photo } from "@/components/ui/Photo";
-import { conditionLabel, fuelLabel, num, rs, vehicleTitle } from "@/lib/format";
+import { num, rs, vehicleTitle } from "@/lib/format";
 import { monthlyFrom } from "@/lib/estimate";
 import { useApp, useHydrated } from "@/store";
 import type { Vehicle } from "@/types";
 import { cn } from "@/lib/cn";
+import { LinkField } from "@/components/ui/LinkField";
+import { Field, fill, useText } from "@/lib/site-data";
 
-type Row = { label: string; get: (v: Vehicle) => string | number; best?: "min" | "max" };
+type Row = { label: React.ReactNode; key: string; get: (v: Vehicle) => string | number; best?: "min" | "max"; money?: boolean };
 
-const rows: Row[] = [
-  { label: "Price", get: (v) => v.priceLkr, best: "min" },
-  { label: "Monthly from*", get: (v) => Math.round(monthlyFrom(v)), best: "min" },
-  { label: "Condition", get: (v) => conditionLabel[v.condition] },
-  { label: "Year", get: (v) => v.yom, best: "max" },
-  { label: "Mileage (km)", get: (v) => v.mileageKm, best: "min" },
-  { label: "Fuel", get: (v) => fuelLabel[v.fuel] },
-  { label: "Engine / battery", get: (v) => (v.batteryKwh ? `${v.batteryKwh} kWh` : `${num(v.engineCc ?? 0)} cc`) },
-  { label: "Gearbox", get: (v) => (v.transmission === "auto" ? "Automatic" : "Manual") },
-  { label: "Seats", get: (v) => v.seats, best: "max" },
-  { label: "Auction grade", get: (v) => v.auctionGrade ?? "—" },
-  { label: "Owners", get: (v) => v.owners ?? (v.condition === "used" ? "—" : "0 in Sri Lanka") },
-  { label: "Colour", get: (v) => v.colour },
-];
+const CMP = "Comparison value taken from each car's listing";
 
-const fmt = (label: string, val: string | number) =>
-  typeof val === "number" ? (label.startsWith("Price") || label.startsWith("Monthly") ? rs(val) : num(val)) : val;
-
+/* Wording is editable in Fivora (site-data.json `compare.view`); values come from each car. */
 export function CompareView() {
+  const text = useText();
+  const rows: Row[] = [
+    { key: "price", label: <Field data-preview-field-path="compare.view.rowPrice" />, get: (v) => v.priceLkr, best: "min", money: true },
+    { key: "monthly", label: <Field data-preview-field-path="compare.view.rowMonthly" />, get: (v) => Math.round(monthlyFrom(v)), best: "min", money: true },
+    { key: "condition", label: <Field data-preview-field-path="compare.view.rowCondition" />, get: (v) => text(`labels.condition.${v.condition}`) || v.condition },
+    { key: "year", label: <Field data-preview-field-path="compare.view.rowYear" />, get: (v) => v.yom, best: "max" },
+    { key: "mileage", label: <Field data-preview-field-path="compare.view.rowMileage" />, get: (v) => v.mileageKm, best: "min" },
+    { key: "fuel", label: <Field data-preview-field-path="compare.view.rowFuel" />, get: (v) => text(`labels.fuel.${v.fuel}`) || v.fuel },
+    {
+      key: "engine",
+      label: <Field data-preview-field-path="compare.view.rowEngine" />,
+      get: (v) => (v.batteryKwh ? `${v.batteryKwh} ${text("common.units.kwh")}` : `${num(v.engineCc ?? 0)} ${text("common.units.cc")}`),
+    },
+    { key: "gearbox", label: <Field data-preview-field-path="compare.view.rowGearbox" />, get: (v) => text(`labels.transmissionLong.${v.transmission}`) || v.transmission },
+    { key: "seats", label: <Field data-preview-field-path="compare.view.rowSeats" />, get: (v) => v.seats, best: "max" },
+    { key: "grade", label: <Field data-preview-field-path="compare.view.rowGrade" />, get: (v) => v.auctionGrade ?? "—" },
+    {
+      key: "owners",
+      label: <Field data-preview-field-path="compare.view.rowOwners" />,
+      get: (v) => v.owners ?? (v.condition === "used" ? "—" : text("compare.view.ownersNew")),
+    },
+    { key: "colour", label: <Field data-preview-field-path="compare.view.rowColour" />, get: (v) => v.colour },
+  ];
+  const fmt = (r: Row, val: string | number) => (typeof val === "number" ? (r.money ? rs(val) : num(val)) : val);
+
   const mounted = useHydrated();
   const ids = useApp((s) => s.compare);
   const toggle = useApp((s) => s.toggleCompare);
@@ -41,11 +53,11 @@ export function CompareView() {
   if (cars.length === 0)
     return (
       <div className="rounded-3xl bg-surface px-6 py-16 text-center">
-        <h2 className="font-display text-xl font-semibold">Nothing to compare yet</h2>
-        <p className="mx-auto mt-2 max-w-sm text-sm text-muted">Tick &ldquo;Compare&rdquo; on up to three cars and they&apos;ll line up here, side by side.</p>
-        <Link href="/cars" className="btn-ink mt-6">
-          Browse cars
-        </Link>
+        <Field as="h2" className="font-display text-xl font-semibold" data-preview-field-path="compare.view.emptyTitle" />
+        <Field as="p" className="mx-auto mt-2 max-w-sm text-sm text-muted" data-preview-field-path="compare.view.emptyText" />
+        <LinkField data-preview-field-path="compare.view.browseHref" className="btn-ink mt-6">
+          <Field data-preview-field-path="compare.view.browseLabel" />
+        </LinkField>
       </div>
     );
 
@@ -59,7 +71,7 @@ export function CompareView() {
   return (
     <div className="no-scrollbar -mx-6 overflow-x-auto px-6 md:mx-0 md:px-0">
       <table className="w-full min-w-160 table-fixed border-separate border-spacing-0 text-sm">
-        <caption className="sr-only">Car comparison</caption>
+        <Field as="caption" className="sr-only" data-preview-field-path="compare.view.caption" />
         <thead>
           <tr>
             <th className="w-36 md:w-48" />
@@ -70,26 +82,33 @@ export function CompareView() {
                   <button
                     type="button"
                     onClick={() => toggle(v.id)}
-                    aria-label={`Remove ${vehicleTitle(v)}`}
+                    aria-label={fill(text("compare.view.removeLabel"), { car: vehicleTitle(v) })}
+                    data-preview-field-path="compare.view.removeLabel"
                     className="absolute top-2 right-2 flex size-8 items-center justify-center rounded-full bg-paper/95"
                   >
                     <X className="size-4" />
                   </button>
                 </div>
-                <Link href={`/cars/${v.slug}`} className="mt-3 block font-display text-base font-semibold hover:underline">
+                <Link
+                  href={`/cars/${v.slug}`}
+                  className="mt-3 block font-display text-base font-semibold hover:underline"
+                  data-preview-static="The car's own title, editable on its listing"
+                >
                   {vehicleTitle(v)}
                 </Link>
-                <p className="text-xs text-muted">{v.grade}</p>
+                <p className="text-xs text-muted" data-preview-static="The car's own grade, editable on its listing">
+                  {v.grade}
+                </p>
               </th>
             ))}
             {cars.length < 3 && (
               <th className="px-2 pb-5 align-top">
-                <Link
-                  href="/cars"
+                <LinkField
+                  data-preview-field-path="compare.view.addHref"
                   className="flex aspect-4/3 flex-col items-center justify-center gap-2 rounded-2xl border border-dashed border-ink/20 text-sm font-medium text-muted hover:border-ink hover:text-ink"
                 >
-                  <Plus className="size-5" /> Add a car
-                </Link>
+                  <Plus className="size-5" /> <Field data-preview-field-path="compare.view.addLabel" />
+                </LinkField>
               </th>
             )}
           </tr>
@@ -98,14 +117,19 @@ export function CompareView() {
           {rows.map((r) => {
             const b = bestIdx(r);
             return (
-              <tr key={r.label}>
+              <tr key={r.key}>
                 <th scope="row" className="border-t border-line py-3 pr-3 text-left text-xs font-medium tracking-wide text-muted uppercase">
                   {r.label}
                 </th>
                 {cars.map((v, k) => (
                   <td key={v.id} className={cn("border-t border-line px-2 py-3 font-medium", k === b && "text-ok")} data-num>
-                    {fmt(r.label, r.get(v))}
-                    {k === b && <span className="ml-1.5 rounded-full bg-ok/10 px-1.5 py-0.5 text-[0.65rem] font-semibold">best</span>}
+                    <span data-preview-static={CMP}>{fmt(r, r.get(v))}</span>
+                    {k === b && (
+                      <Field
+                        className="ml-1.5 rounded-full bg-ok/10 px-1.5 py-0.5 text-[0.65rem] font-semibold"
+                        data-preview-field-path="compare.view.best"
+                      />
+                    )}
                   </td>
                 ))}
                 {cars.length < 3 && <td className="border-t border-line" />}
@@ -114,7 +138,7 @@ export function CompareView() {
           })}
         </tbody>
       </table>
-      <p className="mt-4 text-xs text-muted">*Minimum legal down payment, 60 months, sample reducing-balance rate.</p>
+      <Field as="p" className="mt-4 text-xs text-muted" data-preview-field-path="compare.view.footnote" />
     </div>
   );
 }

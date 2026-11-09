@@ -5,14 +5,14 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { MessageCircle, Phone } from "lucide-react";
 import { site, whatsappLink } from "@/config/site";
-import { useT } from "@/lib/i18n";
+import { Field, useText } from "@/lib/site-data";
 import { WhatsAppIcon } from "@/components/ui/icons";
 import { openChat } from "@/components/chat/chat-bus";
 import { cn } from "@/lib/cn";
 
 /** Sticky bottom actions on phones and tablets. Hides while scrolling down. */
 export function ActionBar() {
-  const t = useT();
+  const text = useText();
   const pathname = usePathname();
   const [hidden, setHidden] = useState(false);
   const last = useRef(0);
@@ -43,9 +43,13 @@ export function ActionBar() {
       )}
     >
       <div className="mx-auto flex max-w-md items-center gap-1 rounded-full border border-line bg-paper/95 p-1.5 shadow-[0_10px_30px_-12px_rgba(14,17,22,0.35)] backdrop-blur">
-        <a href={site.phoneHref} className="flex h-12 flex-1 flex-col items-center justify-center rounded-full text-[0.68rem] font-medium text-ink active:bg-surface">
+        <a
+          href={site.phoneHref}
+          className="flex h-12 flex-1 flex-col items-center justify-center rounded-full text-[0.68rem] font-medium text-ink active:bg-surface"
+          data-preview-field-path="common.business.phone"
+        >
           <Phone className="size-[1.1rem]" strokeWidth={1.75} />
-          {t("call")}
+          <Field data-preview-field-path="common.ui.call" />
         </a>
         <button
           type="button"
@@ -53,19 +57,24 @@ export function ActionBar() {
           className="flex h-12 flex-1 flex-col items-center justify-center rounded-full text-[0.68rem] font-medium text-ink active:bg-surface"
         >
           <MessageCircle className="size-[1.1rem]" strokeWidth={1.75} />
-          Ask
+          <Field data-preview-field-path="common.ui.ask" />
         </button>
         <a
-          href={whatsappLink("Hi Drivora, I'd like to ask about a car.")}
+          href={whatsappLink(text("common.messages.whatsappGeneral"))}
           target="_blank"
           rel="noopener"
           className="flex h-12 flex-1 flex-col items-center justify-center rounded-full text-[0.68rem] font-medium text-ink active:bg-surface"
+          data-preview-field-path="common.business.whatsapp"
         >
           <WhatsAppIcon className="size-[1.1rem]" />
-          {t("whatsapp")}
+          <Field data-preview-field-path="common.ui.whatsapp" />
         </a>
-        <Link href="/book" className="flex h-12 flex-[1.4] items-center justify-center rounded-full bg-ink px-4 text-sm font-medium text-on-ink">
-          {t("bookShort")}
+        <Link
+          href={text("common.links.book") || "/book"}
+          className="flex h-12 flex-[1.4] items-center justify-center rounded-full bg-ink px-4 text-sm font-medium text-on-ink"
+          data-preview-field-path="common.links.book"
+        >
+          <Field data-preview-field-path="common.ui.bookShort" />
         </Link>
       </div>
     </div>

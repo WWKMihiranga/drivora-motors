@@ -1,7 +1,11 @@
+"use client";
+
 import { rsM } from "@/lib/format";
+import { Field, fill, useText } from "@/lib/site-data";
 
 /** Hand-drawn SVG area chart (no chart library) of the outstanding balance. */
 export function BalanceChart({ principal, balances }: { principal: number; balances: number[] }) {
+  const text = useText();
   const W = 320;
   const H = 120;
   const pad = 4;
@@ -13,7 +17,7 @@ export function BalanceChart({ principal, balances }: { principal: number; balan
   const years = Math.floor(n / 12);
   return (
     <figure>
-      <svg viewBox={`0 0 ${W} ${H}`} className="h-28 w-full" role="img" aria-label="Outstanding balance falling to zero over the term">
+      <svg viewBox={`0 0 ${W} ${H}`} className="h-28 w-full" role="img" aria-label={text("calc.chartLabel")}>
         <defs>
           <linearGradient id="bal" x1="0" x2="0" y1="0" y2="1">
             <stop offset="0" stopColor="#f97316" stopOpacity="0.35" />
@@ -28,8 +32,8 @@ export function BalanceChart({ principal, balances }: { principal: number; balan
         <path d={line} fill="none" stroke="#f97316" strokeWidth="2" strokeLinejoin="round" />
       </svg>
       <figcaption className="mt-1 flex justify-between text-[0.7rem] text-white/45" data-num>
-        <span>Owed today {rsM(principal)}</span>
-        <span>Paid off in {n} months</span>
+        <Field data-preview-field-path="calc.chartOwed" format={(t) => fill(t, { amount: rsM(principal) })} />
+        <Field data-preview-field-path="calc.chartPaidOff" format={(t) => fill(t, { n })} />
       </figcaption>
     </figure>
   );

@@ -8,12 +8,12 @@ import { HowItWorks } from "@/components/home/HowItWorks";
 import { LeasingTeaser } from "@/components/home/LeasingTeaser";
 import { SectionHeader } from "@/components/home/SectionHeader";
 import { ClosingCta, Guides, OfferBanner, Reviews, WhyUs } from "@/components/home/Sections";
-import { getFeatured, getPosts, getReviews, getVehicles } from "@/lib/api";
+import { Field } from "@/lib/site-data";
+import { getFeatured, getVehicles } from "@/lib/api";
 
 export default async function HomePage() {
-  const [all, featured, reviews, posts] = await Promise.all([getVehicles(), getFeatured(), getReviews(), getPosts()]);
+  const [all, featured] = await Promise.all([getVehicles(), getFeatured()]);
   const makes = [...new Set(all.map((v) => v.make))].sort();
-  const spotlight = all.find((v) => v.id === "v01")!;
   const available = all.filter((v) => v.status !== "sold").length;
 
   return (
@@ -24,19 +24,29 @@ export default async function HomePage() {
         <QuickSearch makes={makes} total={available} />
       </div>
 
-      <section className="container-x py-14 md:py-20" aria-label="Why buy here">
+      <section className="container-x py-14 md:py-20" aria-labelledby="benefits-label">
+        <Field id="benefits-label" className="sr-only" data-preview-field-path="home.benefits.sectionLabel" />
         <Benefits />
       </section>
 
       <section className="container-x pb-20 md:pb-28" aria-labelledby="stock-title">
-        <SectionHeader eyebrow="In stock now" title="Fresh on the forecourt" link={{ href: "/cars", label: "All cars" }} className="mb-8" />
+        <SectionHeader
+          eyebrow={<Field data-preview-field-path="home.stock.eyebrow" />}
+          title={<Field id="stock-title" data-preview-field-path="home.stock.title" />}
+          link={{ "data-preview-field-path": "home.stock.linkHref", label: <Field data-preview-field-path="home.stock.linkLabel" /> }}
+          className="mb-8"
+        />
         <StockTabs vehicles={featured} />
       </section>
 
-      <Spotlight v={spotlight} />
+      <Spotlight />
 
       <section className="container-x py-20 md:py-28" aria-labelledby="how-title">
-        <SectionHeader eyebrow="How buying works" title="Five steps, no surprises" className="mb-12" />
+        <SectionHeader
+          eyebrow={<Field data-preview-field-path="home.how.eyebrow" />}
+          title={<Field id="how-title" data-preview-field-path="home.how.title" />}
+          className="mb-12"
+        />
         <HowItWorks />
       </section>
 
@@ -44,9 +54,9 @@ export default async function HomePage() {
 
       <section className="container-x py-20 md:py-28">
         <SectionHeader
-          eyebrow="Leasing"
-          title="See your monthly payment before you fall for the car"
-          link={{ href: "/finance", label: "Full calculator" }}
+          eyebrow={<Field data-preview-field-path="home.leasing.eyebrow" />}
+          title={<Field data-preview-field-path="home.leasing.title" />}
+          link={{ "data-preview-field-path": "home.leasing.linkHref", label: <Field data-preview-field-path="home.leasing.linkLabel" /> }}
           className="mb-8"
         />
         <LeasingTeaser />
@@ -61,15 +71,24 @@ export default async function HomePage() {
       </section>
 
       <section className="container-x pb-20 md:pb-28" aria-labelledby="reviews-title">
-        <SectionHeader eyebrow="Buyers, in their words" title="What people say after the handover" className="mb-8">
-          <p className="mt-3 text-sm text-muted">Demo reviews, shown with the car each buyer chose.</p>
+        <SectionHeader
+          eyebrow={<Field data-preview-field-path="home.reviews.eyebrow" />}
+          title={<Field id="reviews-title" data-preview-field-path="home.reviews.title" />}
+          className="mb-8"
+        >
+          <Field as="p" className="mt-3 text-sm text-muted" data-preview-field-path="home.reviews.note" />
         </SectionHeader>
-        <Reviews reviews={reviews} />
+        <Reviews />
       </section>
 
       <section className="container-x pb-20 md:pb-28">
-        <SectionHeader eyebrow="Guides & news" title="Read before you buy" link={{ href: "/blog", label: "All articles" }} className="mb-8" />
-        <Guides posts={posts} />
+        <SectionHeader
+          eyebrow={<Field data-preview-field-path="home.guides.eyebrow" />}
+          title={<Field data-preview-field-path="home.guides.title" />}
+          link={{ "data-preview-field-path": "home.guides.linkHref", label: <Field data-preview-field-path="home.guides.linkLabel" /> }}
+          className="mb-8"
+        />
+        <Guides />
       </section>
 
       <ClosingCta />

@@ -1,17 +1,20 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { withBasePath } from "@/lib/base-path";
 
 type Props = {
   src: "/lottie/success.json" | "/lottie/searching.json";
   loop?: boolean;
   className?: string;
-  label: string;
+  /** An sr-only <Field id={labelId} ...> naming the animation for screen readers. */
+  label: React.ReactNode;
+  labelId: string;
 };
 
 const cache = new Map<string, Promise<unknown>>();
 function loadJson(src: string) {
-  if (!cache.has(src)) cache.set(src, fetch(src).then((r) => r.json()));
+  if (!cache.has(src)) cache.set(src, fetch(withBasePath(src)).then((r) => r.json()));
   return cache.get(src)!;
 }
 
@@ -19,7 +22,7 @@ function loadJson(src: string) {
  * Lottie player loaded on demand (lottie-web "light" SVG build, ~60 KB gzip),
  * so pages that never show an animation never download it.
  */
-export function Lottie({ src, loop = false, className, label }: Props) {
+export function Lottie({ src, loop = false, className, label, labelId }: Props) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -47,5 +50,11 @@ export function Lottie({ src, loop = false, className, label }: Props) {
     };
   }, [src, loop]);
 
-  return <div ref={ref} role="img" aria-label={label} className={className} />;
+  // The label is a node (an sr-only <Field> with id={labelId}) so its text stays editable in Fivora.
+  return (
+    <>
+      <div ref={ref} role="img" aria-labelledby={labelId} className={className} />
+      {label}
+    </>
+  );
 }

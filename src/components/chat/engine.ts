@@ -1,6 +1,13 @@
+import siteData from "@/data/site-data.json";
 import { vehicles } from "@/data/vehicles";
 import type { Vehicle } from "@/types";
 import { rsM } from "@/lib/format";
+import { fill } from "@/lib/fill";
+
+/* Every reply below is editable in Fivora (site-data.json `chat`); the matching logic stays in code. */
+const C = siteData.content.chat;
+const list = (s: string) => s.split("|").map((x) => x.trim()).filter(Boolean);
+const esc = (s: string) => s.replace(/[.*+?^${}()[\]\\]/g, "\\$&");
 
 export interface BotReply {
   text: string;
@@ -37,25 +44,20 @@ export function parseBudget(t: string): number | undefined {
   return n;
 }
 
-const FAQ: [RegExp, string, { href: string; label: string }?][] = [
-  [/(lease|leasing|loan|finance|down ?payment|ltv|instal)/, "Since 25 May 2026, lenders can finance up to 40% of an unregistered or newly registered car, so you need at least 60% down. Cars registered over a year and commercial vehicles can be financed up to 60%. The leasing calculator works it out for you.", { href: "/finance", label: "Open the leasing calculator" }],
-  [/(trade|sell my|exchange|swap)/, "Yes, we take trade-ins. Send a few photos and details and we usually reply with a price range the same day.", { href: "/sell", label: "Get a trade-in price" }],
-  [/(auction sheet|grade|mileage|odometer|rollback|history)/, "Every reconditioned car has its auction sheet and English translation on the listing, and we print the verified mileage. For used cars we show the service history."],
-  [/(deliver|delivery|outside colombo|kandy|galle|jaffna|kurunegala)/, "We deliver island-wide. Within 30 km of Nugegoda it's free; further away we only charge the driver's cost."],
-  [/(warranty|guarantee)/, "Brand-new cars carry the agent warranty. Reconditioned and used cars come with our 6-month engine and gearbox cover."],
-  [/(where|location|address|open|hours|time)/, "We're at 214 High Level Road, Nugegoda. Open Mon–Sat 9.00–18.00 and Sun 10.00–14.00.", { href: "/contact", label: "Directions" }],
-  [/(reserve|deposit|hold)/, "A refundable Rs 100,000 deposit holds a car for 5 days while your finance is approved."],
-  [/(test ?drive|visit|view|see the car)/, "Happy to arrange that. Pick a car and a time slot and we'll confirm on WhatsApp.", { href: "/book", label: "Book a test drive" }],
-];
+const FAQ = Object.values(C.answers).map((a) => ({
+  re: new RegExp(`(${list(a.keywords).map(esc).join("|")})`),
+  text: a.text,
+  link: a.linkHref && a.linkLabel ? { href: a.linkHref, label: a.linkLabel } : undefined,
+}));
 
 export function reply(input: string): BotReply {
   const t = input.toLowerCase();
 
   if (/(human|person|agent|someone|call me|talk)/.test(t)) {
-    return { text: "Of course. Tap below to continue on WhatsApp with our sales team. They usually reply within 10 minutes during opening hours.", handover: true };
+    return { text: C.handover, handover: true };
   }
   if (/^(hi|hello|hey|ayubowan|vanakkam)\b/.test(t)) {
-    return { text: "Hello! Tell me your budget and what kind of car you want, for example \"hybrid SUV under 20m\".", quick: QUICK };
+    return { text: C.greeting, quick: QUICK };
   }
 
   const budget = parseBudget(t);
@@ -81,28 +83,25 @@ export function reply(input: string): BotReply {
     if (condition) q.set("condition", condition);
     if (make) q.set("make", make);
     if (hits.length === 0) {
-      return {
-        text: `Nothing ${parts ? `(${parts}) ` : ""}${budget ? `under ${rsM(budget)} ` : ""}in stock right now. Want our team to source one for you?`,
-        quick: ["Talk to a person", "Show all cars"],
-      };
+      const filters = `${parts ? `(${parts}) ` : ""}${budget ? `${fill(C.under, { amount: rsM(budget) })} ` : ""}`;
+      return { text: fill(C.none, { filters }), quick: list(C.noneQuickReplies) };
     }
+    const what = `${parts || C.carWord}${hits.length === 1 ? "" : C.pluralSuffix}`;
+    const under = budget ? ` ${fill(C.under, { amount: rsM(budget) })}` : "";
     return {
-      text: `I found ${hits.length} ${parts || "car"}${hits.length === 1 ? "" : "s"}${budget ? ` under ${rsM(budget)}` : ""}. Here are the best matches:`,
+      text: fill(C.found, { count: hits.length, what, under }),
       cars: hits.slice(0, 3),
-      link: { href: `/cars?${q.toString()}`, label: `See all ${hits.length}` },
+      link: { href: `/cars?${q.toString()}`, label: fill(C.seeAll, { count: hits.length }) },
     };
   }
 
-  for (const [re, text, link] of FAQ) if (re.test(t)) return { text, link };
+  for (const { re, text, link } of FAQ) if (re.test(t)) return { text, link };
 
   if (/show all|all cars|stock|inventory/.test(t)) {
-    return { text: "Here's everything we have in stock.", link: { href: "/cars", label: "Browse all cars" } };
+    return { text: C.stock, link: { href: C.stockLinkHref || "/cars", label: C.stockLinkLabel } };
   }
 
-  return {
-    text: "I'm a simple demo assistant, so I might have missed that. Try a budget or car type, or ask about leasing, trade-ins or delivery.",
-    quick: QUICK,
-  };
+  return { text: C.fallback, quick: QUICK };
 }
 
-export const QUICK = ["Hybrid SUV under 20m", "Cars under 10m", "Electric cars", "Leasing help", "Talk to a person"];
+export const QUICK = list(C.quickReplies);

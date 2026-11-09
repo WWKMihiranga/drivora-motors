@@ -3,6 +3,7 @@
 import { useSyncExternalStore } from "react";
 import { Moon, Sun } from "lucide-react";
 import { cn } from "@/lib/cn";
+import { useText } from "@/lib/site-data";
 
 /*
  * Theme = data-theme on <html> ("drivora" | "drivora-dark"), which FlyonUI and our colour
@@ -27,6 +28,7 @@ const isDark = () => document.documentElement.dataset.theme === DARK;
 
 export function ThemeToggle({ className }: { className?: string }) {
   const dark = useSyncExternalStore(subscribe, isDark, () => false);
+  const text = useText();
 
   const toggle = () => {
     const html = document.documentElement;
@@ -44,9 +46,10 @@ export function ThemeToggle({ className }: { className?: string }) {
     <button
       type="button"
       onClick={toggle}
-      aria-label="Dark mode"
+      aria-label={text("common.ui.darkMode")}
       aria-pressed={dark}
-      title={dark ? "Switch to light mode" : "Switch to dark mode"}
+      title={dark ? text("common.ui.switchToLight") : text("common.ui.switchToDark")}
+      data-preview-field-path="common.ui.darkMode"
       className={cn(
         "flex size-11 items-center justify-center rounded-full text-ink transition-colors hover:bg-surface",
         className,

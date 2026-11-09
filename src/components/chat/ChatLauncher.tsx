@@ -6,11 +6,13 @@ import { useEffect, useState } from "react";
 import { MessageCircle, X } from "lucide-react";
 import { CHAT_EVENT } from "./chat-bus";
 import { cn } from "@/lib/cn";
+import { Field, useText } from "@/lib/site-data";
 
 const ChatPanel = dynamic(() => import("./ChatPanel"), { ssr: false });
 
 export function ChatLauncher() {
   const [open, setOpen] = useState(false);
+  const text = useText();
   const [loaded, setLoaded] = useState(false);
   const [prefill, setPrefill] = useState<string | undefined>();
   // On the home page the launcher waits until the hero is scrolled past, so it never sits on
@@ -45,7 +47,8 @@ export function ChatLauncher() {
           setOpen((o) => !o);
         }}
         onPointerEnter={() => setLoaded(true)}
-        aria-label={open ? "Close chat" : "Ask Drivora"}
+        aria-label={open ? text("common.chat.launcherCloseLabel") : text("common.chat.launcher")}
+        data-preview-field-path="common.chat.launcher"
         aria-expanded={open}
         tabIndex={shown ? undefined : -1}
         className={cn(
@@ -57,7 +60,7 @@ export function ChatLauncher() {
           {!open && <span className="absolute inset-0 animate-ping-slow rounded-full bg-brand-bright/40" />}
           {open ? <X className="relative size-4" /> : <MessageCircle className="relative size-4" strokeWidth={1.75} />}
         </span>
-        {open ? "Close" : "Ask Drivora"}
+        {open ? text("common.chat.launcherClose") : text("common.chat.launcher")}
       </button>
 
       <div
@@ -66,10 +69,10 @@ export function ChatLauncher() {
           open ? "visible translate-y-0 scale-100 opacity-100" : "invisible translate-y-3 scale-[0.98] opacity-0",
         )}
         role="dialog"
-        aria-label="Chat with Drivora assistant"
-        aria-hidden={!open}
+        aria-labelledby="chat-dialog-label"
         inert={!open}
       >
+        <Field id="chat-dialog-label" className="sr-only" data-preview-field-path="common.chat.dialogLabel" />
         {loaded && <ChatPanel onClose={() => setOpen(false)} prefill={prefill} open={open} />}
       </div>
     </>

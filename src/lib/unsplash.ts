@@ -1,6 +1,15 @@
-/** Build an Unsplash CDN URL from a photo id ("1749058983232-59b967855b18"). */
+import { withBasePath } from "./base-path";
+
+/**
+ * Image URL for a photo. Accepts an Unsplash photo id ("1749058983232-59b967855b18"), a full URL
+ * (e.g. a dealer's upload from the Fivora editor) or a site-relative path. Unsplash photos get crop
+ * params; everything else is returned as-is (relative paths get the Fivora base path).
+ */
 export function u(id: string, opts: { fit?: "crop" | "max"; ar?: string } = {}) {
-  const url = new URL(`https://images.unsplash.com/photo-${id}`);
+  if (!id) return "";
+  const isUnsplash = /^[0-9]+-[0-9a-f]+$/.test(id) || id.startsWith("https://images.unsplash.com/");
+  if (!isUnsplash) return withBasePath(id);
+  const url = new URL(id.startsWith("https://") ? id : `https://images.unsplash.com/photo-${id}`);
   if (opts.fit === "crop") {
     url.searchParams.set("fit", "crop");
     if (opts.ar) url.searchParams.set("ar", opts.ar);

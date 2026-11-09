@@ -3,15 +3,19 @@
 import { Heart } from "lucide-react";
 import { useApp } from "@/store";
 import { cn } from "@/lib/cn";
+import { fill, useText } from "@/lib/site-data";
 
 export function SaveButton({ id, className, label }: { id: string; className?: string; label?: string }) {
   const saved = useApp((s) => s.saved.includes(id));
   const toggle = useApp((s) => s.toggleSaved);
+  const text = useText();
+  const car = label ?? "car";
   return (
     <button
       type="button"
       aria-pressed={saved}
-      aria-label={saved ? `Remove ${label ?? "car"} from saved` : `Save ${label ?? "car"}`}
+      aria-label={fill(text(saved ? "common.vehicleCard.unsaveLabel" : "common.vehicleCard.saveLabel"), { car })}
+      data-preview-field-path="common.vehicleCard.saveLabel"
       onClick={(e) => {
         e.preventDefault();
         e.stopPropagation();
