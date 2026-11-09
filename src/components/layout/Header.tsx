@@ -4,11 +4,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Heart, Phone } from "lucide-react";
-import { Logo } from "@/components/ui/Logo";
+import { BrandLogo } from "@/components/ui/BrandLogo";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { MobileMenu } from "./MobileMenu";
 import { ThemeToggle } from "./ThemeToggle";
-import { nav, site } from "@/config/site";
+import { site } from "@/config/site";
+import { Field, useList, useText } from "@/lib/site-data";
 import { useT } from "@/lib/i18n";
 import { useApp } from "@/store";
 import { cn } from "@/lib/cn";
@@ -16,6 +17,8 @@ import { cn } from "@/lib/cn";
 export function Header() {
   const pathname = usePathname();
   const t = useT();
+  const text = useText();
+  const nav = useList<{ label: string; href: string }>("common.nav");
   const savedCount = useApp((s) => s.saved.length);
   // Sinhala and Tamil labels run much wider than English, so those languages get the short CTA
   // and the menu button until xl, or the header row overflows. The phone is a call icon in every
@@ -52,24 +55,36 @@ export function Header() {
               : "border border-transparent bg-white/0",
           )}
         >
-          <Link href="/" aria-label={`${site.name} home`} className="shrink-0">
-            <Logo />
+          <Link
+            href={text("common.links.home") || "/"}
+            aria-label={text("common.ui.homeLinkLabel")}
+            className="shrink-0"
+            data-preview-field-path="common.ui.homeLinkLabel"
+          >
+            <BrandLogo />
           </Link>
 
-          <nav aria-label="Main" className={cn("ml-3 hidden shrink-0 items-center xl:ml-6 xl:flex xl:gap-1", latin && "lg:flex")}>
-            {nav.map((item) => {
-              const active = pathname === item.href || pathname.startsWith(item.href + "/");
+          <nav
+            aria-labelledby="nav-main-label"
+            className={cn("ml-3 hidden shrink-0 items-center xl:ml-6 xl:flex xl:gap-1", latin && "lg:flex")}
+            data-preview-list-path="common.nav"
+          >
+            <Field id="nav-main-label" className="sr-only" data-preview-field-path="common.ui.mainNavLabel" />
+            {nav.map((item, i) => {
+              const active = !!item.href && (pathname === item.href || pathname.startsWith(item.href + "/"));
               return (
                 <Link
-                  key={item.href}
-                  href={item.href}
+                  key={`${item.href}-${i}`}
+                  href={item.href || "/"}
+                  data-preview-item-path={`common.nav[${i}]`}
+                  data-preview-field-path={`common.nav[${i}].href`}
                   className={cn(
                     "group relative rounded-full px-3 py-2 text-[0.92rem] font-medium whitespace-nowrap transition-colors xl:px-3.5",
                     active ? "text-ink" : "text-muted-strong hover:text-ink",
                   )}
                   aria-current={active ? "page" : undefined}
                 >
-                  {t(item.key)}
+                  <Field data-preview-field-path={`common.nav[${i}].label`} />
                   <span
                     className={cn(
                       "absolute inset-x-3.5 -bottom-0.5 h-0.5 origin-left rounded-full bg-brand transition-transform duration-300 ease-out-soft",
@@ -85,8 +100,9 @@ export function Header() {
             <LanguageSwitcher className="hidden md:flex" />
             <ThemeToggle className="hidden sm:flex" />
             <Link
-              href="/saved"
-              aria-label={`${t("saved")} (${savedCount})`}
+              href={text("common.links.saved") || "/saved"}
+              aria-label={`${text("common.ui.savedLinkLabel")} (${savedCount})`}
+              data-preview-field-path="common.ui.savedLinkLabel"
               className="relative hidden size-11 items-center justify-center rounded-full text-ink transition-colors hover:bg-surface sm:flex"
             >
               <Heart className="size-[1.15rem]" strokeWidth={1.75} />
@@ -98,25 +114,31 @@ export function Header() {
             </Link>
             <a
               href={site.phoneHref}
-              aria-label={`${t("call")} ${site.phone}`}
-              title={site.phone}
+              aria-label={`${t("call")} ${text("common.business.phone")}`}
+              title={text("common.business.phone")}
+              data-preview-field-path="common.business.phone"
               className="flex size-11 items-center justify-center rounded-full text-ink transition-colors hover:bg-surface"
             >
               <Phone className="size-[1.1rem]" strokeWidth={1.75} />
             </a>
-            <Link href="/book" className="btn-ink hidden h-11 px-5 text-[0.9rem] whitespace-nowrap md:inline-flex">
+            <Link
+              href={text("common.links.book") || "/book"}
+              className="btn-ink hidden h-11 px-5 text-[0.9rem] whitespace-nowrap md:inline-flex"
+              data-preview-field-path="common.links.book"
+            >
               {latin ? (
                 <>
-                  <span className="xl:hidden">{t("bookShort")}</span>
-                  <span className="hidden xl:inline">{t("book")}</span>
+                  <Field className="xl:hidden" data-preview-field-path="common.ui.bookShort" />
+                  <Field className="hidden xl:inline" data-preview-field-path="common.ui.book" />
                 </>
               ) : (
-                t("bookShort")
+                <Field data-preview-field-path="common.ui.bookShort" />
               )}
             </Link>
             <button
               type="button"
-              aria-label={open ? "Close menu" : t("menu")}
+              aria-label={open ? text("common.ui.closeMenu") : t("menu")}
+              data-preview-field-path="common.ui.menu"
               aria-expanded={open}
               aria-controls="mobile-menu"
               onClick={() => setOpen((o) => !o)}

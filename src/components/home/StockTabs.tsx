@@ -1,52 +1,56 @@
 "use client";
 
-import Link from "next/link";
 import { useMemo, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import type { Vehicle } from "@/types";
 import { VehicleCard } from "@/components/vehicle/VehicleCard";
+import { LinkField } from "@/components/ui/LinkField";
+import { Field, fill, useList } from "@/lib/site-data";
 import { cn } from "@/lib/cn";
 
-const tabs = [
-  { key: "all", label: "All", href: "/cars", test: () => true },
-  { key: "recon", label: "Reconditioned", href: "/cars?condition=reconditioned", test: (v: Vehicle) => v.condition === "reconditioned" },
-  { key: "used", label: "Used", href: "/cars?condition=used", test: (v: Vehicle) => v.condition === "used" },
-  { key: "new", label: "Brand new", href: "/cars?condition=brand-new", test: (v: Vehicle) => v.condition === "brand-new" },
-  {
-    key: "green",
-    label: "EV & hybrid",
-    href: "/cars?fuel=hybrid,electric",
-    test: (v: Vehicle) => v.fuel === "electric" || v.fuel === "hybrid" || v.fuel === "plug-in-hybrid",
-  },
-] as const;
+type Tab = { label: string; filter: string; href: string; seeAllLabel: string };
+
+/** What each tab's `filter` value (editable in Fivora) selects. Unknown values show all cars. */
+function matches(filter: string, v: Vehicle) {
+  if (filter === "green") return v.fuel === "electric" || v.fuel === "hybrid" || v.fuel === "plug-in-hybrid";
+  if (filter === "reconditioned" || filter === "used" || filter === "brand-new") return v.condition === filter;
+  if (filter === "electric" || filter === "hybrid" || filter === "petrol" || filter === "diesel") return v.fuel === filter;
+  return true;
+}
 
 export function StockTabs({ vehicles }: { vehicles: Vehicle[] }) {
-  const [tab, setTab] = useState<(typeof tabs)[number]["key"]>("all");
-  const current = tabs.find((t) => t.key === tab)!;
-  const list = useMemo(() => vehicles.filter(current.test), [vehicles, current]);
+  const tabs = useList<Tab>("home.stock.tabs");
+  const [tab, setTab] = useState(0);
+  const t = Math.min(tab, Math.max(tabs.length - 1, 0));
+  const current = tabs[t];
+  const list = useMemo(() => vehicles.filter((v) => (current ? matches(current.filter, v) : true)), [vehicles, current]);
 
   return (
     <div>
       <div
         role="tablist"
-        aria-label="Filter stock"
+        aria-labelledby="stock-tabs-label"
         className="no-scrollbar -mx-6 flex gap-2 overflow-x-auto px-6 md:mx-0 md:px-0"
+        data-preview-list-path="home.stock.tabs"
       >
-        {tabs.map((t) => {
-          const count = vehicles.filter(t.test).length;
+        <Field id="stock-tabs-label" className="sr-only" data-preview-field-path="home.stock.tablistLabel" />
+        {tabs.map((tb, i) => {
+          const count = vehicles.filter((v) => matches(tb.filter, v)).length;
           return (
             <button
-              key={t.key}
+              key={`${tb.filter}-${i}`}
               role="tab"
               type="button"
-              aria-selected={tab === t.key}
-              onClick={() => setTab(t.key)}
+              aria-selected={t === i}
+              onClick={() => setTab(i)}
+              data-preview-item-path={`home.stock.tabs[${i}]`}
               className={cn(
                 "h-10 shrink-0 rounded-full border px-4 text-sm font-medium transition-colors",
-                tab === t.key ? "border-ink bg-ink text-on-ink" : "border-line bg-paper text-ink hover:border-ink/40",
+                t === i ? "border-ink bg-ink text-on-ink" : "border-line bg-paper text-ink hover:border-ink/40",
               )}
             >
-              {t.label} <span className={cn("ml-1 text-xs", tab === t.key ? "text-white/60" : "text-muted")}>{count}</span>
+              <Field data-preview-field-path={`home.stock.tabs[${i}].label`} />{" "}
+              <span className={cn("ml-1 text-xs", t === i ? "text-white/60" : "text-muted")}>{count}</span>
             </button>
           );
         })}
@@ -67,11 +71,17 @@ export function StockTabs({ vehicles }: { vehicles: Vehicle[] }) {
         ))}
       </div>
 
-      <div className="mt-8 flex justify-center">
-        <Link href={current.href} className="btn-line">
-          See all {list.length} {current.key === "all" ? "cars" : current.label.toLowerCase()} <ArrowRight className="size-4" />
-        </Link>
-      </div>
+      {current && (
+        <div className="mt-8 flex justify-center">
+          <LinkField data-preview-field-path={`home.stock.tabs[${t}].href`} className="btn-line">
+            <Field
+              data-preview-field-path="home.stock.seeAll"
+              format={(tpl) => fill(tpl, { count: list.length, label: current.seeAllLabel })}
+            />{" "}
+            <ArrowRight className="size-4" />
+          </LinkField>
+        </div>
+      )}
     </div>
   );
 }

@@ -3,6 +3,8 @@ import "./globals.css";
 import { inter, sinhala, sora, tamil } from "./fonts";
 import { site } from "@/config/site";
 import { Providers } from "@/components/layout/Providers";
+import { PageMain, SkipLink } from "@/components/layout/PageMain";
+import { SiteData } from "@/lib/site-data";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ActionBar } from "@/components/layout/ActionBar";
@@ -62,23 +64,18 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         />
       </head>
       <body>
-        <a
-          href="#main"
-          className="sr-only z-70 rounded-full bg-ink px-4 py-2 text-on-ink focus:not-sr-only focus:fixed focus:top-4 focus:left-4"
-        >
-          Skip to content
-        </a>
-        <Providers>
-          <Splash />
-          <Header />
-          <main id="main" tabIndex={-1} className="outline-none">
-            {children}
-          </main>
-          <Footer />
-          <CompareBar />
-          <ActionBar />
-          <ChatLauncher />
-        </Providers>
+        <SiteData>
+          <SkipLink />
+          <Providers>
+            <Splash />
+            <Header />
+            <PageMain>{children}</PageMain>
+            <Footer />
+            <CompareBar />
+            <ActionBar />
+            <ChatLauncher />
+          </Providers>
+        </SiteData>
       </body>
     </html>
   );

@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { CarsExplorer } from "@/components/search/CarsExplorer";
-import { PageHeader } from "@/components/layout/PageHeader";
-import { VehicleCard } from "@/components/vehicle/VehicleCard";
+import { CarsExplorer, CarsExplorerFromUrl } from "@/components/search/CarsExplorer";
+import { Crumb, PageHeader } from "@/components/layout/PageHeader";
 import { getVehicles } from "@/lib/api";
+import { pageMeta } from "@/lib/seo";
+import { Field, FillField } from "@/lib/site-data";
 
-export const metadata: Metadata = {
-  title: "Cars for sale",
-  description: "Reconditioned, used and brand-new cars in Nugegoda with auction sheets, service history and leasing estimates.",
-};
+export const metadata: Metadata = pageMeta("cars");
 
 export default async function CarsPage() {
   const vehicles = await getVehicles();
@@ -16,23 +14,15 @@ export default async function CarsPage() {
   return (
     <>
       <PageHeader
-        eyebrow={`${available.length} cars in stock`}
-        title="Every car, checked and documented"
-        text="Filter by budget, body type or fuel. Each listing shows its auction sheet or service history and an estimated monthly payment."
-        crumbs={[{ href: "/cars", label: "Cars" }]}
+        eyebrow={<FillField data-preview-field-path="cars.header.eyebrow" vars={{ count: available.length }} />}
+        title={<Field data-preview-field-path="cars.header.title" />}
+        text={<Field data-preview-field-path="cars.header.text" />}
+        crumbs={[<Crumb key="c" data-preview-field-path="cars.header.crumbHref" label={<Field data-preview-field-path="cars.header.crumbLabel" />} />]}
       />
       <section className="container-x py-10 md:py-14">
-        {/* The static fallback is a real, crawlable list; filters hydrate on the client. */}
-        <Suspense
-          fallback={
-            <div className="grid gap-4 sm:grid-cols-2 lg:ml-80 xl:grid-cols-3">
-              {available.slice(0, 9).map((v) => (
-                <VehicleCard key={v.id} v={v} />
-              ))}
-            </div>
-          }
-        >
-          <CarsExplorer vehicles={vehicles} />
+        {/* The static HTML is the full explorer with no filters (crawlable); the URL's filters apply on the client. */}
+        <Suspense fallback={<CarsExplorer vehicles={vehicles} />}>
+          <CarsExplorerFromUrl vehicles={vehicles} />
         </Suspense>
       </section>
     </>

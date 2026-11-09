@@ -1,23 +1,29 @@
+import siteData from "../data/site-data.json";
 import type { VehicleClass } from "@/types";
+
+/*
+ * Lending settings are editable in Fivora (site-data.json `financeSettings`), so a dealer can update
+ * them when the Central Bank changes its directions, or set their own sample rates.
+ */
+const f = siteData.content.financeSettings;
 
 /**
  * Central Bank of Sri Lanka maximum loan-to-value caps for motor vehicle credit,
- * effective 25 May 2026. Kept in one place with a date so they can be updated
- * when CBSL changes the directions.
+ * effective 25 May 2026 (defaults). Kept in one place with a date.
  */
 export const LTV_RULES = {
-  effectiveDate: "25 May 2026",
-  source: "CBSL macroprudential directions on motor vehicle LTV ratios",
+  effectiveDate: f.ltvEffectiveDate,
+  source: f.ltvSource,
   // registered and used in Sri Lanka for more than one year, any vehicle
-  registeredOverOneYear: 0.6,
+  registeredOverOneYear: f.ltvRegisteredOverOneYear,
   // unregistered, or registered for less than one year
-  newOrRecent: { car: 0.4, commercial: 0.6 } satisfies Record<VehicleClass, number>,
+  newOrRecent: { car: f.ltvNewOrRecentCar, commercial: f.ltvNewOrRecentCommercial } satisfies Record<VehicleClass, number>,
 } as const;
 
 export const DEFAULT_RATES = {
   /** Sample rates for the demo only; real rates come from partner lenders. */
-  flatAnnual: 0.12,
-  reducingAnnual: 0.155,
+  flatAnnual: f.flatAnnualRate,
+  reducingAnnual: f.reducingAnnualRate,
 };
 
 export type RegistrationStatus = "unregistered" | "under-1-year" | "over-1-year";

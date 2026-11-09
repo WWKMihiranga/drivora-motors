@@ -10,19 +10,14 @@ import { LogoMark } from "@/components/ui/Logo";
 import { whatsappLink } from "@/config/site";
 import { rsM, vehicleTitle } from "@/lib/format";
 import { cn } from "@/lib/cn";
+import { Field, fill, useText } from "@/lib/site-data";
 
 type Msg = { from: "bot" | "me"; body: BotReply | string };
 
+/* Wording is editable in Fivora (site-data.json `chat`). */
 export default function ChatPanel({ onClose, prefill, open }: { onClose: () => void; prefill?: string; open: boolean }) {
-  const [msgs, setMsgs] = useState<Msg[]>([
-    {
-      from: "bot",
-      body: {
-        text: "Hi, I'm the Drivora assistant. Tell me your budget and the kind of car you need and I'll check our stock.",
-        quick: QUICK,
-      },
-    },
-  ]);
+  const t = useText();
+  const [msgs, setMsgs] = useState<Msg[]>(() => [{ from: "bot", body: { text: t("chat.welcome"), quick: QUICK } }]);
   const [typing, setTyping] = useState(false);
   const [text, setText] = useState("");
   const listRef = useRef<HTMLDivElement>(null);
@@ -66,12 +61,12 @@ export default function ChatPanel({ onClose, prefill, open }: { onClose: () => v
           <LogoMark className="size-5" />
         </span>
         <div className="flex-1 leading-tight">
-          <p className="text-sm font-semibold">Drivora assistant</p>
+          <Field as="p" className="text-sm font-semibold" data-preview-field-path="chat.title" />
           <p className="flex items-center gap-1.5 text-xs text-white/60">
-            <span className="size-1.5 rounded-full bg-emerald-400" /> Answers from our live stock · demo
+            <span className="size-1.5 rounded-full bg-emerald-400" /> <Field data-preview-field-path="chat.status" />
           </p>
         </div>
-        <button type="button" onClick={onClose} aria-label="Close chat" className="flex size-9 items-center justify-center rounded-full hover:bg-white/10">
+        <button type="button" onClick={onClose} aria-label={t("chat.closeLabel")} data-preview-field-path="chat.closeLabel" className="flex size-9 items-center justify-center rounded-full hover:bg-white/10">
           <X className="size-4" />
         </button>
       </div>
@@ -106,13 +101,15 @@ export default function ChatPanel({ onClose, prefill, open }: { onClose: () => v
           ref={inputRef}
           value={text}
           onChange={(e) => setText(e.target.value)}
-          placeholder="e.g. hybrid SUV under 20m"
-          aria-label="Message"
+          placeholder={t("chat.placeholder")}
+          aria-label={t("chat.inputLabel")}
+          data-preview-field-path="chat.placeholder"
           className="h-11 min-w-0 flex-1 rounded-full bg-surface px-4 text-[16px] focus:outline-none focus-visible:ring-2 focus-visible:ring-ink/10"
         />
         <button
           type="submit"
-          aria-label="Send"
+          aria-label={t("chat.sendLabel")}
+          data-preview-field-path="chat.sendLabel"
           disabled={!text.trim()}
           className="flex size-11 shrink-0 items-center justify-center rounded-full bg-ink text-on-ink transition-opacity disabled:opacity-30"
         >
@@ -124,6 +121,7 @@ export default function ChatPanel({ onClose, prefill, open }: { onClose: () => v
 }
 
 function BotBubble({ r, onQuick, transcript }: { r: BotReply; onQuick: (q: string) => void; transcript: string }) {
+  const t = useText();
   return (
     <div className="mr-6 space-y-2.5">
       <div className="rounded-2xl rounded-bl-md bg-paper px-3.5 py-2.5 text-[0.92rem] leading-relaxed text-ink">{r.text}</div>
@@ -141,7 +139,7 @@ function BotBubble({ r, onQuick, transcript }: { r: BotReply; onQuick: (q: strin
               <span className="min-w-0 flex-1 leading-tight">
                 <span className="block truncate text-sm font-semibold">{vehicleTitle(v)}</span>
                 <span className="text-xs text-muted">
-                  {v.grade} · {Math.round(v.mileageKm / 1000)}k km
+                  {v.grade} · {fill(t("chat.kmShort"), { n: Math.round(v.mileageKm / 1000) })}
                 </span>
               </span>
               <span className="font-display text-sm font-semibold" data-num>
@@ -158,12 +156,12 @@ function BotBubble({ r, onQuick, transcript }: { r: BotReply; onQuick: (q: strin
       )}
       {r.handover && (
         <a
-          href={whatsappLink(`Hi Drivora, I was chatting on your website:\n${transcript}`)}
+          href={whatsappLink(`${t("chat.handoverMessage")}\n${transcript}`)}
           target="_blank"
           rel="noopener"
           className="inline-flex items-center gap-2 rounded-full bg-[#075E54] px-4 py-2.5 text-sm font-medium text-white"
         >
-          <WhatsAppIcon className="size-4" /> Continue on WhatsApp
+          <WhatsAppIcon className="size-4" /> <Field data-preview-field-path="chat.handoverLabel" />
         </a>
       )}
       {r.quick && (

@@ -1,7 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { Lottie } from "@/components/ui/Lottie";
+import { LinkField } from "@/components/ui/LinkField";
+import { Field } from "@/lib/site-data";
 import { cn } from "@/lib/cn";
 
 /** Sri Lankan mobile/landline: 07XXXXXXXX, 0XXXXXXXXX or +94XXXXXXXXX (spaces allowed). */
@@ -10,7 +11,8 @@ export function validPhone(v: string) {
   return /^(?:\+94|0)\d{9}$/.test(d);
 }
 
-export function Field({
+/* Form building blocks. Labels are passed as <Field> nodes so their wording is editable in Fivora. */
+export function FormField({
   label,
   id,
   error,
@@ -18,10 +20,10 @@ export function Field({
   children,
   className,
 }: {
-  label: string;
+  label: React.ReactNode;
   id: string;
   error?: string;
-  hint?: string;
+  hint?: React.ReactNode;
   children: React.ReactNode;
   className?: string;
 }) {
@@ -32,7 +34,7 @@ export function Field({
       </label>
       {children}
       {error ? (
-        <p id={`${id}-err`} className="mt-1.5 text-xs font-medium text-bad">
+        <p id={`${id}-err`} className="mt-1.5 text-xs font-medium text-bad" data-preview-static="Validation message shown after a failed submit">
           {error}
         </p>
       ) : hint ? (
@@ -54,24 +56,24 @@ export function Consent({ checked, onChange, error }: { checked: boolean; onChan
           aria-invalid={!!error}
         />
         <span>
-          I agree that Drivora may contact me about this request and store my details as described in the{" "}
-          <Link href="/faq" className="underline underline-offset-2">
-            privacy notice
-          </Link>
+          <Field data-preview-field-path="forms.common.consentText" />{" "}
+          <LinkField data-preview-field-path="forms.common.privacyHref" className="underline underline-offset-2">
+            <Field data-preview-field-path="forms.common.privacyLabel" />
+          </LinkField>
           .
         </span>
       </label>
-      {error && <p className="mt-1.5 text-xs font-medium text-bad">{error}</p>}
+      {error && (
+        <p className="mt-1.5 text-xs font-medium text-bad" data-preview-static="Validation message shown after a failed submit">
+          {error}
+        </p>
+      )}
     </div>
   );
 }
 
 export function DemoNote({ className }: { className?: string }) {
-  return (
-    <p className={cn("text-xs text-muted", className)}>
-      Demo form: your details stay in this browser and are not sent anywhere.
-    </p>
-  );
+  return <Field as="p" className={cn("text-xs text-muted", className)} data-preview-field-path="forms.common.demoNote" />;
 }
 
 export function Success({
@@ -79,13 +81,18 @@ export function Success({
   text,
   children,
 }: {
-  title: string;
-  text: string;
+  title: React.ReactNode;
+  text: React.ReactNode;
   children?: React.ReactNode;
 }) {
   return (
     <div className="flex flex-col items-center px-4 py-8 text-center" role="status">
-      <Lottie src="/lottie/success.json" className="size-28" label="Done" />
+      <Lottie
+        src="/lottie/success.json"
+        className="size-28"
+        labelId="form-success-anim"
+        label={<Field id="form-success-anim" className="sr-only" data-preview-field-path="forms.common.successAnimationLabel" />}
+      />
       <h3 className="mt-2 font-display text-2xl font-semibold">{title}</h3>
       <p className="mt-2 max-w-sm text-sm leading-relaxed text-muted">{text}</p>
       {children && <div className="mt-6 flex flex-wrap justify-center gap-3">{children}</div>}

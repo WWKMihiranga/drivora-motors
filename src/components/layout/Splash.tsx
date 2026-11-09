@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { LogoMark } from "@/components/ui/Logo";
-import { site } from "@/config/site";
+import { Field, useText } from "@/lib/site-data";
 
 /**
  * "Headlights on" intro. The markup is server-rendered and hidden by default;
@@ -18,6 +18,7 @@ export function SplashScript() {
 }
 
 export function Splash() {
+  const text = useText();
   useEffect(() => {
     const html = document.documentElement;
     if (!html.classList.contains("splash-on")) return;
@@ -47,10 +48,11 @@ export function Splash() {
     };
   }, []);
 
-  const word = "DRIVORA".split("");
+  const word = text("common.ui.splashWord").split("");
 
   return (
-    <div id="splash" role="status" aria-label={`Loading ${site.name}`} className="splash">
+    <div id="splash" role="status" aria-labelledby="splash-label" className="splash">
+      <Field id="splash-label" className="sr-only" data-preview-field-path="common.ui.splashLoading" />
       <div className="splash-door splash-door-top" />
       <div className="splash-door splash-door-bottom" />
       <div className="splash-beam splash-beam-a" />
@@ -59,24 +61,27 @@ export function Splash() {
       <div className="splash-content">
         <LogoMark draw className="splash-mark size-14 text-white" />
         <div className="mt-6 flex overflow-hidden font-display text-4xl font-bold tracking-[0.22em] text-white sm:text-5xl">
-          {word.map((ch, i) => (
-            <span key={i} className="splash-letter" style={{ ["--i" as string]: i }}>
-              {ch}
-            </span>
-          ))}
+          {/* display:contents keeps the letters as flex items; the span only carries the editable marker */}
+          <span className="contents" data-preview-field-path="common.ui.splashWord">
+            {word.map((ch, i) => (
+              <span key={i} className="splash-letter" style={{ ["--i" as string]: i }}>
+                {ch}
+              </span>
+            ))}
+          </span>
         </div>
-        <div className="splash-sub mt-2 text-[0.7rem] font-medium tracking-[0.6em] text-white/55">MOTORS</div>
+        <Field as="p" className="splash-sub mt-2 text-[0.7rem] font-medium tracking-[0.6em] text-white/55" data-preview-field-path="common.ui.splashSub" />
         <div className="mt-8 flex w-56 items-center gap-3">
           <div className="relative h-px flex-1 overflow-hidden bg-white/15">
             <div className="splash-road absolute inset-0 origin-left bg-brand-bright" />
           </div>
           <span className="splash-counter w-8 text-right font-display text-xs font-light text-white/70" data-num />
         </div>
-        <p className="splash-tagline mt-5 text-sm text-white/60">{site.tagline}</p>
+        <Field as="p" data-preview-field-path="common.business.tagline" className="splash-tagline mt-5 text-sm text-white/60" />
       </div>
 
-      <button type="button" className="splash-skip" aria-label="Skip intro">
-        Skip
+      <button type="button" className="splash-skip" aria-label={text("common.ui.splashSkipLabel")} data-preview-field-path="common.ui.splashSkip">
+        <Field data-preview-field-path="common.ui.splashSkip" />
       </button>
     </div>
   );

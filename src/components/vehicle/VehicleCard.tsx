@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowUpRight, Fuel, Gauge, Settings2 } from "lucide-react";
 import type { Vehicle } from "@/types";
@@ -5,7 +7,9 @@ import { Photo } from "@/components/ui/Photo";
 import { ConditionBadge, HighlightBadge, StatusBadge, VerifiedTick } from "./Badges";
 import { SaveButton } from "./SaveButton";
 import { CompareToggle } from "./CompareToggle";
-import { fuelLabel, num, rs } from "@/lib/format";
+import { num, rs } from "@/lib/format";
+import { Field, fill, useText } from "@/lib/site-data";
+import { vehicleIndex } from "@/data/vehicles";
 import { monthlyFrom } from "@/lib/estimate";
 import { cn } from "@/lib/cn";
 
@@ -23,8 +27,11 @@ export function VehicleCard({
   index?: number;
 }) {
   const sold = v.status === "sold";
+  const text = useText();
+  const i = vehicleIndex(v);
   return (
     <article
+      data-preview-item-path={`vehicles[${i}]`}
       data-reveal
       style={{ ["--reveal-i" as string]: index % 4 }}
       className={cn("group relative flex flex-col rounded-[1.25rem] bg-surface p-2 card-lift", className)}
@@ -32,7 +39,8 @@ export function VehicleCard({
       <div className="relative aspect-4/3 overflow-hidden rounded-[0.9rem] bg-media">
         <Photo
           id={v.images[0]}
-          alt={`${v.colour} ${v.make} ${v.model}`}
+          alt={fill(text("common.vehicleCard.photoAlt"), { colour: v.colour, make: v.make, model: v.model })}
+          data-preview-field-path={`vehicles[${i}].images[0]`}
           crop="4:3"
           fill
           sizes={sizes}
@@ -43,25 +51,44 @@ export function VehicleCard({
           )}
         />
         <div className="absolute top-2.5 left-2.5 flex flex-wrap gap-1.5">
-          <ConditionBadge condition={v.condition} on="photo" />
+          <ConditionBadge condition={v.condition} on="photo" data-preview-field-path={`vehicles[${i}].condition`} />
           {v.badge && !sold && (
-            <HighlightBadge on="photo">{v.badge}</HighlightBadge>
+            <HighlightBadge on="photo" data-preview-field-path={`vehicles[${i}].badge`}>
+              {v.badge}
+            </HighlightBadge>
           )}
         </div>
         <SaveButton id={v.id} label={`${v.make} ${v.model}`} className="absolute top-2 right-2 z-10" />
-        {v.status !== "available" && <StatusBadge status={v.status} on="photo" className="absolute bottom-2.5 left-2.5" />}
+        {v.status !== "available" && (
+          <StatusBadge
+            status={v.status}
+            on="photo"
+            className="absolute bottom-2.5 left-2.5"
+            data-preview-field-path={`vehicles[${i}].status`}
+          />
+        )}
       </div>
 
       <div className="flex flex-1 flex-col px-2.5 pt-3.5 pb-2">
         <div className="flex items-start justify-between gap-3">
           <div className="min-w-0">
             <h3 className="truncate font-display text-[1.05rem] font-semibold">
-              <Link href={`/cars/${v.slug}`} className="after:absolute after:inset-0 after:rounded-[1.25rem]">
-                {v.make} {v.model}
+              <Link
+                href={`/cars/${v.slug}`}
+                className="after:absolute after:inset-0 after:rounded-[1.25rem]"
+                data-preview-field-path={`vehicles[${i}].slug`}
+              >
+                <Field data-preview-field-path={`vehicles[${i}].make`} /> <Field data-preview-field-path={`vehicles[${i}].model`} />
               </Link>
             </h3>
             <p className="truncate text-[0.82rem] text-muted-strong">
-              {v.yom} · {v.grade}
+              <Field data-preview-field-path={`vehicles[${i}].yom`} />
+              {v.grade && (
+                <>
+                  {" · "}
+                  <Field data-preview-field-path={`vehicles[${i}].grade`} />
+                </>
+              )}
             </p>
           </div>
           {v.verified && <VerifiedTick label={false} className="mt-1 shrink-0" />}
@@ -70,32 +97,44 @@ export function VehicleCard({
         <ul className="mt-3 flex flex-wrap gap-x-3.5 gap-y-1 text-[0.8rem] text-muted-strong">
           <li className="inline-flex items-center gap-1">
             <Gauge className="size-3.5" strokeWidth={1.5} />
-            <span data-num>{num(v.mileageKm)} km</span>
+            <Field data-num data-preview-field-path={`vehicles[${i}].mileageKm`} format={(m) => `${num(Number(m))} ${text("common.units.km")}`} />
           </li>
           <li className="inline-flex items-center gap-1">
             <Fuel className="size-3.5" strokeWidth={1.5} />
-            {fuelLabel[v.fuel]}
+            <Field data-preview-field-path={`vehicles[${i}].fuel`} format={(f) => text(`labels.fuel.${f}`) || f} />
           </li>
           <li className="inline-flex items-center gap-1">
             <Settings2 className="size-3.5" strokeWidth={1.5} />
-            {v.transmission === "auto" ? "Auto" : "Manual"}
+            <Field data-preview-field-path={`vehicles[${i}].transmission`} format={(t) => text(`labels.transmission.${t}`) || t} />
           </li>
         </ul>
 
         <div className="mt-auto flex items-end justify-between gap-3 pt-4">
           <div>
-            {v.previousPriceLkr && (
-              <p className="text-xs text-muted line-through" data-num>
-                {rs(v.previousPriceLkr)}
-              </p>
+            {!!v.previousPriceLkr && (
+              <Field
+                as="p"
+                className="text-xs text-muted line-through"
+                data-num
+                data-preview-field-path={`vehicles[${i}].previousPriceLkr`}
+                format={(p) => rs(Number(p))}
+              />
             )}
-            <p className={cn("font-display text-[1.15rem] font-semibold", v.previousPriceLkr && "text-brand")} data-num>
-              {rs(v.priceLkr)}
-            </p>
+            <Field
+              as="p"
+              className={cn("font-display text-[1.15rem] font-semibold", v.previousPriceLkr && "text-brand")}
+              data-num
+              data-preview-field-path={`vehicles[${i}].priceLkr`}
+              format={(p) => rs(Number(p))}
+            />
             {!sold && (
-              <p className="text-[0.75rem] text-muted-strong" data-num>
-                from {rs(monthlyFrom(v))}/mo*
-              </p>
+              <Field
+                as="p"
+                className="text-[0.75rem] text-muted-strong"
+                data-num
+                data-preview-field-path="common.vehicleCard.monthlyFrom"
+                format={(t) => fill(t, { amount: rs(monthlyFrom(v)) })}
+              />
             )}
           </div>
           <span className="flex size-10 shrink-0 items-center justify-center rounded-full border border-ink/15 text-ink transition-colors duration-300 group-hover:border-ink group-hover:bg-ink group-hover:text-on-ink">

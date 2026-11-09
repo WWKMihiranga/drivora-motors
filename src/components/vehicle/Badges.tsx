@@ -1,5 +1,7 @@
+"use client";
+
 import { BadgeCheck } from "lucide-react";
-import { conditionLabel, statusLabel } from "@/lib/format";
+import { Field, useText } from "@/lib/site-data";
 import type { Condition, Status } from "@/types";
 import { cn } from "@/lib/cn";
 
@@ -11,6 +13,8 @@ import { cn } from "@/lib/cn";
  * Squared-off corners keep tags visually distinct from the pill-shaped buttons.
  */
 type Surface = "photo" | "page";
+/** Optional Fivora marker: the vehicle field the badge shows, e.g. `vehicles[${i}].status`. */
+type Marker = { "data-preview-field-path"?: string };
 
 const base =
   "inline-flex h-6 items-center gap-1.5 whitespace-nowrap rounded-md px-2 text-[0.7rem] leading-none font-semibold";
@@ -30,25 +34,37 @@ const statusTint: Record<Status, string> = {
   arriving: "bg-note/10 text-note ring-note/25",
 };
 
-export function StatusBadge({ status, on = "page", className }: { status: Status; on?: Surface; className?: string }) {
+export function StatusBadge({ status, on = "page", className, ...marker }: { status: Status; on?: Surface; className?: string } & Marker) {
+  const text = useText();
   return (
-    <span className={cn(base, on === "photo" ? glass : cn("ring-1 ring-inset", statusTint[status]), className)}>
+    <span className={cn(base, on === "photo" ? glass : cn("ring-1 ring-inset", statusTint[status]), className)} {...marker}>
       <span className={cn("size-1.5 rounded-full", on === "photo" ? statusDot[status] : "bg-current")} />
-      {statusLabel[status]}
+      {text(`labels.status.${status}`) || status}
     </span>
   );
 }
 
-export function ConditionBadge({ condition, on = "page", className }: { condition: Condition; on?: Surface; className?: string }) {
+export function ConditionBadge({
+  condition,
+  on = "page",
+  className,
+  ...marker
+}: { condition: Condition; on?: Surface; className?: string } & Marker) {
+  const text = useText();
   return (
-    <span className={cn(base, on === "photo" ? glass : "bg-surface text-ink ring-1 ring-inset ring-line", className)}>
-      {conditionLabel[condition]}
+    <span className={cn(base, on === "photo" ? glass : "bg-surface text-ink ring-1 ring-inset ring-line", className)} {...marker}>
+      {text(`labels.condition.${condition}`) || condition}
     </span>
   );
 }
 
 /** Dealer highlight such as "Just landed" or "Popular": the one tag meant to catch the eye. */
-export function HighlightBadge({ children, on = "page", className }: { children: React.ReactNode; on?: Surface; className?: string }) {
+export function HighlightBadge({
+  children,
+  on = "page",
+  className,
+  ...marker
+}: { children: React.ReactNode; on?: Surface; className?: string } & Marker) {
   return (
     <span
       className={cn(
@@ -56,6 +72,7 @@ export function HighlightBadge({ children, on = "page", className }: { children:
         on === "photo" ? "bg-white text-night" : "bg-brand/10 text-brand ring-1 ring-inset ring-brand/25",
         className,
       )}
+      {...marker}
     >
       {children}
     </span>
@@ -63,10 +80,15 @@ export function HighlightBadge({ children, on = "page", className }: { children:
 }
 
 export function VerifiedTick({ className, label = true }: { className?: string; label?: boolean }) {
+  const text = useText();
   return (
-    <span className={cn("inline-flex items-center gap-1 text-[0.75rem] font-semibold text-ok", className)} title="Documents checked by Drivora">
+    <span
+      className={cn("inline-flex items-center gap-1 text-[0.75rem] font-semibold text-ok", className)}
+      title={text("common.vehicleCard.verifiedTitle")}
+      data-preview-field-path="common.vehicleCard.verifiedTitle"
+    >
       <BadgeCheck className="size-4" strokeWidth={2} />
-      {label && "Verified"}
+      {label && <Field data-preview-field-path="common.vehicleCard.verified" />}
     </span>
   );
 }

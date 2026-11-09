@@ -20,6 +20,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
 import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
+import { withBasePath } from "@/lib/base-path";
 
 export interface ViewerApi {
   setColor: (hex: string) => void;
@@ -76,11 +77,11 @@ export async function mountViewer(
     : new MeshPhysicalMaterial({ color: 0xffffff, metalness: 0.25, roughness: 0, transmission: 1 });
 
   const draco = new DRACOLoader();
-  draco.setDecoderPath("/draco/");
+  draco.setDecoderPath(withBasePath("/draco/"));
   const loader = new GLTFLoader();
   loader.setDRACOLoader(draco);
 
-  const gltf = await loader.loadAsync("/models/showroom-coupe.glb", (e) => {
+  const gltf = await loader.loadAsync(withBasePath("/models/showroom-coupe.glb"), (e) => {
     if (e.total) opts.onProgress?.(e.loaded / e.total);
   });
   const car = gltf.scene.children[0] as Object3D;

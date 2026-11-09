@@ -1,5 +1,7 @@
+import type { Metadata } from "next";
+import siteData from "@/data/site-data.json";
 import { site } from "@/config/site";
-import { conditionLabel, fuelLabel, vehicleTitle } from "@/lib/format";
+import { conditionLabel, fuelLabel, transmissionLongLabel, vehicleTitle } from "@/lib/format";
 import { u } from "@/lib/unsplash";
 import type { Vehicle } from "@/types";
 
@@ -19,8 +21,8 @@ export function dealerJsonLd() {
       postalCode: site.address.postcode,
       addressCountry: site.address.country,
     },
-    openingHours: ["Mo-Sa 09:00-18:00", "Su 10:00-14:00"],
-    priceRange: "Rs 6,000,000 – Rs 100,000,000",
+    openingHours: siteData.content.common.business.openingHoursSchema.split(",").map((s) => s.trim()).filter(Boolean),
+    priceRange: siteData.content.common.business.priceRange,
   };
 }
 
@@ -35,7 +37,7 @@ export function vehicleJsonLd(v: Vehicle) {
     bodyType: v.bodyType,
     color: v.colour,
     fuelType: fuelLabel[v.fuel],
-    vehicleTransmission: v.transmission === "auto" ? "Automatic" : "Manual",
+    vehicleTransmission: transmissionLongLabel[v.transmission],
     seatingCapacity: v.seats,
     itemCondition:
       v.condition === "brand-new" ? "https://schema.org/NewCondition" : "https://schema.org/UsedCondition",
@@ -48,7 +50,7 @@ export function vehicleJsonLd(v: Vehicle) {
     offers: {
       "@type": "Offer",
       price: v.priceLkr,
-      priceCurrency: "LKR",
+      priceCurrency: siteData.content.common.business.currencyCode,
       availability:
         v.status === "sold"
           ? "https://schema.org/SoldOut"
@@ -58,4 +60,10 @@ export function vehicleJsonLd(v: Vehicle) {
       seller: { "@type": "AutoDealer", name: site.name },
     },
   };
+}
+
+/** Search-engine title/description for a page, editable in Fivora at `<page>.seo`. */
+export function pageMeta(page: string): Metadata {
+  const seo = (siteData.content as unknown as Record<string, { seo?: { title?: string; description?: string } }>)[page]?.seo;
+  return { title: seo?.title, description: seo?.description };
 }

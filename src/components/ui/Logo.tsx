@@ -25,14 +25,23 @@ export function LogoMark({ className, draw = false }: { className?: string; draw
   );
 }
 
-export function Logo({ className, dark = false }: { className?: string; dark?: boolean }) {
+export function Logo({
+  className,
+  dark = false,
+  word = "DRIVORA",
+  sub = "MOTORS",
+  ...rest
+}: { className?: string; dark?: boolean; word?: React.ReactNode; sub?: React.ReactNode } & Omit<
+  React.HTMLAttributes<HTMLSpanElement>,
+  "className"
+>) {
   return (
-    <span className={cn("inline-flex items-center gap-2.5", dark ? "text-white" : "text-ink", className)}>
+    <span className={cn("inline-flex items-center gap-2.5", dark ? "text-white" : "text-ink", className)} {...rest}>
       <LogoMark className="size-8 shrink-0" />
       <span className="leading-none">
-        <span className="block font-display text-[1.05rem] font-bold tracking-[0.18em]">DRIVORA</span>
+        <span className="block font-display text-[1.05rem] font-bold tracking-[0.18em]">{word}</span>
         <span className={cn("mt-0.5 block text-[0.6rem] font-medium tracking-[0.42em]", dark ? "text-white/60" : "text-muted")}>
-          MOTORS
+          {sub}
         </span>
       </span>
     </span>

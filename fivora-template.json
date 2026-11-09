@@ -1,0 +1,6469 @@
+{
+  "framework": "nextjs-static-export",
+  "version": 2,
+  "visualEditing": {
+    "contractVersion": 1,
+    "mode": "strict",
+    "controlOnlyPaths": [
+      "about.heroImageAlt",
+      "about.seo.description",
+      "about.seo.title",
+      "about.storyImageAlt",
+      "additionalPages[*].id",
+      "additionalPages[*].route",
+      "admin.colCar",
+      "admin.colDays",
+      "admin.colDocs",
+      "admin.colPrice",
+      "admin.colStatus",
+      "admin.daysAgo",
+      "admin.hoursAgo",
+      "admin.justNow",
+      "admin.kpiDrivesBase",
+      "admin.nav[*].icon",
+      "admin.nav[*].tab",
+      "admin.seo.title",
+      "admin.today",
+      "admin.viewLabel",
+      "blog.post.backHref",
+      "blog.post.backLabel",
+      "blog.post.ctaHref",
+      "blog.post.ctaLabel",
+      "blog.post.ctaText",
+      "blog.post.ctaTitle",
+      "blog.post.notFound",
+      "blog.readLong",
+      "blog.readShort",
+      "blog.seo.description",
+      "blog.seo.title",
+      "book.seo.description",
+      "book.seo.title",
+      "calc.belowMin",
+      "calc.chartLabel",
+      "calc.chartOwed",
+      "calc.chartPaidOff",
+      "calc.defaultPrice",
+      "calc.downStep",
+      "calc.flatNote",
+      "calc.maxPrice",
+      "calc.regOver1",
+      "calc.regUnder1",
+      "calc.termDefault",
+      "calc.termMax",
+      "calc.termMin",
+      "calc.typeCommercial",
+      "carActions.bookHref",
+      "carActions.bookLabel",
+      "carActions.bookShort",
+      "carActions.depositAmount",
+      "carActions.lakhsSuffix",
+      "carActions.leasingAnchor",
+      "carActions.leasingFrom",
+      "carActions.leasingFromValue",
+      "carActions.reserve.closeLabel",
+      "carActions.reserve.depositLabel",
+      "carActions.reserve.dialogLabel",
+      "carActions.reserve.doneLabel",
+      "carActions.reserve.gatewayNote",
+      "carActions.reserve.leadName",
+      "carActions.reserve.methodLabels.bank",
+      "carActions.reserve.methodLabels.card",
+      "carActions.reserve.methodLabels.lankaqr",
+      "carActions.reserve.payWith",
+      "carActions.reserve.submit",
+      "carActions.reserve.successText",
+      "carActions.reserve.successTitle",
+      "carActions.reserve.title",
+      "carActions.reserveLabel",
+      "carActions.similarLabel",
+      "carActions.whatsappLabel",
+      "carActions.whatsappMessage",
+      "carDetail.aboutTitle",
+      "carDetail.breadcrumbCars",
+      "carDetail.breadcrumbCarsHref",
+      "carDetail.enquireText",
+      "carDetail.enquireTitle",
+      "carDetail.featuresTitle",
+      "carDetail.leasingEyebrow",
+      "carDetail.leasingTitle",
+      "carDetail.photoAlt",
+      "carDetail.seo.description",
+      "carDetail.seo.notFound",
+      "carDetail.similarTitle",
+      "carDetail.specBattery",
+      "carDetail.specBody",
+      "carDetail.specColour",
+      "carDetail.specCondition",
+      "carDetail.specEngine",
+      "carDetail.specFirstReg",
+      "carDetail.specFuel",
+      "carDetail.specGearbox",
+      "carDetail.specGrade",
+      "carDetail.specLocation",
+      "carDetail.specMakeModel",
+      "carDetail.specMileage",
+      "carDetail.specNotRegistered",
+      "carDetail.specSeats",
+      "carDetail.specYom",
+      "carDetail.specsTitle",
+      "carDetail.statBattery",
+      "carDetail.statEngine",
+      "carDetail.statMileage",
+      "carDetail.statSeats",
+      "carDetail.statYear",
+      "carDetail.statYearReg",
+      "cars.explorer.carOne",
+      "cars.explorer.chipFrom",
+      "cars.explorer.chipKm",
+      "cars.explorer.chipSold",
+      "cars.explorer.chipTo",
+      "cars.explorer.chipYear",
+      "cars.explorer.clearAll",
+      "cars.explorer.emptyAnimationLabel",
+      "cars.explorer.emptyAskHref",
+      "cars.explorer.emptyAskLabel",
+      "cars.explorer.emptyClear",
+      "cars.explorer.emptyText",
+      "cars.explorer.emptyTitle",
+      "cars.explorer.removeChip",
+      "cars.explorer.sheetClear",
+      "cars.explorer.sorts[*].key",
+      "cars.filters.mileageLabel",
+      "cars.filters.mileageOption",
+      "cars.filters.noMax",
+      "cars.filters.noMin",
+      "cars.filters.priceStepLabel",
+      "cars.filters.yearOption",
+      "cars.seo.description",
+      "cars.seo.title",
+      "chat.answers.delivery.keywords",
+      "chat.answers.delivery.linkHref",
+      "chat.answers.delivery.linkLabel",
+      "chat.answers.delivery.text",
+      "chat.answers.history.keywords",
+      "chat.answers.history.linkHref",
+      "chat.answers.history.linkLabel",
+      "chat.answers.history.text",
+      "chat.answers.leasing.keywords",
+      "chat.answers.leasing.linkHref",
+      "chat.answers.leasing.linkLabel",
+      "chat.answers.leasing.text",
+      "chat.answers.location.keywords",
+      "chat.answers.location.linkHref",
+      "chat.answers.location.linkLabel",
+      "chat.answers.location.text",
+      "chat.answers.reserve.keywords",
+      "chat.answers.reserve.linkHref",
+      "chat.answers.reserve.linkLabel",
+      "chat.answers.reserve.text",
+      "chat.answers.testDrive.keywords",
+      "chat.answers.testDrive.linkHref",
+      "chat.answers.testDrive.linkLabel",
+      "chat.answers.testDrive.text",
+      "chat.answers.tradeIn.keywords",
+      "chat.answers.tradeIn.linkHref",
+      "chat.answers.tradeIn.linkLabel",
+      "chat.answers.tradeIn.text",
+      "chat.answers.warranty.keywords",
+      "chat.answers.warranty.linkHref",
+      "chat.answers.warranty.linkLabel",
+      "chat.answers.warranty.text",
+      "chat.carWord",
+      "chat.closeLabel",
+      "chat.fallback",
+      "chat.found",
+      "chat.greeting",
+      "chat.handover",
+      "chat.handoverLabel",
+      "chat.handoverMessage",
+      "chat.inputLabel",
+      "chat.kmShort",
+      "chat.none",
+      "chat.noneQuickReplies",
+      "chat.placeholder",
+      "chat.pluralSuffix",
+      "chat.quickReplies",
+      "chat.seeAll",
+      "chat.sendLabel",
+      "chat.status",
+      "chat.stock",
+      "chat.stockLinkHref",
+      "chat.stockLinkLabel",
+      "chat.title",
+      "chat.under",
+      "chat.welcome",
+      "common.business.currencyCode",
+      "common.business.description",
+      "common.business.hoursShort",
+      "common.business.mapEmbedUrl",
+      "common.business.openingHoursSchema",
+      "common.business.priceRange",
+      "common.business.region",
+      "common.business.shortName",
+      "common.chat.launcherClose",
+      "common.chat.launcherCloseLabel",
+      "common.compareBar.removeLabel",
+      "common.footer.newsletter.thanks",
+      "common.messages.whatsappGeneral",
+      "common.messages.whatsappHello",
+      "common.socials.facebook",
+      "common.socials.instagram",
+      "common.socials.tiktok",
+      "common.socials.youtube",
+      "common.ui.about",
+      "common.ui.browse",
+      "common.ui.calc",
+      "common.ui.cars",
+      "common.ui.closeMenu",
+      "common.ui.contact",
+      "common.ui.finance",
+      "common.ui.logoSub",
+      "common.ui.logoWord",
+      "common.ui.sell",
+      "common.ui.splashSkipLabel",
+      "common.ui.switchToDark",
+      "common.ui.switchToLight",
+      "common.units.cc",
+      "common.units.km",
+      "common.units.kwh",
+      "common.units.lakhs",
+      "common.units.perMonth",
+      "common.vehicleCard.compare",
+      "common.vehicleCard.compareFull",
+      "common.vehicleCard.monthlyFrom",
+      "common.vehicleCard.photoAlt",
+      "common.vehicleCard.saveLabel",
+      "common.vehicleCard.unsaveLabel",
+      "common.vehicleCard.verified",
+      "common.vehicleCard.verifiedTitle",
+      "compare.seo.title",
+      "compare.view.addHref",
+      "compare.view.addLabel",
+      "compare.view.best",
+      "compare.view.browseHref",
+      "compare.view.browseLabel",
+      "compare.view.caption",
+      "compare.view.emptyText",
+      "compare.view.emptyTitle",
+      "compare.view.footnote",
+      "compare.view.ownersNew",
+      "compare.view.removeLabel",
+      "compare.view.rowColour",
+      "compare.view.rowCondition",
+      "compare.view.rowEngine",
+      "compare.view.rowFuel",
+      "compare.view.rowGearbox",
+      "compare.view.rowGrade",
+      "compare.view.rowMileage",
+      "compare.view.rowMonthly",
+      "compare.view.rowOwners",
+      "compare.view.rowPrice",
+      "compare.view.rowSeats",
+      "compare.view.rowYear",
+      "contact.formVehicle",
+      "contact.map.iframeTitle",
+      "contact.map.imageAlt",
+      "contact.seo.description",
+      "contact.seo.title",
+      "contact.showroomMapUrl",
+      "credits.seo.title",
+      "faq.seo.description",
+      "faq.seo.title",
+      "finance.budget.carMany",
+      "finance.budget.carOne",
+      "finance.budget.cashDefault",
+      "finance.budget.cashMax",
+      "finance.budget.cashMin",
+      "finance.budget.cashStep",
+      "finance.budget.monthlyDefault",
+      "finance.budget.monthlyLimit",
+      "finance.budget.monthlyMax",
+      "finance.budget.monthlyMin",
+      "finance.budget.monthlyStep",
+      "finance.running.kmDefault",
+      "finance.running.perMonth",
+      "finance.running.petrolDefault",
+      "finance.running.types[*].energy",
+      "finance.running.unitDefault",
+      "finance.seo.description",
+      "finance.seo.title",
+      "financeSettings.flatAnnualRate",
+      "financeSettings.ltvEffectiveDate",
+      "financeSettings.ltvNewOrRecentCar",
+      "financeSettings.ltvNewOrRecentCommercial",
+      "financeSettings.ltvRegisteredOverOneYear",
+      "financeSettings.ltvSource",
+      "financeSettings.reducingAnnualRate",
+      "forms.booking.calendarFile",
+      "forms.booking.calendarLabel",
+      "forms.booking.calendarTitle",
+      "forms.booking.daysAhead",
+      "forms.booking.errorTime",
+      "forms.booking.successText",
+      "forms.booking.successTitle",
+      "forms.booking.successWhereHome",
+      "forms.booking.summaryHome",
+      "forms.booking.sundayCutoff",
+      "forms.booking.viewCar",
+      "forms.booking.whatsappLabel",
+      "forms.booking.whatsappMessage",
+      "forms.common.errorConsent",
+      "forms.common.errorName",
+      "forms.common.errorPhone",
+      "forms.common.successAnimationLabel",
+      "forms.enquiry.successText",
+      "forms.enquiry.successTitle",
+      "forms.enquiry.whatsappLabel",
+      "forms.tradeIn.againLabel",
+      "forms.tradeIn.conditions[*].factor",
+      "forms.tradeIn.conditions[*].key",
+      "forms.tradeIn.errorModel",
+      "forms.tradeIn.estimateBasePrice",
+      "forms.tradeIn.estimateYear",
+      "forms.tradeIn.nextCarHref",
+      "forms.tradeIn.nextCarLabel",
+      "forms.tradeIn.photoAlt",
+      "forms.tradeIn.removePhotoLabel",
+      "forms.tradeIn.resultText",
+      "forms.tradeIn.yearCount",
+      "forms.tradeIn.yearNewest",
+      "gallery.closeLabel",
+      "gallery.dialogLabel",
+      "gallery.nextLabel",
+      "gallery.openLabel",
+      "gallery.photoAlt",
+      "gallery.prevLabel",
+      "gallery.thumbLabel",
+      "home.closing.imageAlt",
+      "home.guides.readTime",
+      "home.hero.inStockLabel",
+      "home.hero.playLabel",
+      "home.hero.slideLabel",
+      "home.hero.slides[*].alt",
+      "home.hero.slides[1].carHref",
+      "home.hero.slides[1].carLabel",
+      "home.hero.slides[1].eyebrow",
+      "home.hero.slides[1].linkHref",
+      "home.hero.slides[1].linkLabel",
+      "home.hero.slides[1].text",
+      "home.hero.slides[1].title",
+      "home.hero.slides[2].carHref",
+      "home.hero.slides[2].carLabel",
+      "home.hero.slides[2].eyebrow",
+      "home.hero.slides[2].linkHref",
+      "home.hero.slides[2].linkLabel",
+      "home.hero.slides[2].text",
+      "home.hero.slides[2].title",
+      "home.leasing.priceDefault",
+      "home.leasing.priceMax",
+      "home.leasing.priceMin",
+      "home.leasing.termDefault",
+      "home.leasing.termSuffix",
+      "home.offer.imageAlt",
+      "home.quickSearch.budgets[*].max",
+      "home.quickSearch.resultsHref",
+      "home.reviews.boughtPrefix",
+      "home.reviews.photoAlt",
+      "home.reviews.starsLabel",
+      "home.spotlight.bookHref",
+      "home.spotlight.bookLabel",
+      "home.spotlight.eyebrow",
+      "home.spotlight.gradeLabel",
+      "home.spotlight.mileageLabel",
+      "home.spotlight.photoAlt",
+      "home.spotlight.priceLabel",
+      "home.spotlight.seatsLabel",
+      "home.spotlight.vehicleId",
+      "home.spotlight.viewLabel",
+      "home.spotlight.yearLabel",
+      "home.stock.seeAll",
+      "home.stock.tabs[*].filter",
+      "home.stock.tabs[*].seeAllLabel",
+      "home.stock.tabs[1].href",
+      "home.stock.tabs[2].href",
+      "home.stock.tabs[3].href",
+      "home.stock.tabs[4].href",
+      "home.studio.dragHint",
+      "home.studio.error",
+      "home.studio.loading",
+      "home.studio.lowPowerNote",
+      "home.studio.paints[1].name",
+      "home.studio.paints[2].name",
+      "home.studio.paints[3].name",
+      "home.studio.paints[4].name",
+      "home.studio.zoomHint",
+      "home.whyUs.imageAlt",
+      "labels.body.coupe",
+      "labels.body.hatchback",
+      "labels.body.pickup",
+      "labels.body.sedan",
+      "labels.body.suv",
+      "labels.fuel.diesel",
+      "labels.fuel.electric",
+      "labels.fuel.hybrid",
+      "labels.fuel.petrol",
+      "labels.fuel.plug-in-hybrid",
+      "labels.mileageSource.auction-sheet",
+      "labels.mileageSource.new",
+      "labels.mileageSource.odometer",
+      "labels.mileageSource.service-log",
+      "labels.status.arriving",
+      "labels.status.available",
+      "labels.status.reserved",
+      "labels.status.sold",
+      "labels.transmission.auto",
+      "labels.transmission.manual",
+      "reviews[*].id",
+      "reviews[*].monthsAgo",
+      "saved.seo.title",
+      "saved.view.browseHref",
+      "saved.view.browseLabel",
+      "saved.view.emptyText",
+      "saved.view.emptyTitle",
+      "saved.view.recentTitle",
+      "sell.seo.description",
+      "sell.seo.title",
+      "translations.si.common.nav.0.label",
+      "translations.si.common.nav.1.label",
+      "translations.si.common.nav.2.label",
+      "translations.si.common.nav.3.label",
+      "translations.si.common.nav.4.label",
+      "translations.si.common.ui.about",
+      "translations.si.common.ui.book",
+      "translations.si.common.ui.bookShort",
+      "translations.si.common.ui.browse",
+      "translations.si.common.ui.calc",
+      "translations.si.common.ui.call",
+      "translations.si.common.ui.cars",
+      "translations.si.common.ui.contact",
+      "translations.si.common.ui.finance",
+      "translations.si.common.ui.menu",
+      "translations.si.common.ui.saved",
+      "translations.si.common.ui.sell",
+      "translations.si.common.ui.whatsapp",
+      "translations.ta.common.nav.0.label",
+      "translations.ta.common.nav.1.label",
+      "translations.ta.common.nav.2.label",
+      "translations.ta.common.nav.3.label",
+      "translations.ta.common.nav.4.label",
+      "translations.ta.common.ui.about",
+      "translations.ta.common.ui.book",
+      "translations.ta.common.ui.bookShort",
+      "translations.ta.common.ui.browse",
+      "translations.ta.common.ui.calc",
+      "translations.ta.common.ui.call",
+      "translations.ta.common.ui.cars",
+      "translations.ta.common.ui.contact",
+      "translations.ta.common.ui.finance",
+      "translations.ta.common.ui.menu",
+      "translations.ta.common.ui.saved",
+      "translations.ta.common.ui.sell",
+      "translations.ta.common.ui.whatsapp",
+      "trust.closeLabel",
+      "trust.demoNote",
+      "trust.docChassisLabel",
+      "trust.docChassisValue",
+      "trust.docVehicleLabel",
+      "trust.eyebrow",
+      "trust.gradeLabel",
+      "trust.mileageNote",
+      "trust.mileageTitle",
+      "trust.ownersLabel",
+      "trust.sheet.exteriorGrade",
+      "trust.sheet.exteriorLabel",
+      "trust.sheet.interiorGrade",
+      "trust.sheet.interiorLabel",
+      "trust.sheet.marks.first.code",
+      "trust.sheet.marks.first.label",
+      "trust.sheet.marks.first.x",
+      "trust.sheet.marks.first.y",
+      "trust.sheet.marks.second.code",
+      "trust.sheet.marks.second.label",
+      "trust.sheet.marks.second.x",
+      "trust.sheet.marks.second.y",
+      "trust.sheet.marksLabel",
+      "trust.sheet.marksValue",
+      "trust.sheet.mileageLabel",
+      "trust.sheet.overallLabel",
+      "trust.sheet.translationLabel",
+      "trust.sheet.translationValue",
+      "trust.sourceLabel",
+      "trust.title",
+      "trust.verifiedBadge",
+      "trust.viewLabel",
+      "vehicles[*].id",
+      "vehicles[*].vehicleClass",
+      "vehicles[*].verified",
+      "vehicles[0].listedDaysAgo",
+      "vehicles[0].status",
+      "vehicles[10].listedDaysAgo",
+      "vehicles[10].status",
+      "vehicles[11].listedDaysAgo",
+      "vehicles[11].status",
+      "vehicles[12].listedDaysAgo",
+      "vehicles[12].status",
+      "vehicles[13].listedDaysAgo",
+      "vehicles[13].status",
+      "vehicles[14].listedDaysAgo",
+      "vehicles[14].status",
+      "vehicles[15].listedDaysAgo",
+      "vehicles[15].status",
+      "vehicles[16].listedDaysAgo",
+      "vehicles[16].status",
+      "vehicles[17].listedDaysAgo",
+      "vehicles[17].status",
+      "vehicles[18].listedDaysAgo",
+      "vehicles[18].status",
+      "vehicles[19].listedDaysAgo",
+      "vehicles[1].listedDaysAgo",
+      "vehicles[1].status",
+      "vehicles[20].listedDaysAgo",
+      "vehicles[20].slug",
+      "vehicles[21].listedDaysAgo",
+      "vehicles[21].status",
+      "vehicles[22].listedDaysAgo",
+      "vehicles[22].status",
+      "vehicles[23].listedDaysAgo",
+      "vehicles[23].status",
+      "vehicles[2].listedDaysAgo",
+      "vehicles[2].status",
+      "vehicles[3].listedDaysAgo",
+      "vehicles[3].status",
+      "vehicles[4].listedDaysAgo",
+      "vehicles[4].status",
+      "vehicles[5].listedDaysAgo",
+      "vehicles[5].status",
+      "vehicles[6].listedDaysAgo",
+      "vehicles[6].status",
+      "vehicles[7].listedDaysAgo",
+      "vehicles[7].status",
+      "vehicles[8].listedDaysAgo",
+      "vehicles[9].listedDaysAgo",
+      "vehicles[9].status"
+    ]
+  },
+  "siteDataFile": "src/data/site-data.json",
+  "outputDirectory": "out",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "buildCommand": "pnpm run build",
+  "basePathEnvVar": "NEXT_PUBLIC_SITE_BASE_PATH",
+  "publicSiteUrlEnvVar": "NEXT_PUBLIC_SITE_URL",
+  "pages": [
+    {
+      "id": "home",
+      "label": "Home",
+      "route": "/",
+      "required": true
+    },
+    {
+      "id": "cars",
+      "label": "Cars",
+      "route": "/cars",
+      "required": true
+    },
+    {
+      "id": "finance",
+      "label": "Leasing",
+      "route": "/finance",
+      "required": true
+    },
+    {
+      "id": "sell",
+      "label": "Sell / Trade-in",
+      "route": "/sell",
+      "required": true
+    },
+    {
+      "id": "book",
+      "label": "Book a test drive",
+      "route": "/book",
+      "required": true
+    },
+    {
+      "id": "about",
+      "label": "About",
+      "route": "/about",
+      "required": true
+    },
+    {
+      "id": "contact",
+      "label": "Contact",
+      "route": "/contact",
+      "required": true
+    },
+    {
+      "id": "faq",
+      "label": "FAQ",
+      "route": "/faq",
+      "required": true
+    },
+    {
+      "id": "blog",
+      "label": "Guides & news",
+      "route": "/blog",
+      "required": true
+    },
+    {
+      "id": "compare",
+      "label": "Compare",
+      "route": "/compare",
+      "required": true
+    },
+    {
+      "id": "saved",
+      "label": "Saved cars",
+      "route": "/saved",
+      "required": true
+    }
+  ],
+  "editorSchema": {
+    "version": 1,
+    "sections": [
+      {
+        "id": "common",
+        "path": "common",
+        "type": "object",
+        "label": "Common",
+        "fields": [
+          {
+            "key": "logoUrl",
+            "label": "Logo Url",
+            "type": "image"
+          },
+          {
+            "key": "business",
+            "type": "object",
+            "label": "Business",
+            "fields": [
+              {
+                "key": "name",
+                "label": "Name",
+                "type": "text"
+              },
+              {
+                "key": "shortName",
+                "label": "Short Name",
+                "type": "text"
+              },
+              {
+                "key": "tagline",
+                "label": "Tagline",
+                "type": "text"
+              },
+              {
+                "key": "description",
+                "label": "Description",
+                "type": "textarea"
+              },
+              {
+                "key": "phone",
+                "label": "Phone",
+                "type": "tel"
+              },
+              {
+                "key": "whatsapp",
+                "label": "Whatsapp",
+                "type": "tel"
+              },
+              {
+                "key": "email",
+                "label": "Email",
+                "type": "email"
+              },
+              {
+                "key": "addressLine1",
+                "label": "Address Line1",
+                "type": "text"
+              },
+              {
+                "key": "city",
+                "label": "City",
+                "type": "text"
+              },
+              {
+                "key": "region",
+                "label": "Region",
+                "type": "text"
+              },
+              {
+                "key": "postcode",
+                "label": "Postcode",
+                "type": "text"
+              },
+              {
+                "key": "hours",
+                "label": "Hours",
+                "type": "text"
+              },
+              {
+                "key": "hoursShort",
+                "label": "Hours Short",
+                "type": "text"
+              },
+              {
+                "key": "registration",
+                "label": "Registration",
+                "type": "text"
+              },
+              {
+                "key": "founded",
+                "label": "Founded",
+                "type": "number"
+              },
+              {
+                "key": "mapEmbedUrl",
+                "label": "Map Embed Url",
+                "type": "url"
+              },
+              {
+                "key": "currency",
+                "label": "Currency",
+                "type": "text"
+              },
+              {
+                "key": "currencyCode",
+                "label": "Currency Code",
+                "type": "text"
+              },
+              {
+                "key": "priceRange",
+                "label": "Price Range",
+                "type": "text"
+              },
+              {
+                "key": "openingHoursSchema",
+                "label": "Opening Hours Schema",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "key": "socials",
+            "type": "object",
+            "label": "Socials",
+            "fields": [
+              {
+                "key": "facebook",
+                "label": "Facebook",
+                "type": "text"
+              },
+              {
+                "key": "instagram",
+                "label": "Instagram",
+                "type": "text"
+              },
+              {
+                "key": "youtube",
+                "label": "Youtube",
+                "type": "text"
+              },
+              {
+                "key": "tiktok",
+                "label": "Tiktok",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "key": "ui",
+            "type": "object",
+            "label": "Interface words",
+            "fields": [
+              {
+                "key": "cars",
+                "label": "Cars",
+                "type": "text"
+              },
+              {
+                "key": "finance",
+                "label": "Finance",
+                "type": "text"
+              },
+              {
+                "key": "sell",
+                "label": "Sell",
+                "type": "text"
+              },
+              {
+                "key": "about",
+                "label": "About",
+                "type": "text"
+              },
+              {
+                "key": "contact",
+                "label": "Contact",
+                "type": "text"
+              },
+              {
+                "key": "book",
+                "label": "Book",
+                "type": "text"
+              },
+              {
+                "key": "bookShort",
+                "label": "Book Short",
+                "type": "text"
+              },
+              {
+                "key": "call",
+                "label": "Call",
+                "type": "text"
+              },
+              {
+                "key": "whatsapp",
+                "label": "Whatsapp",
+                "type": "tel"
+              },
+              {
+                "key": "browse",
+                "label": "Browse",
+                "type": "text"
+              },
+              {
+                "key": "calc",
+                "label": "Calc",
+                "type": "text"
+              },
+              {
+                "key": "saved",
+                "label": "Saved",
+                "type": "text"
+              },
+              {
+                "key": "menu",
+                "label": "Menu",
+                "type": "text"
+              },
+              {
+                "key": "closeMenu",
+                "label": "Close Menu",
+                "type": "text"
+              },
+              {
+                "key": "ask",
+                "label": "Ask",
+                "type": "text"
+              },
+              {
+                "key": "skipToContent",
+                "label": "Skip To Content",
+                "type": "text"
+              },
+              {
+                "key": "mainNavLabel",
+                "label": "Main Nav Label",
+                "type": "text"
+              },
+              {
+                "key": "mobileNavLabel",
+                "label": "Mobile Nav Label",
+                "type": "text"
+              },
+              {
+                "key": "languageLabel",
+                "label": "Language Label",
+                "type": "text"
+              },
+              {
+                "key": "darkMode",
+                "label": "Dark Mode",
+                "type": "text"
+              },
+              {
+                "key": "switchToLight",
+                "label": "Switch To Light",
+                "type": "text"
+              },
+              {
+                "key": "switchToDark",
+                "label": "Switch To Dark",
+                "type": "text"
+              },
+              {
+                "key": "homeLinkLabel",
+                "label": "Home Link Label",
+                "type": "text"
+              },
+              {
+                "key": "savedLinkLabel",
+                "label": "Saved Link Label",
+                "type": "text"
+              },
+              {
+                "key": "demoNote",
+                "label": "Demo Note",
+                "type": "text"
+              },
+              {
+                "key": "breadcrumbLabel",
+                "label": "Breadcrumb Label",
+                "type": "text"
+              },
+              {
+                "key": "breadcrumbHome",
+                "label": "Breadcrumb Home",
+                "type": "text"
+              },
+              {
+                "key": "splashLoading",
+                "label": "Splash Loading",
+                "type": "text"
+              },
+              {
+                "key": "splashSkip",
+                "label": "Splash Skip",
+                "type": "text"
+              },
+              {
+                "key": "splashSkipLabel",
+                "label": "Splash Skip Label",
+                "type": "text"
+              },
+              {
+                "key": "splashWord",
+                "label": "Splash Word",
+                "type": "text"
+              },
+              {
+                "key": "splashSub",
+                "label": "Splash Sub",
+                "type": "text"
+              },
+              {
+                "key": "logoWord",
+                "label": "Logo Word",
+                "type": "image"
+              },
+              {
+                "key": "logoSub",
+                "label": "Logo Sub",
+                "type": "image"
+              },
+              {
+                "key": "langEn",
+                "label": "Lang En",
+                "type": "text"
+              },
+              {
+                "key": "langSi",
+                "label": "Lang Si",
+                "type": "text"
+              },
+              {
+                "key": "langTa",
+                "label": "Lang Ta",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "key": "nav",
+            "type": "list",
+            "label": "Nav",
+            "itemLabel": "Nav",
+            "fields": [
+              {
+                "key": "label",
+                "label": "Label",
+                "type": "text"
+              },
+              {
+                "key": "href",
+                "label": "Link",
+                "type": "url"
+              }
+            ]
+          },
+          {
+            "key": "messages",
+            "type": "object",
+            "label": "Messages",
+            "fields": [
+              {
+                "key": "whatsappGeneral",
+                "label": "Whatsapp General",
+                "type": "text"
+              },
+              {
+                "key": "whatsappHello",
+                "label": "Whatsapp Hello",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "key": "footer",
+            "type": "object",
+            "label": "Footer",
+            "fields": [
+              {
+                "key": "blurb",
+                "label": "Blurb",
+                "type": "textarea"
+              },
+              {
+                "key": "columns",
+                "type": "list",
+                "label": "Columns",
+                "itemLabel": "Column",
+                "fields": [
+                  {
+                    "key": "title",
+                    "label": "Title",
+                    "type": "text"
+                  },
+                  {
+                    "key": "links",
+                    "type": "list",
+                    "label": "Links",
+                    "itemLabel": "Link",
+                    "fields": [
+                      {
+                        "key": "label",
+                        "label": "Label",
+                        "type": "text"
+                      },
+                      {
+                        "key": "href",
+                        "label": "Link",
+                        "type": "url"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "key": "visitTitle",
+                "label": "Visit Title",
+                "type": "text"
+              },
+              {
+                "key": "whatsappCta",
+                "label": "Whatsapp Cta",
+                "type": "text"
+              },
+              {
+                "key": "copyrightPrefix",
+                "label": "Copyright Prefix",
+                "type": "text"
+              },
+              {
+                "key": "copyrightNote",
+                "label": "Copyright Note",
+                "type": "text"
+              },
+              {
+                "key": "bottomLinks",
+                "type": "list",
+                "label": "Bottom Links",
+                "itemLabel": "Bottom Link",
+                "fields": [
+                  {
+                    "key": "label",
+                    "label": "Label",
+                    "type": "text"
+                  },
+                  {
+                    "key": "href",
+                    "label": "Link",
+                    "type": "url"
+                  }
+                ]
+              },
+              {
+                "key": "newsletter",
+                "type": "object",
+                "label": "Newsletter",
+                "fields": [
+                  {
+                    "key": "label",
+                    "label": "Label",
+                    "type": "text"
+                  },
+                  {
+                    "key": "placeholder",
+                    "label": "Placeholder",
+                    "type": "text"
+                  },
+                  {
+                    "key": "subscribe",
+                    "label": "Subscribe",
+                    "type": "text"
+                  },
+                  {
+                    "key": "note",
+                    "label": "Note",
+                    "type": "textarea"
+                  },
+                  {
+                    "key": "thanks",
+                    "label": "Thanks",
+                    "type": "text"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "chat",
+            "type": "object",
+            "label": "Chat",
+            "fields": [
+              {
+                "key": "launcher",
+                "label": "Launcher",
+                "type": "text"
+              },
+              {
+                "key": "launcherClose",
+                "label": "Launcher Close",
+                "type": "text"
+              },
+              {
+                "key": "launcherCloseLabel",
+                "label": "Launcher Close Label",
+                "type": "text"
+              },
+              {
+                "key": "dialogLabel",
+                "label": "Dialog Label",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "key": "compareBar",
+            "type": "object",
+            "label": "Compare Bar",
+            "fields": [
+              {
+                "key": "removeLabel",
+                "label": "Remove Label",
+                "type": "text"
+              },
+              {
+                "key": "countSuffix",
+                "label": "Count Suffix",
+                "type": "text"
+              },
+              {
+                "key": "clear",
+                "label": "Clear",
+                "type": "text"
+              },
+              {
+                "key": "cta",
+                "label": "Cta",
+                "type": "text"
+              },
+              {
+                "key": "href",
+                "label": "Link",
+                "type": "url"
+              }
+            ]
+          },
+          {
+            "key": "links",
+            "type": "object",
+            "label": "Links",
+            "fields": [
+              {
+                "key": "book",
+                "label": "Book",
+                "type": "text"
+              },
+              {
+                "key": "saved",
+                "label": "Saved",
+                "type": "text"
+              },
+              {
+                "key": "home",
+                "label": "Home",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "key": "units",
+            "type": "object",
+            "label": "Units",
+            "fields": [
+              {
+                "key": "km",
+                "label": "Km",
+                "type": "text"
+              },
+              {
+                "key": "kwh",
+                "label": "Kwh",
+                "type": "text"
+              },
+              {
+                "key": "cc",
+                "label": "Cc",
+                "type": "text"
+              },
+              {
+                "key": "lakhs",
+                "label": "Lakhs",
+                "type": "text"
+              },
+              {
+                "key": "perMonth",
+                "label": "Per Month",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "key": "vehicleCard",
+            "type": "object",
+            "label": "Vehicle Card",
+            "fields": [
+              {
+                "key": "monthlyFrom",
+                "label": "Monthly From",
+                "type": "text"
+              },
+              {
+                "key": "saveLabel",
+                "label": "Save Label",
+                "type": "text"
+              },
+              {
+                "key": "unsaveLabel",
+                "label": "Unsave Label",
+                "type": "text"
+              },
+              {
+                "key": "compare",
+                "label": "Compare",
+                "type": "text"
+              },
+              {
+                "key": "compareFull",
+                "label": "Compare Full",
+                "type": "text"
+              },
+              {
+                "key": "verified",
+                "label": "Verified",
+                "type": "text"
+              },
+              {
+                "key": "verifiedTitle",
+                "label": "Verified Title",
+                "type": "text"
+              },
+              {
+                "key": "photoAlt",
+                "label": "Photo Alt",
+                "type": "image"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "vehicles",
+        "path": "vehicles",
+        "type": "list",
+        "label": "Vehicles",
+        "itemLabel": "Vehicle",
+        "fields": [
+          {
+            "key": "id",
+            "label": "Id",
+            "type": "text"
+          },
+          {
+            "key": "make",
+            "label": "Make",
+            "type": "text"
+          },
+          {
+            "key": "model",
+            "label": "Model",
+            "type": "text"
+          },
+          {
+            "key": "grade",
+            "label": "Grade",
+            "type": "text"
+          },
+          {
+            "key": "yom",
+            "label": "Year of manufacture",
+            "type": "number"
+          },
+          {
+            "key": "condition",
+            "label": "Condition",
+            "type": "select",
+            "options": [
+              "brand-new",
+              "reconditioned",
+              "used"
+            ]
+          },
+          {
+            "key": "status",
+            "label": "Status",
+            "type": "select",
+            "options": [
+              "available",
+              "reserved",
+              "sold",
+              "arriving"
+            ]
+          },
+          {
+            "key": "mileageKm",
+            "label": "Mileage (km)",
+            "type": "number"
+          },
+          {
+            "key": "mileageSource",
+            "label": "Mileage source",
+            "type": "select",
+            "options": [
+              "auction-sheet",
+              "service-log",
+              "odometer",
+              "new"
+            ]
+          },
+          {
+            "key": "fuel",
+            "label": "Fuel",
+            "type": "select",
+            "options": [
+              "petrol",
+              "diesel",
+              "hybrid",
+              "plug-in-hybrid",
+              "electric"
+            ]
+          },
+          {
+            "key": "transmission",
+            "label": "Transmission",
+            "type": "select",
+            "options": [
+              "auto",
+              "manual"
+            ]
+          },
+          {
+            "key": "engineCc",
+            "label": "Engine (cc)",
+            "type": "number"
+          },
+          {
+            "key": "bodyType",
+            "label": "Body type",
+            "type": "select",
+            "options": [
+              "hatchback",
+              "sedan",
+              "suv",
+              "pickup",
+              "coupe"
+            ]
+          },
+          {
+            "key": "colour",
+            "label": "Colour",
+            "type": "text"
+          },
+          {
+            "key": "seats",
+            "label": "Seats",
+            "type": "number"
+          },
+          {
+            "key": "location",
+            "label": "Location",
+            "type": "text"
+          },
+          {
+            "key": "priceLkr",
+            "label": "Price",
+            "type": "number"
+          },
+          {
+            "key": "vehicleClass",
+            "label": "Vehicle class",
+            "type": "select",
+            "options": [
+              "car",
+              "commercial"
+            ]
+          },
+          {
+            "key": "images",
+            "type": "list",
+            "label": "Images",
+            "itemField": {
+              "label": "Image",
+              "type": "image"
+            }
+          },
+          {
+            "key": "verified",
+            "label": "Verified",
+            "type": "boolean"
+          },
+          {
+            "key": "auctionGrade",
+            "label": "Auction grade",
+            "type": "text"
+          },
+          {
+            "key": "features",
+            "type": "list",
+            "label": "Features",
+            "itemField": {
+              "label": "Feature",
+              "type": "text"
+            }
+          },
+          {
+            "key": "highlights",
+            "type": "list",
+            "label": "Highlights",
+            "itemField": {
+              "label": "Highlight",
+              "type": "text"
+            }
+          },
+          {
+            "key": "description",
+            "label": "Description",
+            "type": "textarea"
+          },
+          {
+            "key": "listedDaysAgo",
+            "label": "Days listed",
+            "type": "number"
+          },
+          {
+            "key": "badge",
+            "label": "Badge",
+            "type": "select",
+            "options": [
+              "New arrival",
+              "Price drop",
+              "Popular",
+              "Just landed"
+            ]
+          },
+          {
+            "key": "slug",
+            "label": "Slug",
+            "type": "text"
+          },
+          {
+            "key": "documents",
+            "type": "list",
+            "label": "Documents",
+            "itemLabel": "Document",
+            "fields": [
+              {
+                "key": "type",
+                "label": "Type",
+                "type": "select",
+                "options": [
+                  "auction-sheet",
+                  "inspection",
+                  "service",
+                  "cr"
+                ]
+              },
+              {
+                "key": "label",
+                "label": "Label",
+                "type": "text"
+              },
+              {
+                "key": "note",
+                "label": "Note",
+                "type": "textarea"
+              }
+            ]
+          },
+          {
+            "key": "batteryKwh",
+            "label": "Battery (kWh)",
+            "type": "number"
+          },
+          {
+            "key": "yor",
+            "label": "Year first registered",
+            "type": "number"
+          },
+          {
+            "key": "previousPriceLkr",
+            "label": "Previous price (shows as a price drop)",
+            "type": "number"
+          },
+          {
+            "key": "owners",
+            "label": "Owners",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "id": "reviews",
+        "path": "reviews",
+        "type": "list",
+        "label": "Reviews",
+        "itemLabel": "Review",
+        "fields": [
+          {
+            "key": "id",
+            "label": "Id",
+            "type": "text"
+          },
+          {
+            "key": "name",
+            "label": "Name",
+            "type": "text"
+          },
+          {
+            "key": "town",
+            "label": "Town",
+            "type": "text"
+          },
+          {
+            "key": "rating",
+            "label": "Rating",
+            "type": "number"
+          },
+          {
+            "key": "text",
+            "label": "Text",
+            "type": "textarea"
+          },
+          {
+            "key": "car",
+            "label": "Car",
+            "type": "text"
+          },
+          {
+            "key": "image",
+            "label": "Image",
+            "type": "image"
+          },
+          {
+            "key": "monthsAgo",
+            "label": "Months Ago",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "id": "posts",
+        "path": "posts",
+        "type": "list",
+        "label": "Posts",
+        "itemLabel": "Post",
+        "fields": [
+          {
+            "key": "slug",
+            "label": "Slug",
+            "type": "text"
+          },
+          {
+            "key": "title",
+            "label": "Title",
+            "type": "text"
+          },
+          {
+            "key": "excerpt",
+            "label": "Excerpt",
+            "type": "textarea"
+          },
+          {
+            "key": "category",
+            "label": "Category",
+            "type": "select",
+            "options": [
+              "Guide",
+              "News",
+              "Leasing",
+              "EV"
+            ]
+          },
+          {
+            "key": "image",
+            "label": "Image",
+            "type": "image"
+          },
+          {
+            "key": "readMins",
+            "label": "Reading time (minutes)",
+            "type": "number"
+          },
+          {
+            "key": "date",
+            "label": "Date",
+            "type": "text"
+          },
+          {
+            "key": "body",
+            "type": "list",
+            "label": "Body",
+            "itemLabel": "Body",
+            "fields": [
+              {
+                "key": "text",
+                "label": "Text",
+                "type": "textarea"
+              },
+              {
+                "key": "heading",
+                "label": "Heading",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "faqs",
+        "path": "faqs",
+        "type": "list",
+        "label": "Faqs",
+        "itemLabel": "Faq",
+        "fields": [
+          {
+            "key": "q",
+            "label": "Question",
+            "type": "text"
+          },
+          {
+            "key": "a",
+            "label": "Answer",
+            "type": "textarea"
+          }
+        ]
+      },
+      {
+        "id": "translations",
+        "path": "translations",
+        "type": "object",
+        "label": "Translations",
+        "fields": [
+          {
+            "key": "si",
+            "type": "object",
+            "label": "Sinhala",
+            "fields": [
+              {
+                "key": "common",
+                "type": "object",
+                "label": "Common",
+                "fields": [
+                  {
+                    "key": "ui",
+                    "type": "object",
+                    "label": "Interface words",
+                    "fields": [
+                      {
+                        "key": "cars",
+                        "label": "Cars",
+                        "type": "text"
+                      },
+                      {
+                        "key": "finance",
+                        "label": "Finance",
+                        "type": "text"
+                      },
+                      {
+                        "key": "sell",
+                        "label": "Sell",
+                        "type": "text"
+                      },
+                      {
+                        "key": "about",
+                        "label": "About",
+                        "type": "text"
+                      },
+                      {
+                        "key": "contact",
+                        "label": "Contact",
+                        "type": "text"
+                      },
+                      {
+                        "key": "book",
+                        "label": "Book",
+                        "type": "text"
+                      },
+                      {
+                        "key": "bookShort",
+                        "label": "Book Short",
+                        "type": "text"
+                      },
+                      {
+                        "key": "call",
+                        "label": "Call",
+                        "type": "text"
+                      },
+                      {
+                        "key": "whatsapp",
+                        "label": "Whatsapp",
+                        "type": "tel"
+                      },
+                      {
+                        "key": "browse",
+                        "label": "Browse",
+                        "type": "text"
+                      },
+                      {
+                        "key": "calc",
+                        "label": "Calc",
+                        "type": "text"
+                      },
+                      {
+                        "key": "saved",
+                        "label": "Saved",
+                        "type": "text"
+                      },
+                      {
+                        "key": "menu",
+                        "label": "Menu",
+                        "type": "text"
+                      }
+                    ]
+                  },
+                  {
+                    "key": "nav",
+                    "type": "object",
+                    "label": "Nav",
+                    "fields": [
+                      {
+                        "key": "0",
+                        "type": "object",
+                        "label": "0",
+                        "fields": [
+                          {
+                            "key": "label",
+                            "label": "Label",
+                            "type": "text"
+                          }
+                        ]
+                      },
+                      {
+                        "key": "1",
+                        "type": "object",
+                        "label": "1",
+                        "fields": [
+                          {
+                            "key": "label",
+                            "label": "Label",
+                            "type": "text"
+                          }
+                        ]
+                      },
+                      {
+                        "key": "2",
+                        "type": "object",
+                        "label": "2",
+                        "fields": [
+                          {
+                            "key": "label",
+                            "label": "Label",
+                            "type": "text"
+                          }
+                        ]
+                      },
+                      {
+                        "key": "3",
+                        "type": "object",
+                        "label": "3",
+                        "fields": [
+                          {
+                            "key": "label",
+                            "label": "Label",
+                            "type": "text"
+                          }
+                        ]
+                      },
+                      {
+                        "key": "4",
+                        "type": "object",
+                        "label": "4",
+                        "fields": [
+                          {
+                            "key": "label",
+                            "label": "Label",
+                            "type": "text"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "ta",
+            "type": "object",
+            "label": "Tamil",
+            "fields": [
+              {
+                "key": "common",
+                "type": "object",
+                "label": "Common",
+                "fields": [
+                  {
+                    "key": "ui",
+                    "type": "object",
+                    "label": "Interface words",
+                    "fields": [
+                      {
+                        "key": "cars",
+                        "label": "Cars",
+                        "type": "text"
+                      },
+                      {
+                        "key": "finance",
+                        "label": "Finance",
+                        "type": "text"
+                      },
+                      {
+                        "key": "sell",
+                        "label": "Sell",
+                        "type": "text"
+                      },
+                      {
+                        "key": "about",
+                        "label": "About",
+                        "type": "text"
+                      },
+                      {
+                        "key": "contact",
+                        "label": "Contact",
+                        "type": "text"
+                      },
+                      {
+                        "key": "book",
+                        "label": "Book",
+                        "type": "text"
+                      },
+                      {
+                        "key": "bookShort",
+                        "label": "Book Short",
+                        "type": "text"
+                      },
+                      {
+                        "key": "call",
+                        "label": "Call",
+                        "type": "text"
+                      },
+                      {
+                        "key": "whatsapp",
+                        "label": "Whatsapp",
+                        "type": "tel"
+                      },
+                      {
+                        "key": "browse",
+                        "label": "Browse",
+                        "type": "text"
+                      },
+                      {
+                        "key": "calc",
+                        "label": "Calc",
+                        "type": "text"
+                      },
+                      {
+                        "key": "saved",
+                        "label": "Saved",
+                        "type": "text"
+                      },
+                      {
+                        "key": "menu",
+                        "label": "Menu",
+                        "type": "text"
+                      }
+                    ]
+                  },
+                  {
+                    "key": "nav",
+                    "type": "object",
+                    "label": "Nav",
+                    "fields": [
+                      {
+                        "key": "0",
+                        "type": "object",
+                        "label": "0",
+                        "fields": [
+                          {
+                            "key": "label",
+                            "label": "Label",
+                            "type": "text"
+                          }
+                        ]
+                      },
+                      {
+                        "key": "1",
+                        "type": "object",
+                        "label": "1",
+                        "fields": [
+                          {
+                            "key": "label",
+                            "label": "Label",
+                            "type": "text"
+                          }
+                        ]
+                      },
+                      {
+                        "key": "2",
+                        "type": "object",
+                        "label": "2",
+                        "fields": [
+                          {
+                            "key": "label",
+                            "label": "Label",
+                            "type": "text"
+                          }
+                        ]
+                      },
+                      {
+                        "key": "3",
+                        "type": "object",
+                        "label": "3",
+                        "fields": [
+                          {
+                            "key": "label",
+                            "label": "Label",
+                            "type": "text"
+                          }
+                        ]
+                      },
+                      {
+                        "key": "4",
+                        "type": "object",
+                        "label": "4",
+                        "fields": [
+                          {
+                            "key": "label",
+                            "label": "Label",
+                            "type": "text"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "home",
+        "path": "home",
+        "type": "object",
+        "label": "Home",
+        "fields": [
+          {
+            "key": "hero",
+            "type": "object",
+            "label": "Hero",
+            "fields": [
+              {
+                "key": "carouselLabel",
+                "label": "Carousel Label",
+                "type": "text"
+              },
+              {
+                "key": "chooseSlideLabel",
+                "label": "Choose Slide Label",
+                "type": "text"
+              },
+              {
+                "key": "slideLabel",
+                "label": "Slide Label",
+                "type": "text"
+              },
+              {
+                "key": "playLabel",
+                "label": "Play Label",
+                "type": "text"
+              },
+              {
+                "key": "pauseLabel",
+                "label": "Pause Label",
+                "type": "text"
+              },
+              {
+                "key": "prevLabel",
+                "label": "Prev Label",
+                "type": "text"
+              },
+              {
+                "key": "nextLabel",
+                "label": "Next Label",
+                "type": "text"
+              },
+              {
+                "key": "inStockLabel",
+                "label": "In Stock Label",
+                "type": "text"
+              },
+              {
+                "key": "browseHref",
+                "label": "Browse Href",
+                "type": "url"
+              },
+              {
+                "key": "browseLabel",
+                "label": "Browse Label",
+                "type": "text"
+              },
+              {
+                "key": "slides",
+                "type": "list",
+                "label": "Slides",
+                "itemLabel": "Slide",
+                "fields": [
+                  {
+                    "key": "image",
+                    "label": "Image",
+                    "type": "image"
+                  },
+                  {
+                    "key": "alt",
+                    "label": "Alt",
+                    "type": "text"
+                  },
+                  {
+                    "key": "carHref",
+                    "label": "Car Href",
+                    "type": "url"
+                  },
+                  {
+                    "key": "carLabel",
+                    "label": "Car Label",
+                    "type": "text"
+                  },
+                  {
+                    "key": "eyebrow",
+                    "label": "Eyebrow",
+                    "type": "text"
+                  },
+                  {
+                    "key": "title",
+                    "label": "Title",
+                    "type": "text"
+                  },
+                  {
+                    "key": "text",
+                    "label": "Text",
+                    "type": "textarea"
+                  },
+                  {
+                    "key": "linkHref",
+                    "label": "Link Href",
+                    "type": "url"
+                  },
+                  {
+                    "key": "linkLabel",
+                    "label": "Link Label",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "key": "stats",
+                "type": "list",
+                "label": "Stats",
+                "itemLabel": "Stat",
+                "fields": [
+                  {
+                    "key": "value",
+                    "label": "Value",
+                    "type": "text"
+                  },
+                  {
+                    "key": "label",
+                    "label": "Label",
+                    "type": "text"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "quickSearch",
+            "type": "object",
+            "label": "Quick Search",
+            "fields": [
+              {
+                "key": "formLabel",
+                "label": "Form Label",
+                "type": "text"
+              },
+              {
+                "key": "makeLabel",
+                "label": "Make Label",
+                "type": "text"
+              },
+              {
+                "key": "makePlaceholder",
+                "label": "Make Placeholder",
+                "type": "text"
+              },
+              {
+                "key": "budgetLabel",
+                "label": "Budget Label",
+                "type": "text"
+              },
+              {
+                "key": "budgetPlaceholder",
+                "label": "Budget Placeholder",
+                "type": "text"
+              },
+              {
+                "key": "budgets",
+                "type": "list",
+                "label": "Budgets",
+                "itemLabel": "Budget",
+                "fields": [
+                  {
+                    "key": "max",
+                    "label": "Max",
+                    "type": "number"
+                  },
+                  {
+                    "key": "label",
+                    "label": "Label",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "key": "bodyLabel",
+                "label": "Body Label",
+                "type": "text"
+              },
+              {
+                "key": "bodyPlaceholder",
+                "label": "Body Placeholder",
+                "type": "text"
+              },
+              {
+                "key": "bodyOptions",
+                "type": "list",
+                "label": "Body Options",
+                "itemField": {
+                  "label": "Body Option",
+                  "type": "text"
+                }
+              },
+              {
+                "key": "conditionLabel",
+                "label": "Condition Label",
+                "type": "text"
+              },
+              {
+                "key": "conditionPlaceholder",
+                "label": "Condition Placeholder",
+                "type": "text"
+              },
+              {
+                "key": "conditionOptions",
+                "type": "list",
+                "label": "Condition Options",
+                "itemField": {
+                  "label": "Condition Option",
+                  "type": "text"
+                }
+              },
+              {
+                "key": "submit",
+                "label": "Submit",
+                "type": "text"
+              },
+              {
+                "key": "resultsHref",
+                "label": "Results Href",
+                "type": "url"
+              }
+            ]
+          },
+          {
+            "key": "benefits",
+            "type": "object",
+            "label": "Benefits",
+            "fields": [
+              {
+                "key": "sectionLabel",
+                "label": "Section Label",
+                "type": "text"
+              },
+              {
+                "key": "items",
+                "type": "list",
+                "label": "Items",
+                "itemLabel": "Item",
+                "fields": [
+                  {
+                    "key": "icon",
+                    "label": "Icon",
+                    "type": "text"
+                  },
+                  {
+                    "key": "title",
+                    "label": "Title",
+                    "type": "text"
+                  },
+                  {
+                    "key": "text",
+                    "label": "Text",
+                    "type": "textarea"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "stock",
+            "type": "object",
+            "label": "Stock",
+            "fields": [
+              {
+                "key": "eyebrow",
+                "label": "Eyebrow",
+                "type": "text"
+              },
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "key": "linkLabel",
+                "label": "Link Label",
+                "type": "text"
+              },
+              {
+                "key": "linkHref",
+                "label": "Link Href",
+                "type": "url"
+              },
+              {
+                "key": "tablistLabel",
+                "label": "Tablist Label",
+                "type": "text"
+              },
+              {
+                "key": "seeAll",
+                "label": "See All",
+                "type": "text"
+              },
+              {
+                "key": "tabs",
+                "type": "list",
+                "label": "Tabs",
+                "itemLabel": "Tab",
+                "fields": [
+                  {
+                    "key": "label",
+                    "label": "Label",
+                    "type": "text"
+                  },
+                  {
+                    "key": "filter",
+                    "label": "Filter",
+                    "type": "text"
+                  },
+                  {
+                    "key": "href",
+                    "label": "Link",
+                    "type": "url"
+                  },
+                  {
+                    "key": "seeAllLabel",
+                    "label": "See All Label",
+                    "type": "text"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "spotlight",
+            "type": "object",
+            "label": "Spotlight",
+            "fields": [
+              {
+                "key": "vehicleId",
+                "label": "Vehicle Id",
+                "type": "text"
+              },
+              {
+                "key": "eyebrow",
+                "label": "Eyebrow",
+                "type": "text"
+              },
+              {
+                "key": "priceLabel",
+                "label": "Price Label",
+                "type": "text"
+              },
+              {
+                "key": "photoAlt",
+                "label": "Photo Alt",
+                "type": "image"
+              },
+              {
+                "key": "yearLabel",
+                "label": "Year Label",
+                "type": "text"
+              },
+              {
+                "key": "mileageLabel",
+                "label": "Mileage Label",
+                "type": "text"
+              },
+              {
+                "key": "gradeLabel",
+                "label": "Grade Label",
+                "type": "text"
+              },
+              {
+                "key": "seatsLabel",
+                "label": "Seats Label",
+                "type": "text"
+              },
+              {
+                "key": "viewLabel",
+                "label": "View Label",
+                "type": "text"
+              },
+              {
+                "key": "bookLabel",
+                "label": "Book Label",
+                "type": "text"
+              },
+              {
+                "key": "bookHref",
+                "label": "Book Href",
+                "type": "url"
+              }
+            ]
+          },
+          {
+            "key": "how",
+            "type": "object",
+            "label": "How",
+            "fields": [
+              {
+                "key": "eyebrow",
+                "label": "Eyebrow",
+                "type": "text"
+              },
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "key": "steps",
+                "type": "list",
+                "label": "Steps",
+                "itemLabel": "Step",
+                "fields": [
+                  {
+                    "key": "icon",
+                    "label": "Icon",
+                    "type": "text"
+                  },
+                  {
+                    "key": "title",
+                    "label": "Title",
+                    "type": "text"
+                  },
+                  {
+                    "key": "text",
+                    "label": "Text",
+                    "type": "textarea"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "studio",
+            "type": "object",
+            "label": "Studio",
+            "fields": [
+              {
+                "key": "eyebrow",
+                "label": "Eyebrow",
+                "type": "text"
+              },
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "key": "text",
+                "label": "Text",
+                "type": "textarea"
+              },
+              {
+                "key": "paintLabel",
+                "label": "Paint Label",
+                "type": "text"
+              },
+              {
+                "key": "modelLabel",
+                "label": "Model Label",
+                "type": "text"
+              },
+              {
+                "key": "loading",
+                "label": "Loading",
+                "type": "text"
+              },
+              {
+                "key": "error",
+                "label": "Error",
+                "type": "text"
+              },
+              {
+                "key": "loadButton",
+                "label": "Load Button",
+                "type": "text"
+              },
+              {
+                "key": "lowPowerNote",
+                "label": "Low Power Note",
+                "type": "text"
+              },
+              {
+                "key": "dragHint",
+                "label": "Drag Hint",
+                "type": "text"
+              },
+              {
+                "key": "zoomHint",
+                "label": "Zoom Hint",
+                "type": "text"
+              },
+              {
+                "key": "paints",
+                "type": "list",
+                "label": "Paints",
+                "itemLabel": "Paint",
+                "fields": [
+                  {
+                    "key": "name",
+                    "label": "Name",
+                    "type": "text"
+                  },
+                  {
+                    "key": "hex",
+                    "label": "Colour (hex)",
+                    "type": "text"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "leasing",
+            "type": "object",
+            "label": "Leasing",
+            "fields": [
+              {
+                "key": "eyebrow",
+                "label": "Eyebrow",
+                "type": "text"
+              },
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "key": "linkLabel",
+                "label": "Link Label",
+                "type": "text"
+              },
+              {
+                "key": "linkHref",
+                "label": "Link Href",
+                "type": "url"
+              },
+              {
+                "key": "priceLabel",
+                "label": "Price Label",
+                "type": "text"
+              },
+              {
+                "key": "priceMinLabel",
+                "label": "Price Min Label",
+                "type": "text"
+              },
+              {
+                "key": "priceMaxLabel",
+                "label": "Price Max Label",
+                "type": "text"
+              },
+              {
+                "key": "priceMin",
+                "label": "Price Min",
+                "type": "number"
+              },
+              {
+                "key": "priceMax",
+                "label": "Price Max",
+                "type": "number"
+              },
+              {
+                "key": "priceDefault",
+                "label": "Price Default",
+                "type": "number"
+              },
+              {
+                "key": "registrationLabel",
+                "label": "Registration Label",
+                "type": "text"
+              },
+              {
+                "key": "unregisteredLabel",
+                "label": "Unregistered Label",
+                "type": "text"
+              },
+              {
+                "key": "registeredLabel",
+                "label": "Registered Label",
+                "type": "text"
+              },
+              {
+                "key": "termLabel",
+                "label": "Term Label",
+                "type": "text"
+              },
+              {
+                "key": "terms",
+                "type": "list",
+                "label": "Terms",
+                "itemField": {
+                  "label": "Term",
+                  "type": "number"
+                }
+              },
+              {
+                "key": "termDefault",
+                "label": "Term Default",
+                "type": "number"
+              },
+              {
+                "key": "termSuffix",
+                "label": "Term Suffix",
+                "type": "text"
+              },
+              {
+                "key": "monthlyLabel",
+                "label": "Monthly Label",
+                "type": "text"
+              },
+              {
+                "key": "minDownLabel",
+                "label": "Min Down Label",
+                "type": "text"
+              },
+              {
+                "key": "minDownHint",
+                "label": "Min Down Hint",
+                "type": "text"
+              },
+              {
+                "key": "financedLabel",
+                "label": "Financed Label",
+                "type": "text"
+              },
+              {
+                "key": "rateLabel",
+                "label": "Rate Label",
+                "type": "text"
+              },
+              {
+                "key": "rateValue",
+                "label": "Rate Value",
+                "type": "text"
+              },
+              {
+                "key": "cta",
+                "label": "Cta",
+                "type": "text"
+              },
+              {
+                "key": "disclaimer",
+                "label": "Disclaimer",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "key": "whyUs",
+            "type": "object",
+            "label": "Why Us",
+            "fields": [
+              {
+                "key": "image",
+                "label": "Image",
+                "type": "image"
+              },
+              {
+                "key": "imageAlt",
+                "label": "Image Alt",
+                "type": "image"
+              },
+              {
+                "key": "cardTitle",
+                "label": "Card Title",
+                "type": "text"
+              },
+              {
+                "key": "cardText",
+                "label": "Card Text",
+                "type": "text"
+              },
+              {
+                "key": "eyebrow",
+                "label": "Eyebrow",
+                "type": "text"
+              },
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "key": "reasons",
+                "type": "list",
+                "label": "Reasons",
+                "itemLabel": "Reason",
+                "fields": [
+                  {
+                    "key": "title",
+                    "label": "Title",
+                    "type": "text"
+                  },
+                  {
+                    "key": "text",
+                    "label": "Text",
+                    "type": "textarea"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "offer",
+            "type": "object",
+            "label": "Offer",
+            "fields": [
+              {
+                "key": "image",
+                "label": "Image",
+                "type": "image"
+              },
+              {
+                "key": "imageAlt",
+                "label": "Image Alt",
+                "type": "image"
+              },
+              {
+                "key": "eyebrow",
+                "label": "Eyebrow",
+                "type": "text"
+              },
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "key": "text",
+                "label": "Text",
+                "type": "textarea"
+              },
+              {
+                "key": "ctaLabel",
+                "label": "Cta Label",
+                "type": "text"
+              },
+              {
+                "key": "ctaHref",
+                "label": "Cta Href",
+                "type": "url"
+              }
+            ]
+          },
+          {
+            "key": "reviews",
+            "type": "object",
+            "label": "Reviews",
+            "fields": [
+              {
+                "key": "eyebrow",
+                "label": "Eyebrow",
+                "type": "text"
+              },
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "key": "note",
+                "label": "Note",
+                "type": "textarea"
+              },
+              {
+                "key": "starsLabel",
+                "label": "Stars Label",
+                "type": "text"
+              },
+              {
+                "key": "photoAlt",
+                "label": "Photo Alt",
+                "type": "image"
+              },
+              {
+                "key": "boughtPrefix",
+                "label": "Bought Prefix",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "key": "guides",
+            "type": "object",
+            "label": "Guides",
+            "fields": [
+              {
+                "key": "eyebrow",
+                "label": "Eyebrow",
+                "type": "text"
+              },
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "key": "linkLabel",
+                "label": "Link Label",
+                "type": "text"
+              },
+              {
+                "key": "linkHref",
+                "label": "Link Href",
+                "type": "url"
+              },
+              {
+                "key": "readTime",
+                "label": "Read Time",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "key": "closing",
+            "type": "object",
+            "label": "Closing",
+            "fields": [
+              {
+                "key": "image",
+                "label": "Image",
+                "type": "image"
+              },
+              {
+                "key": "imageAlt",
+                "label": "Image Alt",
+                "type": "image"
+              },
+              {
+                "key": "eyebrow",
+                "label": "Eyebrow",
+                "type": "text"
+              },
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "key": "whatsappMessage",
+                "label": "Whatsapp Message",
+                "type": "text"
+              },
+              {
+                "key": "whatsappLabel",
+                "label": "Whatsapp Label",
+                "type": "text"
+              },
+              {
+                "key": "chatLabel",
+                "label": "Chat Label",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "labels",
+        "path": "labels",
+        "type": "object",
+        "label": "Labels",
+        "fields": [
+          {
+            "key": "condition",
+            "type": "object",
+            "label": "Condition",
+            "fields": [
+              {
+                "key": "brand-new",
+                "label": "Brand new",
+                "type": "text"
+              },
+              {
+                "key": "reconditioned",
+                "label": "Reconditioned",
+                "type": "text"
+              },
+              {
+                "key": "used",
+                "label": "Used",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "key": "fuel",
+            "type": "object",
+            "label": "Fuel",
+            "fields": [
+              {
+                "key": "petrol",
+                "label": "Petrol",
+                "type": "text"
+              },
+              {
+                "key": "diesel",
+                "label": "Diesel",
+                "type": "text"
+              },
+              {
+                "key": "hybrid",
+                "label": "Hybrid",
+                "type": "text"
+              },
+              {
+                "key": "plug-in-hybrid",
+                "label": "Plug in hybrid",
+                "type": "text"
+              },
+              {
+                "key": "electric",
+                "label": "Electric",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "key": "body",
+            "type": "object",
+            "label": "Body",
+            "fields": [
+              {
+                "key": "hatchback",
+                "label": "Hatchback",
+                "type": "text"
+              },
+              {
+                "key": "sedan",
+                "label": "Sedan",
+                "type": "text"
+              },
+              {
+                "key": "suv",
+                "label": "Suv",
+                "type": "text"
+              },
+              {
+                "key": "pickup",
+                "label": "Pickup",
+                "type": "text"
+              },
+              {
+                "key": "coupe",
+                "label": "Coupe",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "key": "status",
+            "type": "object",
+            "label": "Status",
+            "fields": [
+              {
+                "key": "available",
+                "label": "Available",
+                "type": "text"
+              },
+              {
+                "key": "reserved",
+                "label": "Reserved",
+                "type": "text"
+              },
+              {
+                "key": "sold",
+                "label": "Sold",
+                "type": "text"
+              },
+              {
+                "key": "arriving",
+                "label": "Arriving",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "key": "transmission",
+            "type": "object",
+            "label": "Transmission",
+            "fields": [
+              {
+                "key": "auto",
+                "label": "Auto",
+                "type": "text"
+              },
+              {
+                "key": "manual",
+                "label": "Manual",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "key": "transmissionLong",
+            "type": "object",
+            "label": "Transmission Long",
+            "fields": [
+              {
+                "key": "auto",
+                "label": "Auto",
+                "type": "text"
+              },
+              {
+                "key": "manual",
+                "label": "Manual",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "key": "mileageSource",
+            "type": "object",
+            "label": "Mileage source",
+            "fields": [
+              {
+                "key": "auction-sheet",
+                "label": "Auction sheet",
+                "type": "text"
+              },
+              {
+                "key": "service-log",
+                "label": "Service log",
+                "type": "text"
+              },
+              {
+                "key": "odometer",
+                "label": "Odometer",
+                "type": "text"
+              },
+              {
+                "key": "new",
+                "label": "New",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "financeSettings",
+        "path": "financeSettings",
+        "type": "object",
+        "label": "Finance Settings",
+        "fields": [
+          {
+            "key": "ltvEffectiveDate",
+            "label": "Ltv Effective Date",
+            "type": "text"
+          },
+          {
+            "key": "ltvSource",
+            "label": "Ltv Source",
+            "type": "text"
+          },
+          {
+            "key": "ltvRegisteredOverOneYear",
+            "label": "Ltv Registered Over One Year",
+            "type": "number"
+          },
+          {
+            "key": "ltvNewOrRecentCar",
+            "label": "Ltv New Or Recent Car",
+            "type": "number"
+          },
+          {
+            "key": "ltvNewOrRecentCommercial",
+            "label": "Ltv New Or Recent Commercial",
+            "type": "number"
+          },
+          {
+            "key": "flatAnnualRate",
+            "label": "Flat Annual Rate",
+            "type": "number"
+          },
+          {
+            "key": "reducingAnnualRate",
+            "label": "Reducing Annual Rate",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "id": "cars",
+        "path": "cars",
+        "type": "object",
+        "label": "Cars",
+        "fields": [
+          {
+            "key": "seo",
+            "type": "object",
+            "label": "Search engine (SEO)",
+            "fields": [
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "key": "description",
+                "label": "Description",
+                "type": "textarea"
+              }
+            ]
+          },
+          {
+            "key": "header",
+            "type": "object",
+            "label": "Header",
+            "fields": [
+              {
+                "key": "eyebrow",
+                "label": "Eyebrow",
+                "type": "text"
+              },
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "key": "text",
+                "label": "Text",
+                "type": "textarea"
+              },
+              {
+                "key": "crumbLabel",
+                "label": "Crumb Label",
+                "type": "text"
+              },
+              {
+                "key": "crumbHref",
+                "label": "Crumb Href",
+                "type": "url"
+              }
+            ]
+          },
+          {
+            "key": "explorer",
+            "type": "object",
+            "label": "Explorer",
+            "fields": [
+              {
+                "key": "filtersTitle",
+                "label": "Filters Title",
+                "type": "text"
+              },
+              {
+                "key": "clearAll",
+                "label": "Clear All",
+                "type": "text"
+              },
+              {
+                "key": "searchLabel",
+                "label": "Search Label",
+                "type": "text"
+              },
+              {
+                "key": "searchPlaceholder",
+                "label": "Search Placeholder",
+                "type": "text"
+              },
+              {
+                "key": "filtersButton",
+                "label": "Filters Button",
+                "type": "text"
+              },
+              {
+                "key": "sortLabel",
+                "label": "Sort Label",
+                "type": "text"
+              },
+              {
+                "key": "sorts",
+                "type": "list",
+                "label": "Sorts",
+                "itemLabel": "Sort",
+                "fields": [
+                  {
+                    "key": "key",
+                    "label": "Key",
+                    "type": "text"
+                  },
+                  {
+                    "key": "label",
+                    "label": "Label",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "key": "viewLabel",
+                "label": "View Label",
+                "type": "text"
+              },
+              {
+                "key": "gridView",
+                "label": "Grid View",
+                "type": "text"
+              },
+              {
+                "key": "listView",
+                "label": "List View",
+                "type": "text"
+              },
+              {
+                "key": "carOne",
+                "label": "Car One",
+                "type": "text"
+              },
+              {
+                "key": "carMany",
+                "label": "Car Many",
+                "type": "text"
+              },
+              {
+                "key": "removeChip",
+                "label": "Remove Chip",
+                "type": "text"
+              },
+              {
+                "key": "chipFrom",
+                "label": "Chip From",
+                "type": "text"
+              },
+              {
+                "key": "chipTo",
+                "label": "Chip To",
+                "type": "text"
+              },
+              {
+                "key": "chipYear",
+                "label": "Chip Year",
+                "type": "text"
+              },
+              {
+                "key": "chipKm",
+                "label": "Chip Km",
+                "type": "text"
+              },
+              {
+                "key": "chipSold",
+                "label": "Chip Sold",
+                "type": "text"
+              },
+              {
+                "key": "emptyAnimationLabel",
+                "label": "Empty Animation Label",
+                "type": "text"
+              },
+              {
+                "key": "emptyTitle",
+                "label": "Empty Title",
+                "type": "text"
+              },
+              {
+                "key": "emptyText",
+                "label": "Empty Text",
+                "type": "textarea"
+              },
+              {
+                "key": "emptyClear",
+                "label": "Empty Clear",
+                "type": "text"
+              },
+              {
+                "key": "emptyAskLabel",
+                "label": "Empty Ask Label",
+                "type": "text"
+              },
+              {
+                "key": "emptyAskHref",
+                "label": "Empty Ask Href",
+                "type": "url"
+              },
+              {
+                "key": "sheetTitle",
+                "label": "Sheet Title",
+                "type": "text"
+              },
+              {
+                "key": "sheetClear",
+                "label": "Sheet Clear",
+                "type": "text"
+              },
+              {
+                "key": "sheetCloseLabel",
+                "label": "Sheet Close Label",
+                "type": "text"
+              },
+              {
+                "key": "sheetShow",
+                "label": "Sheet Show",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "key": "filters",
+            "type": "object",
+            "label": "Filters",
+            "fields": [
+              {
+                "key": "condition",
+                "label": "Condition",
+                "type": "text"
+              },
+              {
+                "key": "price",
+                "label": "Price",
+                "type": "text"
+              },
+              {
+                "key": "minPriceLabel",
+                "label": "Min Price Label",
+                "type": "text"
+              },
+              {
+                "key": "maxPriceLabel",
+                "label": "Max Price Label",
+                "type": "text"
+              },
+              {
+                "key": "noMin",
+                "label": "No Min",
+                "type": "text"
+              },
+              {
+                "key": "noMax",
+                "label": "No Max",
+                "type": "text"
+              },
+              {
+                "key": "priceStepLabel",
+                "label": "Price Step Label",
+                "type": "text"
+              },
+              {
+                "key": "priceSteps",
+                "type": "list",
+                "label": "Price Steps",
+                "itemField": {
+                  "label": "Price Step",
+                  "type": "number"
+                }
+              },
+              {
+                "key": "body",
+                "label": "Body",
+                "type": "text"
+              },
+              {
+                "key": "fuel",
+                "label": "Fuel",
+                "type": "text"
+              },
+              {
+                "key": "make",
+                "label": "Make",
+                "type": "text"
+              },
+              {
+                "key": "yearFrom",
+                "label": "Year From",
+                "type": "text"
+              },
+              {
+                "key": "anyYear",
+                "label": "Any Year",
+                "type": "text"
+              },
+              {
+                "key": "yearOption",
+                "label": "Year Option",
+                "type": "text"
+              },
+              {
+                "key": "yearOptions",
+                "type": "list",
+                "label": "Year Options",
+                "itemField": {
+                  "label": "Year Option",
+                  "type": "number"
+                }
+              },
+              {
+                "key": "mileage",
+                "label": "Mileage",
+                "type": "text"
+              },
+              {
+                "key": "mileageLabel",
+                "label": "Mileage Label",
+                "type": "text"
+              },
+              {
+                "key": "anyMileage",
+                "label": "Any Mileage",
+                "type": "text"
+              },
+              {
+                "key": "mileageOption",
+                "label": "Mileage Option",
+                "type": "text"
+              },
+              {
+                "key": "mileageOptions",
+                "type": "list",
+                "label": "Mileage Options",
+                "itemField": {
+                  "label": "Mileage Option",
+                  "type": "number"
+                }
+              },
+              {
+                "key": "gearbox",
+                "label": "Gearbox",
+                "type": "text"
+              },
+              {
+                "key": "showSold",
+                "label": "Show Sold",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "forms",
+        "path": "forms",
+        "type": "object",
+        "label": "Forms",
+        "fields": [
+          {
+            "key": "common",
+            "type": "object",
+            "label": "Common",
+            "fields": [
+              {
+                "key": "nameLabel",
+                "label": "Name Label",
+                "type": "text"
+              },
+              {
+                "key": "phoneLabel",
+                "label": "Phone Label",
+                "type": "text"
+              },
+              {
+                "key": "phonePlaceholder",
+                "label": "Phone Placeholder",
+                "type": "text"
+              },
+              {
+                "key": "errorName",
+                "label": "Error Name",
+                "type": "text"
+              },
+              {
+                "key": "errorPhone",
+                "label": "Error Phone",
+                "type": "text"
+              },
+              {
+                "key": "errorConsent",
+                "label": "Error Consent",
+                "type": "text"
+              },
+              {
+                "key": "consentText",
+                "label": "Consent Text",
+                "type": "textarea"
+              },
+              {
+                "key": "privacyLabel",
+                "label": "Privacy Label",
+                "type": "text"
+              },
+              {
+                "key": "privacyHref",
+                "label": "Privacy Href",
+                "type": "url"
+              },
+              {
+                "key": "demoNote",
+                "label": "Demo Note",
+                "type": "text"
+              },
+              {
+                "key": "successAnimationLabel",
+                "label": "Success Animation Label",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "key": "enquiry",
+            "type": "object",
+            "label": "Enquiry",
+            "fields": [
+              {
+                "key": "defaultMessage",
+                "label": "Default Message",
+                "type": "text"
+              },
+              {
+                "key": "messageLabel",
+                "label": "Message Label",
+                "type": "text"
+              },
+              {
+                "key": "submit",
+                "label": "Submit",
+                "type": "text"
+              },
+              {
+                "key": "successTitle",
+                "label": "Success Title",
+                "type": "text"
+              },
+              {
+                "key": "successText",
+                "label": "Success Text",
+                "type": "textarea"
+              },
+              {
+                "key": "whatsappLabel",
+                "label": "Whatsapp Label",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "key": "tradeIn",
+            "type": "object",
+            "label": "Trade In",
+            "fields": [
+              {
+                "key": "makeLabel",
+                "label": "Make Label",
+                "type": "text"
+              },
+              {
+                "key": "makes",
+                "type": "list",
+                "label": "Makes",
+                "itemField": {
+                  "label": "Make",
+                  "type": "text"
+                }
+              },
+              {
+                "key": "modelLabel",
+                "label": "Model Label",
+                "type": "text"
+              },
+              {
+                "key": "modelPlaceholder",
+                "label": "Model Placeholder",
+                "type": "text"
+              },
+              {
+                "key": "errorModel",
+                "label": "Error Model",
+                "type": "text"
+              },
+              {
+                "key": "yearLabel",
+                "label": "Year Label",
+                "type": "text"
+              },
+              {
+                "key": "yearNewest",
+                "label": "Year Newest",
+                "type": "number"
+              },
+              {
+                "key": "yearCount",
+                "label": "Year Count",
+                "type": "number"
+              },
+              {
+                "key": "kmLabel",
+                "label": "Km Label",
+                "type": "text"
+              },
+              {
+                "key": "conditionLabel",
+                "label": "Condition Label",
+                "type": "text"
+              },
+              {
+                "key": "conditions",
+                "type": "list",
+                "label": "Conditions",
+                "itemLabel": "Condition",
+                "fields": [
+                  {
+                    "key": "key",
+                    "label": "Key",
+                    "type": "text"
+                  },
+                  {
+                    "key": "title",
+                    "label": "Title",
+                    "type": "text"
+                  },
+                  {
+                    "key": "text",
+                    "label": "Text",
+                    "type": "textarea"
+                  },
+                  {
+                    "key": "factor",
+                    "label": "Factor",
+                    "type": "number"
+                  }
+                ]
+              },
+              {
+                "key": "photosLabel",
+                "label": "Photos Label",
+                "type": "image"
+              },
+              {
+                "key": "photoAlt",
+                "label": "Photo Alt",
+                "type": "image"
+              },
+              {
+                "key": "removePhotoLabel",
+                "label": "Remove Photo Label",
+                "type": "image"
+              },
+              {
+                "key": "addPhoto",
+                "label": "Add Photo",
+                "type": "image"
+              },
+              {
+                "key": "photosNote",
+                "label": "Photos Note",
+                "type": "image"
+              },
+              {
+                "key": "submit",
+                "label": "Submit",
+                "type": "text"
+              },
+              {
+                "key": "resultText",
+                "label": "Result Text",
+                "type": "textarea"
+              },
+              {
+                "key": "nextCarLabel",
+                "label": "Next Car Label",
+                "type": "text"
+              },
+              {
+                "key": "nextCarHref",
+                "label": "Next Car Href",
+                "type": "url"
+              },
+              {
+                "key": "againLabel",
+                "label": "Again Label",
+                "type": "text"
+              },
+              {
+                "key": "estimateBasePrice",
+                "label": "Estimate Base Price",
+                "type": "number"
+              },
+              {
+                "key": "estimateYear",
+                "label": "Estimate Year",
+                "type": "number"
+              }
+            ]
+          },
+          {
+            "key": "booking",
+            "type": "object",
+            "label": "Booking",
+            "fields": [
+              {
+                "key": "slots",
+                "type": "list",
+                "label": "Slots",
+                "itemField": {
+                  "label": "Slot",
+                  "type": "text"
+                }
+              },
+              {
+                "key": "sundayCutoff",
+                "label": "Sunday Cutoff",
+                "type": "text"
+              },
+              {
+                "key": "daysAhead",
+                "label": "Days Ahead",
+                "type": "number"
+              },
+              {
+                "key": "errorTime",
+                "label": "Error Time",
+                "type": "text"
+              },
+              {
+                "key": "successTitle",
+                "label": "Success Title",
+                "type": "text"
+              },
+              {
+                "key": "successText",
+                "label": "Success Text",
+                "type": "text"
+              },
+              {
+                "key": "successWhereHome",
+                "label": "Success Where Home",
+                "type": "text"
+              },
+              {
+                "key": "calendarTitle",
+                "label": "Calendar Title",
+                "type": "text"
+              },
+              {
+                "key": "calendarFile",
+                "label": "Calendar File",
+                "type": "text"
+              },
+              {
+                "key": "calendarLabel",
+                "label": "Calendar Label",
+                "type": "text"
+              },
+              {
+                "key": "whatsappMessage",
+                "label": "Whatsapp Message",
+                "type": "text"
+              },
+              {
+                "key": "whatsappLabel",
+                "label": "Whatsapp Label",
+                "type": "text"
+              },
+              {
+                "key": "step1",
+                "label": "Step1",
+                "type": "text"
+              },
+              {
+                "key": "carLabel",
+                "label": "Car Label",
+                "type": "text"
+              },
+              {
+                "key": "step2",
+                "label": "Step2",
+                "type": "text"
+              },
+              {
+                "key": "showroomTitle",
+                "label": "Showroom Title",
+                "type": "text"
+              },
+              {
+                "key": "showroomText",
+                "label": "Showroom Text",
+                "type": "text"
+              },
+              {
+                "key": "homeTitle",
+                "label": "Home Title",
+                "type": "text"
+              },
+              {
+                "key": "homeText",
+                "label": "Home Text",
+                "type": "text"
+              },
+              {
+                "key": "step3",
+                "label": "Step3",
+                "type": "text"
+              },
+              {
+                "key": "dayLabel",
+                "label": "Day Label",
+                "type": "text"
+              },
+              {
+                "key": "timeLabel",
+                "label": "Time Label",
+                "type": "text"
+              },
+              {
+                "key": "sundayNote",
+                "label": "Sunday Note",
+                "type": "text"
+              },
+              {
+                "key": "step4",
+                "label": "Step4",
+                "type": "text"
+              },
+              {
+                "key": "nameLabel",
+                "label": "Name Label",
+                "type": "text"
+              },
+              {
+                "key": "phoneHint",
+                "label": "Phone Hint",
+                "type": "text"
+              },
+              {
+                "key": "summaryDay",
+                "label": "Summary Day",
+                "type": "text"
+              },
+              {
+                "key": "summaryTime",
+                "label": "Summary Time",
+                "type": "text"
+              },
+              {
+                "key": "summaryWhere",
+                "label": "Summary Where",
+                "type": "text"
+              },
+              {
+                "key": "summaryHome",
+                "label": "Summary Home",
+                "type": "text"
+              },
+              {
+                "key": "summaryShowroom",
+                "label": "Summary Showroom",
+                "type": "text"
+              },
+              {
+                "key": "submit",
+                "label": "Submit",
+                "type": "text"
+              },
+              {
+                "key": "viewCar",
+                "label": "View Car",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "carDetail",
+        "path": "carDetail",
+        "type": "object",
+        "label": "Car Detail",
+        "fields": [
+          {
+            "key": "seo",
+            "type": "object",
+            "label": "Search engine (SEO)",
+            "fields": [
+              {
+                "key": "notFound",
+                "label": "Not Found",
+                "type": "text"
+              },
+              {
+                "key": "description",
+                "label": "Description",
+                "type": "textarea"
+              }
+            ]
+          },
+          {
+            "key": "breadcrumbCars",
+            "label": "Breadcrumb Cars",
+            "type": "text"
+          },
+          {
+            "key": "breadcrumbCarsHref",
+            "label": "Breadcrumb Cars Href",
+            "type": "url"
+          },
+          {
+            "key": "photoAlt",
+            "label": "Photo Alt",
+            "type": "image"
+          },
+          {
+            "key": "statYear",
+            "label": "Stat Year",
+            "type": "text"
+          },
+          {
+            "key": "statYearReg",
+            "label": "Stat Year Reg",
+            "type": "text"
+          },
+          {
+            "key": "statMileage",
+            "label": "Stat Mileage",
+            "type": "text"
+          },
+          {
+            "key": "statBattery",
+            "label": "Stat Battery",
+            "type": "text"
+          },
+          {
+            "key": "statEngine",
+            "label": "Stat Engine",
+            "type": "text"
+          },
+          {
+            "key": "statSeats",
+            "label": "Stat Seats",
+            "type": "text"
+          },
+          {
+            "key": "aboutTitle",
+            "label": "About Title",
+            "type": "text"
+          },
+          {
+            "key": "specsTitle",
+            "label": "Specs Title",
+            "type": "text"
+          },
+          {
+            "key": "specCondition",
+            "label": "Spec Condition",
+            "type": "text"
+          },
+          {
+            "key": "specMakeModel",
+            "label": "Spec Make Model",
+            "type": "text"
+          },
+          {
+            "key": "specGrade",
+            "label": "Spec Grade",
+            "type": "text"
+          },
+          {
+            "key": "specYom",
+            "label": "Spec Yom",
+            "type": "text"
+          },
+          {
+            "key": "specFirstReg",
+            "label": "Spec First Reg",
+            "type": "text"
+          },
+          {
+            "key": "specNotRegistered",
+            "label": "Spec Not Registered",
+            "type": "text"
+          },
+          {
+            "key": "specMileage",
+            "label": "Spec Mileage",
+            "type": "text"
+          },
+          {
+            "key": "specFuel",
+            "label": "Spec Fuel",
+            "type": "text"
+          },
+          {
+            "key": "specGearbox",
+            "label": "Spec Gearbox",
+            "type": "text"
+          },
+          {
+            "key": "specBattery",
+            "label": "Spec Battery",
+            "type": "text"
+          },
+          {
+            "key": "specEngine",
+            "label": "Spec Engine",
+            "type": "text"
+          },
+          {
+            "key": "specBody",
+            "label": "Spec Body",
+            "type": "text"
+          },
+          {
+            "key": "specColour",
+            "label": "Spec Colour",
+            "type": "text"
+          },
+          {
+            "key": "specSeats",
+            "label": "Spec Seats",
+            "type": "text"
+          },
+          {
+            "key": "specLocation",
+            "label": "Spec Location",
+            "type": "text"
+          },
+          {
+            "key": "featuresTitle",
+            "label": "Features Title",
+            "type": "text"
+          },
+          {
+            "key": "leasingEyebrow",
+            "label": "Leasing Eyebrow",
+            "type": "text"
+          },
+          {
+            "key": "leasingTitle",
+            "label": "Leasing Title",
+            "type": "text"
+          },
+          {
+            "key": "enquireTitle",
+            "label": "Enquire Title",
+            "type": "text"
+          },
+          {
+            "key": "enquireText",
+            "label": "Enquire Text",
+            "type": "text"
+          },
+          {
+            "key": "similarTitle",
+            "label": "Similar Title",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "gallery",
+        "path": "gallery",
+        "type": "object",
+        "label": "Gallery",
+        "fields": [
+          {
+            "key": "thumbLabel",
+            "label": "Thumb Label",
+            "type": "text"
+          },
+          {
+            "key": "photoAlt",
+            "label": "Photo Alt",
+            "type": "image"
+          },
+          {
+            "key": "prevLabel",
+            "label": "Prev Label",
+            "type": "text"
+          },
+          {
+            "key": "nextLabel",
+            "label": "Next Label",
+            "type": "text"
+          },
+          {
+            "key": "openLabel",
+            "label": "Open Label",
+            "type": "text"
+          },
+          {
+            "key": "dialogLabel",
+            "label": "Dialog Label",
+            "type": "text"
+          },
+          {
+            "key": "closeLabel",
+            "label": "Close Label",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "trust",
+        "path": "trust",
+        "type": "object",
+        "label": "Trust",
+        "fields": [
+          {
+            "key": "eyebrow",
+            "label": "Eyebrow",
+            "type": "text"
+          },
+          {
+            "key": "title",
+            "label": "Title",
+            "type": "text"
+          },
+          {
+            "key": "verifiedBadge",
+            "label": "Verified Badge",
+            "type": "text"
+          },
+          {
+            "key": "mileageTitle",
+            "label": "Mileage Title",
+            "type": "text"
+          },
+          {
+            "key": "sourceLabel",
+            "label": "Source Label",
+            "type": "text"
+          },
+          {
+            "key": "gradeLabel",
+            "label": "Grade Label",
+            "type": "text"
+          },
+          {
+            "key": "ownersLabel",
+            "label": "Owners Label",
+            "type": "text"
+          },
+          {
+            "key": "mileageNote",
+            "label": "Mileage Note",
+            "type": "text"
+          },
+          {
+            "key": "viewLabel",
+            "label": "View Label",
+            "type": "text"
+          },
+          {
+            "key": "closeLabel",
+            "label": "Close Label",
+            "type": "text"
+          },
+          {
+            "key": "demoNote",
+            "label": "Demo Note",
+            "type": "textarea"
+          },
+          {
+            "key": "sheet",
+            "type": "object",
+            "label": "Sheet",
+            "fields": [
+              {
+                "key": "overallLabel",
+                "label": "Overall Label",
+                "type": "text"
+              },
+              {
+                "key": "interiorLabel",
+                "label": "Interior Label",
+                "type": "text"
+              },
+              {
+                "key": "exteriorLabel",
+                "label": "Exterior Label",
+                "type": "text"
+              },
+              {
+                "key": "interiorGrade",
+                "label": "Interior Grade",
+                "type": "text"
+              },
+              {
+                "key": "exteriorGrade",
+                "label": "Exterior Grade",
+                "type": "text"
+              },
+              {
+                "key": "mileageLabel",
+                "label": "Mileage Label",
+                "type": "text"
+              },
+              {
+                "key": "marksLabel",
+                "label": "Marks Label",
+                "type": "text"
+              },
+              {
+                "key": "marksValue",
+                "label": "Marks Value",
+                "type": "text"
+              },
+              {
+                "key": "translationLabel",
+                "label": "Translation Label",
+                "type": "text"
+              },
+              {
+                "key": "translationValue",
+                "label": "Translation Value",
+                "type": "text"
+              },
+              {
+                "key": "marks",
+                "type": "object",
+                "label": "Marks",
+                "fields": [
+                  {
+                    "key": "first",
+                    "type": "object",
+                    "label": "First",
+                    "fields": [
+                      {
+                        "key": "code",
+                        "label": "Code",
+                        "type": "text"
+                      },
+                      {
+                        "key": "label",
+                        "label": "Label",
+                        "type": "text"
+                      },
+                      {
+                        "key": "x",
+                        "label": "X",
+                        "type": "number"
+                      },
+                      {
+                        "key": "y",
+                        "label": "Y",
+                        "type": "number"
+                      }
+                    ]
+                  },
+                  {
+                    "key": "second",
+                    "type": "object",
+                    "label": "Second",
+                    "fields": [
+                      {
+                        "key": "code",
+                        "label": "Code",
+                        "type": "text"
+                      },
+                      {
+                        "key": "label",
+                        "label": "Label",
+                        "type": "text"
+                      },
+                      {
+                        "key": "x",
+                        "label": "X",
+                        "type": "number"
+                      },
+                      {
+                        "key": "y",
+                        "label": "Y",
+                        "type": "number"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "docVehicleLabel",
+            "label": "Doc Vehicle Label",
+            "type": "text"
+          },
+          {
+            "key": "docChassisLabel",
+            "label": "Doc Chassis Label",
+            "type": "text"
+          },
+          {
+            "key": "docChassisValue",
+            "label": "Doc Chassis Value",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "carActions",
+        "path": "carActions",
+        "type": "object",
+        "label": "Car Actions",
+        "fields": [
+          {
+            "key": "lakhsSuffix",
+            "label": "Lakhs Suffix",
+            "type": "text"
+          },
+          {
+            "key": "leasingFrom",
+            "label": "Leasing From",
+            "type": "text"
+          },
+          {
+            "key": "leasingFromValue",
+            "label": "Leasing From Value",
+            "type": "text"
+          },
+          {
+            "key": "leasingAnchor",
+            "label": "Leasing Anchor",
+            "type": "text"
+          },
+          {
+            "key": "similarLabel",
+            "label": "Similar Label",
+            "type": "text"
+          },
+          {
+            "key": "bookLabel",
+            "label": "Book Label",
+            "type": "text"
+          },
+          {
+            "key": "bookShort",
+            "label": "Book Short",
+            "type": "text"
+          },
+          {
+            "key": "bookHref",
+            "label": "Book Href",
+            "type": "url"
+          },
+          {
+            "key": "whatsappLabel",
+            "label": "Whatsapp Label",
+            "type": "text"
+          },
+          {
+            "key": "whatsappMessage",
+            "label": "Whatsapp Message",
+            "type": "text"
+          },
+          {
+            "key": "reserveLabel",
+            "label": "Reserve Label",
+            "type": "text"
+          },
+          {
+            "key": "depositAmount",
+            "label": "Deposit Amount",
+            "type": "number"
+          },
+          {
+            "key": "reserve",
+            "type": "object",
+            "label": "Reserve",
+            "fields": [
+              {
+                "key": "dialogLabel",
+                "label": "Dialog Label",
+                "type": "text"
+              },
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "key": "closeLabel",
+                "label": "Close Label",
+                "type": "text"
+              },
+              {
+                "key": "successTitle",
+                "label": "Success Title",
+                "type": "text"
+              },
+              {
+                "key": "successText",
+                "label": "Success Text",
+                "type": "textarea"
+              },
+              {
+                "key": "doneLabel",
+                "label": "Done Label",
+                "type": "text"
+              },
+              {
+                "key": "depositLabel",
+                "label": "Deposit Label",
+                "type": "text"
+              },
+              {
+                "key": "payWith",
+                "label": "Pay With",
+                "type": "text"
+              },
+              {
+                "key": "gatewayNote",
+                "label": "Gateway Note",
+                "type": "textarea"
+              },
+              {
+                "key": "submit",
+                "label": "Submit",
+                "type": "text"
+              },
+              {
+                "key": "leadName",
+                "label": "Lead Name",
+                "type": "text"
+              },
+              {
+                "key": "methodLabels",
+                "type": "object",
+                "label": "Method Labels",
+                "fields": [
+                  {
+                    "key": "card",
+                    "label": "Card",
+                    "type": "text"
+                  },
+                  {
+                    "key": "lankaqr",
+                    "label": "Lankaqr",
+                    "type": "text"
+                  },
+                  {
+                    "key": "bank",
+                    "label": "Bank",
+                    "type": "text"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "calc",
+        "path": "calc",
+        "type": "object",
+        "label": "Calc",
+        "fields": [
+          {
+            "key": "priceLabel",
+            "label": "Price Label",
+            "type": "text"
+          },
+          {
+            "key": "maxPrice",
+            "label": "Max Price",
+            "type": "number"
+          },
+          {
+            "key": "defaultPrice",
+            "label": "Default Price",
+            "type": "number"
+          },
+          {
+            "key": "typeLabel",
+            "label": "Type Label",
+            "type": "text"
+          },
+          {
+            "key": "typeCar",
+            "label": "Type Car",
+            "type": "text"
+          },
+          {
+            "key": "typeCommercial",
+            "label": "Type Commercial",
+            "type": "text"
+          },
+          {
+            "key": "regLabel",
+            "label": "Reg Label",
+            "type": "text"
+          },
+          {
+            "key": "regUnregistered",
+            "label": "Reg Unregistered",
+            "type": "text"
+          },
+          {
+            "key": "regUnder1",
+            "label": "Reg Under1",
+            "type": "text"
+          },
+          {
+            "key": "regOver1",
+            "label": "Reg Over1",
+            "type": "text"
+          },
+          {
+            "key": "downLabel",
+            "label": "Down Label",
+            "type": "text"
+          },
+          {
+            "key": "downStep",
+            "label": "Down Step",
+            "type": "number"
+          },
+          {
+            "key": "belowMin",
+            "label": "Below Min",
+            "type": "text"
+          },
+          {
+            "key": "minNote",
+            "label": "Min Note",
+            "type": "text"
+          },
+          {
+            "key": "termLabel",
+            "label": "Term Label",
+            "type": "text"
+          },
+          {
+            "key": "termValue",
+            "label": "Term Value",
+            "type": "text"
+          },
+          {
+            "key": "termYears",
+            "label": "Term Years",
+            "type": "text"
+          },
+          {
+            "key": "termMin",
+            "label": "Term Min",
+            "type": "number"
+          },
+          {
+            "key": "termMax",
+            "label": "Term Max",
+            "type": "number"
+          },
+          {
+            "key": "termDefault",
+            "label": "Term Default",
+            "type": "number"
+          },
+          {
+            "key": "rateTypeLabel",
+            "label": "Rate Type Label",
+            "type": "text"
+          },
+          {
+            "key": "reducing",
+            "label": "Reducing",
+            "type": "text"
+          },
+          {
+            "key": "flat",
+            "label": "Flat",
+            "type": "text"
+          },
+          {
+            "key": "rateLabel",
+            "label": "Rate Label",
+            "type": "text"
+          },
+          {
+            "key": "monthlyLabel",
+            "label": "Monthly Label",
+            "type": "text"
+          },
+          {
+            "key": "forTerm",
+            "label": "For Term",
+            "type": "text"
+          },
+          {
+            "key": "downRow",
+            "label": "Down Row",
+            "type": "text"
+          },
+          {
+            "key": "financedRow",
+            "label": "Financed Row",
+            "type": "text"
+          },
+          {
+            "key": "interestRow",
+            "label": "Interest Row",
+            "type": "text"
+          },
+          {
+            "key": "totalRow",
+            "label": "Total Row",
+            "type": "text"
+          },
+          {
+            "key": "flatNote",
+            "label": "Flat Note",
+            "type": "textarea"
+          },
+          {
+            "key": "disclaimer",
+            "label": "Disclaimer",
+            "type": "textarea"
+          },
+          {
+            "key": "chartLabel",
+            "label": "Chart Label",
+            "type": "text"
+          },
+          {
+            "key": "chartOwed",
+            "label": "Chart Owed",
+            "type": "text"
+          },
+          {
+            "key": "chartPaidOff",
+            "label": "Chart Paid Off",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "finance",
+        "path": "finance",
+        "type": "object",
+        "label": "Finance",
+        "fields": [
+          {
+            "key": "seo",
+            "type": "object",
+            "label": "Search engine (SEO)",
+            "fields": [
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "key": "description",
+                "label": "Description",
+                "type": "textarea"
+              }
+            ]
+          },
+          {
+            "key": "header",
+            "type": "object",
+            "label": "Header",
+            "fields": [
+              {
+                "key": "eyebrow",
+                "label": "Eyebrow",
+                "type": "text"
+              },
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "key": "text",
+                "label": "Text",
+                "type": "textarea"
+              },
+              {
+                "key": "crumbLabel",
+                "label": "Crumb Label",
+                "type": "text"
+              },
+              {
+                "key": "crumbHref",
+                "label": "Crumb Href",
+                "type": "url"
+              }
+            ]
+          },
+          {
+            "key": "rules",
+            "type": "list",
+            "label": "Rules",
+            "itemLabel": "Rule",
+            "fields": [
+              {
+                "key": "value",
+                "label": "Value",
+                "type": "text"
+              },
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "key": "text",
+                "label": "Text",
+                "type": "textarea"
+              }
+            ]
+          },
+          {
+            "key": "rulesSource",
+            "label": "Rules Source",
+            "type": "text"
+          },
+          {
+            "key": "budgetEyebrow",
+            "label": "Budget Eyebrow",
+            "type": "text"
+          },
+          {
+            "key": "budgetTitle",
+            "label": "Budget Title",
+            "type": "text"
+          },
+          {
+            "key": "runningEyebrow",
+            "label": "Running Eyebrow",
+            "type": "text"
+          },
+          {
+            "key": "runningTitle",
+            "label": "Running Title",
+            "type": "text"
+          },
+          {
+            "key": "budget",
+            "type": "object",
+            "label": "Budget",
+            "fields": [
+              {
+                "key": "monthlyLabel",
+                "label": "Monthly Label",
+                "type": "text"
+              },
+              {
+                "key": "monthlyMin",
+                "label": "Monthly Min",
+                "type": "number"
+              },
+              {
+                "key": "monthlyMax",
+                "label": "Monthly Max",
+                "type": "number"
+              },
+              {
+                "key": "monthlyStep",
+                "label": "Monthly Step",
+                "type": "number"
+              },
+              {
+                "key": "monthlyDefault",
+                "label": "Monthly Default",
+                "type": "number"
+              },
+              {
+                "key": "cashLabel",
+                "label": "Cash Label",
+                "type": "text"
+              },
+              {
+                "key": "cashMin",
+                "label": "Cash Min",
+                "type": "number"
+              },
+              {
+                "key": "cashMax",
+                "label": "Cash Max",
+                "type": "number"
+              },
+              {
+                "key": "cashStep",
+                "label": "Cash Step",
+                "type": "number"
+              },
+              {
+                "key": "cashDefault",
+                "label": "Cash Default",
+                "type": "number"
+              },
+              {
+                "key": "unregisteredLabel",
+                "label": "Unregistered Label",
+                "type": "text"
+              },
+              {
+                "key": "registeredLabel",
+                "label": "Registered Label",
+                "type": "text"
+              },
+              {
+                "key": "resultLabel",
+                "label": "Result Label",
+                "type": "text"
+              },
+              {
+                "key": "cashLimit",
+                "label": "Cash Limit",
+                "type": "text"
+              },
+              {
+                "key": "monthlyLimit",
+                "label": "Monthly Limit",
+                "type": "text"
+              },
+              {
+                "key": "cta",
+                "label": "Cta",
+                "type": "text"
+              },
+              {
+                "key": "carOne",
+                "label": "Car One",
+                "type": "text"
+              },
+              {
+                "key": "carMany",
+                "label": "Car Many",
+                "type": "text"
+              },
+              {
+                "key": "resultsHref",
+                "label": "Results Href",
+                "type": "url"
+              }
+            ]
+          },
+          {
+            "key": "running",
+            "type": "object",
+            "label": "Running",
+            "fields": [
+              {
+                "key": "kmLabel",
+                "label": "Km Label",
+                "type": "text"
+              },
+              {
+                "key": "kmDefault",
+                "label": "Km Default",
+                "type": "number"
+              },
+              {
+                "key": "kmSuffix",
+                "label": "Km Suffix",
+                "type": "text"
+              },
+              {
+                "key": "petrolLabel",
+                "label": "Petrol Label",
+                "type": "text"
+              },
+              {
+                "key": "petrolDefault",
+                "label": "Petrol Default",
+                "type": "number"
+              },
+              {
+                "key": "unitLabel",
+                "label": "Unit Label",
+                "type": "text"
+              },
+              {
+                "key": "unitDefault",
+                "label": "Unit Default",
+                "type": "number"
+              },
+              {
+                "key": "note",
+                "label": "Note",
+                "type": "textarea"
+              },
+              {
+                "key": "perMonth",
+                "label": "Per Month",
+                "type": "text"
+              },
+              {
+                "key": "types",
+                "type": "list",
+                "label": "Types",
+                "itemLabel": "Type",
+                "fields": [
+                  {
+                    "key": "name",
+                    "label": "Name",
+                    "type": "text"
+                  },
+                  {
+                    "key": "efficiency",
+                    "label": "Efficiency",
+                    "type": "number"
+                  },
+                  {
+                    "key": "unit",
+                    "label": "Unit",
+                    "type": "text"
+                  },
+                  {
+                    "key": "energy",
+                    "label": "Energy",
+                    "type": "text"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "sell",
+        "path": "sell",
+        "type": "object",
+        "label": "Sell",
+        "fields": [
+          {
+            "key": "seo",
+            "type": "object",
+            "label": "Search engine (SEO)",
+            "fields": [
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "key": "description",
+                "label": "Description",
+                "type": "textarea"
+              }
+            ]
+          },
+          {
+            "key": "header",
+            "type": "object",
+            "label": "Header",
+            "fields": [
+              {
+                "key": "eyebrow",
+                "label": "Eyebrow",
+                "type": "text"
+              },
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "key": "text",
+                "label": "Text",
+                "type": "textarea"
+              },
+              {
+                "key": "crumbLabel",
+                "label": "Crumb Label",
+                "type": "text"
+              },
+              {
+                "key": "crumbHref",
+                "label": "Crumb Href",
+                "type": "url"
+              }
+            ]
+          },
+          {
+            "key": "points",
+            "type": "list",
+            "label": "Points",
+            "itemLabel": "Point",
+            "fields": [
+              {
+                "key": "icon",
+                "label": "Icon",
+                "type": "text"
+              },
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "key": "text",
+                "label": "Text",
+                "type": "textarea"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "book",
+        "path": "book",
+        "type": "object",
+        "label": "Book",
+        "fields": [
+          {
+            "key": "seo",
+            "type": "object",
+            "label": "Search engine (SEO)",
+            "fields": [
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "key": "description",
+                "label": "Description",
+                "type": "textarea"
+              }
+            ]
+          },
+          {
+            "key": "header",
+            "type": "object",
+            "label": "Header",
+            "fields": [
+              {
+                "key": "eyebrow",
+                "label": "Eyebrow",
+                "type": "text"
+              },
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "key": "text",
+                "label": "Text",
+                "type": "textarea"
+              },
+              {
+                "key": "crumbLabel",
+                "label": "Crumb Label",
+                "type": "text"
+              },
+              {
+                "key": "crumbHref",
+                "label": "Crumb Href",
+                "type": "url"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "saved",
+        "path": "saved",
+        "type": "object",
+        "label": "Saved",
+        "fields": [
+          {
+            "key": "seo",
+            "type": "object",
+            "label": "Search engine (SEO)",
+            "fields": [
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "key": "header",
+            "type": "object",
+            "label": "Header",
+            "fields": [
+              {
+                "key": "eyebrow",
+                "label": "Eyebrow",
+                "type": "text"
+              },
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "key": "crumbLabel",
+                "label": "Crumb Label",
+                "type": "text"
+              },
+              {
+                "key": "crumbHref",
+                "label": "Crumb Href",
+                "type": "url"
+              }
+            ]
+          },
+          {
+            "key": "view",
+            "type": "object",
+            "label": "View",
+            "fields": [
+              {
+                "key": "emptyTitle",
+                "label": "Empty Title",
+                "type": "text"
+              },
+              {
+                "key": "emptyText",
+                "label": "Empty Text",
+                "type": "text"
+              },
+              {
+                "key": "browseLabel",
+                "label": "Browse Label",
+                "type": "text"
+              },
+              {
+                "key": "browseHref",
+                "label": "Browse Href",
+                "type": "url"
+              },
+              {
+                "key": "recentTitle",
+                "label": "Recent Title",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "compare",
+        "path": "compare",
+        "type": "object",
+        "label": "Compare",
+        "fields": [
+          {
+            "key": "seo",
+            "type": "object",
+            "label": "Search engine (SEO)",
+            "fields": [
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "key": "header",
+            "type": "object",
+            "label": "Header",
+            "fields": [
+              {
+                "key": "eyebrow",
+                "label": "Eyebrow",
+                "type": "text"
+              },
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "key": "crumbLabel",
+                "label": "Crumb Label",
+                "type": "text"
+              },
+              {
+                "key": "crumbHref",
+                "label": "Crumb Href",
+                "type": "url"
+              }
+            ]
+          },
+          {
+            "key": "view",
+            "type": "object",
+            "label": "View",
+            "fields": [
+              {
+                "key": "emptyTitle",
+                "label": "Empty Title",
+                "type": "text"
+              },
+              {
+                "key": "emptyText",
+                "label": "Empty Text",
+                "type": "text"
+              },
+              {
+                "key": "browseLabel",
+                "label": "Browse Label",
+                "type": "text"
+              },
+              {
+                "key": "browseHref",
+                "label": "Browse Href",
+                "type": "url"
+              },
+              {
+                "key": "caption",
+                "label": "Caption",
+                "type": "text"
+              },
+              {
+                "key": "removeLabel",
+                "label": "Remove Label",
+                "type": "text"
+              },
+              {
+                "key": "addLabel",
+                "label": "Add Label",
+                "type": "text"
+              },
+              {
+                "key": "addHref",
+                "label": "Add Href",
+                "type": "url"
+              },
+              {
+                "key": "best",
+                "label": "Best",
+                "type": "text"
+              },
+              {
+                "key": "footnote",
+                "label": "Footnote",
+                "type": "text"
+              },
+              {
+                "key": "rowPrice",
+                "label": "Row Price",
+                "type": "text"
+              },
+              {
+                "key": "rowMonthly",
+                "label": "Row Monthly",
+                "type": "text"
+              },
+              {
+                "key": "rowCondition",
+                "label": "Row Condition",
+                "type": "text"
+              },
+              {
+                "key": "rowYear",
+                "label": "Row Year",
+                "type": "text"
+              },
+              {
+                "key": "rowMileage",
+                "label": "Row Mileage",
+                "type": "text"
+              },
+              {
+                "key": "rowFuel",
+                "label": "Row Fuel",
+                "type": "text"
+              },
+              {
+                "key": "rowEngine",
+                "label": "Row Engine",
+                "type": "text"
+              },
+              {
+                "key": "rowGearbox",
+                "label": "Row Gearbox",
+                "type": "text"
+              },
+              {
+                "key": "rowSeats",
+                "label": "Row Seats",
+                "type": "text"
+              },
+              {
+                "key": "rowGrade",
+                "label": "Row Grade",
+                "type": "text"
+              },
+              {
+                "key": "rowOwners",
+                "label": "Row Owners",
+                "type": "text"
+              },
+              {
+                "key": "ownersNew",
+                "label": "Owners New",
+                "type": "text"
+              },
+              {
+                "key": "rowColour",
+                "label": "Row Colour",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "about",
+        "path": "about",
+        "type": "object",
+        "label": "About",
+        "fields": [
+          {
+            "key": "seo",
+            "type": "object",
+            "label": "Search engine (SEO)",
+            "fields": [
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "key": "description",
+                "label": "Description",
+                "type": "textarea"
+              }
+            ]
+          },
+          {
+            "key": "header",
+            "type": "object",
+            "label": "Header",
+            "fields": [
+              {
+                "key": "eyebrow",
+                "label": "Eyebrow",
+                "type": "text"
+              },
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "key": "text",
+                "label": "Text",
+                "type": "textarea"
+              },
+              {
+                "key": "crumbLabel",
+                "label": "Crumb Label",
+                "type": "text"
+              },
+              {
+                "key": "crumbHref",
+                "label": "Crumb Href",
+                "type": "url"
+              }
+            ]
+          },
+          {
+            "key": "heroImage",
+            "label": "Hero Image",
+            "type": "image"
+          },
+          {
+            "key": "heroImageAlt",
+            "label": "Hero Image Alt",
+            "type": "image"
+          },
+          {
+            "key": "stats",
+            "type": "list",
+            "label": "Stats",
+            "itemLabel": "Stat",
+            "fields": [
+              {
+                "key": "value",
+                "label": "Value",
+                "type": "text"
+              },
+              {
+                "key": "label",
+                "label": "Label",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "key": "storyEyebrow",
+            "label": "Story Eyebrow",
+            "type": "text"
+          },
+          {
+            "key": "storyTitle",
+            "label": "Story Title",
+            "type": "text"
+          },
+          {
+            "key": "timeline",
+            "type": "list",
+            "label": "Timeline",
+            "itemLabel": "Timeline",
+            "fields": [
+              {
+                "key": "year",
+                "label": "Year",
+                "type": "text"
+              },
+              {
+                "key": "text",
+                "label": "Text",
+                "type": "textarea"
+              }
+            ]
+          },
+          {
+            "key": "storyImage",
+            "label": "Story Image",
+            "type": "image"
+          },
+          {
+            "key": "storyImageAlt",
+            "label": "Story Image Alt",
+            "type": "image"
+          },
+          {
+            "key": "teamEyebrow",
+            "label": "Team Eyebrow",
+            "type": "text"
+          },
+          {
+            "key": "teamTitle",
+            "label": "Team Title",
+            "type": "text"
+          },
+          {
+            "key": "team",
+            "type": "list",
+            "label": "Team",
+            "itemLabel": "Team",
+            "fields": [
+              {
+                "key": "name",
+                "label": "Name",
+                "type": "text"
+              },
+              {
+                "key": "role",
+                "label": "Role",
+                "type": "text"
+              },
+              {
+                "key": "text",
+                "label": "Text",
+                "type": "textarea"
+              }
+            ]
+          },
+          {
+            "key": "teamNote",
+            "label": "Team Note",
+            "type": "text"
+          },
+          {
+            "key": "ctaLabel",
+            "label": "Cta Label",
+            "type": "text"
+          },
+          {
+            "key": "ctaHref",
+            "label": "Cta Href",
+            "type": "url"
+          }
+        ]
+      },
+      {
+        "id": "contact",
+        "path": "contact",
+        "type": "object",
+        "label": "Contact",
+        "fields": [
+          {
+            "key": "seo",
+            "type": "object",
+            "label": "Search engine (SEO)",
+            "fields": [
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "key": "description",
+                "label": "Description",
+                "type": "textarea"
+              }
+            ]
+          },
+          {
+            "key": "header",
+            "type": "object",
+            "label": "Header",
+            "fields": [
+              {
+                "key": "eyebrow",
+                "label": "Eyebrow",
+                "type": "text"
+              },
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "key": "text",
+                "label": "Text",
+                "type": "textarea"
+              },
+              {
+                "key": "crumbLabel",
+                "label": "Crumb Label",
+                "type": "text"
+              },
+              {
+                "key": "crumbHref",
+                "label": "Crumb Href",
+                "type": "url"
+              }
+            ]
+          },
+          {
+            "key": "callLabel",
+            "label": "Call Label",
+            "type": "text"
+          },
+          {
+            "key": "whatsappLabel",
+            "label": "Whatsapp Label",
+            "type": "text"
+          },
+          {
+            "key": "whatsappText",
+            "label": "Whatsapp Text",
+            "type": "text"
+          },
+          {
+            "key": "emailLabel",
+            "label": "Email Label",
+            "type": "email"
+          },
+          {
+            "key": "showroomLabel",
+            "label": "Showroom Label",
+            "type": "text"
+          },
+          {
+            "key": "showroomMapUrl",
+            "label": "Showroom Map Url",
+            "type": "url"
+          },
+          {
+            "key": "hoursLabel",
+            "label": "Hours Label",
+            "type": "text"
+          },
+          {
+            "key": "formTitle",
+            "label": "Form Title",
+            "type": "text"
+          },
+          {
+            "key": "formText",
+            "label": "Form Text",
+            "type": "text"
+          },
+          {
+            "key": "formVehicle",
+            "label": "Form Vehicle",
+            "type": "text"
+          },
+          {
+            "key": "map",
+            "type": "object",
+            "label": "Map",
+            "fields": [
+              {
+                "key": "image",
+                "label": "Image",
+                "type": "image"
+              },
+              {
+                "key": "imageAlt",
+                "label": "Image Alt",
+                "type": "image"
+              },
+              {
+                "key": "directions",
+                "label": "Directions",
+                "type": "text"
+              },
+              {
+                "key": "button",
+                "label": "Button",
+                "type": "text"
+              },
+              {
+                "key": "iframeTitle",
+                "label": "Iframe Title",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "faq",
+        "path": "faq",
+        "type": "object",
+        "label": "Faq",
+        "fields": [
+          {
+            "key": "seo",
+            "type": "object",
+            "label": "Search engine (SEO)",
+            "fields": [
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "key": "description",
+                "label": "Description",
+                "type": "textarea"
+              }
+            ]
+          },
+          {
+            "key": "header",
+            "type": "object",
+            "label": "Header",
+            "fields": [
+              {
+                "key": "eyebrow",
+                "label": "Eyebrow",
+                "type": "text"
+              },
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "key": "crumbLabel",
+                "label": "Crumb Label",
+                "type": "text"
+              },
+              {
+                "key": "crumbHref",
+                "label": "Crumb Href",
+                "type": "url"
+              }
+            ]
+          },
+          {
+            "key": "privacyQuestion",
+            "label": "Privacy Question",
+            "type": "text"
+          },
+          {
+            "key": "privacyAnswer",
+            "label": "Privacy Answer",
+            "type": "textarea"
+          },
+          {
+            "key": "asideTitle",
+            "label": "Aside Title",
+            "type": "text"
+          },
+          {
+            "key": "asideText",
+            "label": "Aside Text",
+            "type": "text"
+          },
+          {
+            "key": "asideButton",
+            "label": "Aside Button",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "blog",
+        "path": "blog",
+        "type": "object",
+        "label": "Blog",
+        "fields": [
+          {
+            "key": "seo",
+            "type": "object",
+            "label": "Search engine (SEO)",
+            "fields": [
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "key": "description",
+                "label": "Description",
+                "type": "textarea"
+              }
+            ]
+          },
+          {
+            "key": "header",
+            "type": "object",
+            "label": "Header",
+            "fields": [
+              {
+                "key": "eyebrow",
+                "label": "Eyebrow",
+                "type": "text"
+              },
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "key": "crumbLabel",
+                "label": "Crumb Label",
+                "type": "text"
+              },
+              {
+                "key": "crumbHref",
+                "label": "Crumb Href",
+                "type": "url"
+              }
+            ]
+          },
+          {
+            "key": "readShort",
+            "label": "Read Short",
+            "type": "text"
+          },
+          {
+            "key": "readLong",
+            "label": "Read Long",
+            "type": "text"
+          },
+          {
+            "key": "post",
+            "type": "object",
+            "label": "Post",
+            "fields": [
+              {
+                "key": "notFound",
+                "label": "Not Found",
+                "type": "text"
+              },
+              {
+                "key": "backLabel",
+                "label": "Back Label",
+                "type": "text"
+              },
+              {
+                "key": "backHref",
+                "label": "Back Href",
+                "type": "url"
+              },
+              {
+                "key": "ctaTitle",
+                "label": "Cta Title",
+                "type": "text"
+              },
+              {
+                "key": "ctaText",
+                "label": "Cta Text",
+                "type": "text"
+              },
+              {
+                "key": "ctaLabel",
+                "label": "Cta Label",
+                "type": "text"
+              },
+              {
+                "key": "ctaHref",
+                "label": "Cta Href",
+                "type": "url"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "credits",
+        "path": "credits",
+        "type": "object",
+        "label": "Credits",
+        "fields": [
+          {
+            "key": "seo",
+            "type": "object",
+            "label": "Search engine (SEO)",
+            "fields": [
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "key": "header",
+            "type": "object",
+            "label": "Header",
+            "fields": [
+              {
+                "key": "eyebrow",
+                "label": "Eyebrow",
+                "type": "text"
+              },
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "key": "crumbLabel",
+                "label": "Crumb Label",
+                "type": "text"
+              },
+              {
+                "key": "crumbHref",
+                "label": "Crumb Href",
+                "type": "url"
+              }
+            ]
+          },
+          {
+            "key": "sections",
+            "type": "list",
+            "label": "Sections",
+            "itemLabel": "Section",
+            "fields": [
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "key": "text",
+                "label": "Text",
+                "type": "textarea"
+              },
+              {
+                "key": "linkLabel",
+                "label": "Link Label",
+                "type": "text"
+              },
+              {
+                "key": "linkHref",
+                "label": "Link Href",
+                "type": "url"
+              },
+              {
+                "key": "textAfter",
+                "label": "Text After",
+                "type": "textarea"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "notFound",
+        "path": "notFound",
+        "type": "object",
+        "label": "Not Found",
+        "fields": [
+          {
+            "key": "title",
+            "label": "Title",
+            "type": "text"
+          },
+          {
+            "key": "text",
+            "label": "Text",
+            "type": "textarea"
+          },
+          {
+            "key": "carsLabel",
+            "label": "Cars Label",
+            "type": "text"
+          },
+          {
+            "key": "carsHref",
+            "label": "Cars Href",
+            "type": "url"
+          },
+          {
+            "key": "homeLabel",
+            "label": "Home Label",
+            "type": "text"
+          },
+          {
+            "key": "homeHref",
+            "label": "Home Href",
+            "type": "url"
+          }
+        ]
+      },
+      {
+        "id": "admin",
+        "path": "admin",
+        "type": "object",
+        "label": "Admin",
+        "fields": [
+          {
+            "key": "seo",
+            "type": "object",
+            "label": "Search engine (SEO)",
+            "fields": [
+              {
+                "key": "title",
+                "label": "Title",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "key": "brand",
+            "label": "Brand",
+            "type": "text"
+          },
+          {
+            "key": "nav",
+            "type": "list",
+            "label": "Nav",
+            "itemLabel": "Nav",
+            "fields": [
+              {
+                "key": "icon",
+                "label": "Icon",
+                "type": "text"
+              },
+              {
+                "key": "label",
+                "label": "Label",
+                "type": "text"
+              },
+              {
+                "key": "tab",
+                "label": "Tab",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "key": "sidebarNote",
+            "label": "Sidebar Note",
+            "type": "text"
+          },
+          {
+            "key": "eyebrow",
+            "label": "Eyebrow",
+            "type": "text"
+          },
+          {
+            "key": "greeting",
+            "label": "Greeting",
+            "type": "text"
+          },
+          {
+            "key": "tabOverview",
+            "label": "Tab Overview",
+            "type": "text"
+          },
+          {
+            "key": "tabStock",
+            "label": "Tab Stock",
+            "type": "text"
+          },
+          {
+            "key": "kpiLeads",
+            "label": "Kpi Leads",
+            "type": "text"
+          },
+          {
+            "key": "kpiLeadsDelta",
+            "label": "Kpi Leads Delta",
+            "type": "text"
+          },
+          {
+            "key": "kpiReply",
+            "label": "Kpi Reply",
+            "type": "text"
+          },
+          {
+            "key": "kpiReplyValue",
+            "label": "Kpi Reply Value",
+            "type": "text"
+          },
+          {
+            "key": "kpiReplyDelta",
+            "label": "Kpi Reply Delta",
+            "type": "text"
+          },
+          {
+            "key": "kpiDrives",
+            "label": "Kpi Drives",
+            "type": "text"
+          },
+          {
+            "key": "kpiDrivesDelta",
+            "label": "Kpi Drives Delta",
+            "type": "text"
+          },
+          {
+            "key": "kpiDrivesBase",
+            "label": "Kpi Drives Base",
+            "type": "number"
+          },
+          {
+            "key": "kpiStock",
+            "label": "Kpi Stock",
+            "type": "text"
+          },
+          {
+            "key": "kpiStockDelta",
+            "label": "Kpi Stock Delta",
+            "type": "text"
+          },
+          {
+            "key": "pipelineTitle",
+            "label": "Pipeline Title",
+            "type": "text"
+          },
+          {
+            "key": "justNow",
+            "label": "Just Now",
+            "type": "text"
+          },
+          {
+            "key": "hoursAgo",
+            "label": "Hours Ago",
+            "type": "text"
+          },
+          {
+            "key": "daysAgo",
+            "label": "Days Ago",
+            "type": "text"
+          },
+          {
+            "key": "today",
+            "label": "Today",
+            "type": "text"
+          },
+          {
+            "key": "sourcesTitle",
+            "label": "Sources Title",
+            "type": "text"
+          },
+          {
+            "key": "sourcesNote",
+            "label": "Sources Note",
+            "type": "text"
+          },
+          {
+            "key": "colCar",
+            "label": "Col Car",
+            "type": "text"
+          },
+          {
+            "key": "colPrice",
+            "label": "Col Price",
+            "type": "text"
+          },
+          {
+            "key": "colStatus",
+            "label": "Col Status",
+            "type": "text"
+          },
+          {
+            "key": "colDays",
+            "label": "Col Days",
+            "type": "text"
+          },
+          {
+            "key": "colDocs",
+            "label": "Col Docs",
+            "type": "text"
+          },
+          {
+            "key": "viewLabel",
+            "label": "View Label",
+            "type": "text"
+          },
+          {
+            "key": "stageLabels",
+            "type": "object",
+            "label": "Stage Labels",
+            "fields": [
+              {
+                "key": "new",
+                "label": "New",
+                "type": "text"
+              },
+              {
+                "key": "contacted",
+                "label": "Contacted",
+                "type": "text"
+              },
+              {
+                "key": "testDrive",
+                "label": "Test Drive",
+                "type": "text"
+              },
+              {
+                "key": "negotiation",
+                "label": "Negotiation",
+                "type": "text"
+              },
+              {
+                "key": "won",
+                "label": "Won",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "chat",
+        "path": "chat",
+        "type": "object",
+        "label": "Chat",
+        "fields": [
+          {
+            "key": "title",
+            "label": "Title",
+            "type": "text"
+          },
+          {
+            "key": "status",
+            "label": "Status",
+            "type": "text"
+          },
+          {
+            "key": "closeLabel",
+            "label": "Close Label",
+            "type": "text"
+          },
+          {
+            "key": "placeholder",
+            "label": "Placeholder",
+            "type": "text"
+          },
+          {
+            "key": "inputLabel",
+            "label": "Input Label",
+            "type": "text"
+          },
+          {
+            "key": "sendLabel",
+            "label": "Send Label",
+            "type": "text"
+          },
+          {
+            "key": "welcome",
+            "label": "Welcome",
+            "type": "textarea"
+          },
+          {
+            "key": "quickReplies",
+            "label": "Quick Replies",
+            "type": "text"
+          },
+          {
+            "key": "greeting",
+            "label": "Greeting",
+            "type": "textarea"
+          },
+          {
+            "key": "handover",
+            "label": "Handover",
+            "type": "textarea"
+          },
+          {
+            "key": "handoverLabel",
+            "label": "Handover Label",
+            "type": "text"
+          },
+          {
+            "key": "handoverMessage",
+            "label": "Handover Message",
+            "type": "text"
+          },
+          {
+            "key": "found",
+            "label": "Found",
+            "type": "text"
+          },
+          {
+            "key": "under",
+            "label": "Under",
+            "type": "text"
+          },
+          {
+            "key": "carWord",
+            "label": "Car Word",
+            "type": "text"
+          },
+          {
+            "key": "pluralSuffix",
+            "label": "Plural Suffix",
+            "type": "text"
+          },
+          {
+            "key": "seeAll",
+            "label": "See All",
+            "type": "text"
+          },
+          {
+            "key": "none",
+            "label": "None",
+            "type": "text"
+          },
+          {
+            "key": "noneQuickReplies",
+            "label": "None Quick Replies",
+            "type": "text"
+          },
+          {
+            "key": "stock",
+            "label": "Stock",
+            "type": "text"
+          },
+          {
+            "key": "stockLinkLabel",
+            "label": "Stock Link Label",
+            "type": "text"
+          },
+          {
+            "key": "stockLinkHref",
+            "label": "Stock Link Href",
+            "type": "url"
+          },
+          {
+            "key": "fallback",
+            "label": "Fallback",
+            "type": "textarea"
+          },
+          {
+            "key": "kmShort",
+            "label": "Km Short",
+            "type": "text"
+          },
+          {
+            "key": "answers",
+            "type": "object",
+            "label": "Answers",
+            "fields": [
+              {
+                "key": "leasing",
+                "type": "object",
+                "label": "Leasing",
+                "fields": [
+                  {
+                    "key": "keywords",
+                    "label": "Keywords",
+                    "type": "text"
+                  },
+                  {
+                    "key": "text",
+                    "label": "Text",
+                    "type": "textarea"
+                  },
+                  {
+                    "key": "linkHref",
+                    "label": "Link Href",
+                    "type": "url"
+                  },
+                  {
+                    "key": "linkLabel",
+                    "label": "Link Label",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "key": "tradeIn",
+                "type": "object",
+                "label": "Trade In",
+                "fields": [
+                  {
+                    "key": "keywords",
+                    "label": "Keywords",
+                    "type": "text"
+                  },
+                  {
+                    "key": "text",
+                    "label": "Text",
+                    "type": "textarea"
+                  },
+                  {
+                    "key": "linkHref",
+                    "label": "Link Href",
+                    "type": "url"
+                  },
+                  {
+                    "key": "linkLabel",
+                    "label": "Link Label",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "key": "history",
+                "type": "object",
+                "label": "History",
+                "fields": [
+                  {
+                    "key": "keywords",
+                    "label": "Keywords",
+                    "type": "text"
+                  },
+                  {
+                    "key": "text",
+                    "label": "Text",
+                    "type": "textarea"
+                  },
+                  {
+                    "key": "linkHref",
+                    "label": "Link Href",
+                    "type": "url"
+                  },
+                  {
+                    "key": "linkLabel",
+                    "label": "Link Label",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "key": "delivery",
+                "type": "object",
+                "label": "Delivery",
+                "fields": [
+                  {
+                    "key": "keywords",
+                    "label": "Keywords",
+                    "type": "text"
+                  },
+                  {
+                    "key": "text",
+                    "label": "Text",
+                    "type": "textarea"
+                  },
+                  {
+                    "key": "linkHref",
+                    "label": "Link Href",
+                    "type": "url"
+                  },
+                  {
+                    "key": "linkLabel",
+                    "label": "Link Label",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "key": "warranty",
+                "type": "object",
+                "label": "Warranty",
+                "fields": [
+                  {
+                    "key": "keywords",
+                    "label": "Keywords",
+                    "type": "text"
+                  },
+                  {
+                    "key": "text",
+                    "label": "Text",
+                    "type": "textarea"
+                  },
+                  {
+                    "key": "linkHref",
+                    "label": "Link Href",
+                    "type": "url"
+                  },
+                  {
+                    "key": "linkLabel",
+                    "label": "Link Label",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "key": "location",
+                "type": "object",
+                "label": "Location",
+                "fields": [
+                  {
+                    "key": "keywords",
+                    "label": "Keywords",
+                    "type": "text"
+                  },
+                  {
+                    "key": "text",
+                    "label": "Text",
+                    "type": "textarea"
+                  },
+                  {
+                    "key": "linkHref",
+                    "label": "Link Href",
+                    "type": "url"
+                  },
+                  {
+                    "key": "linkLabel",
+                    "label": "Link Label",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "key": "reserve",
+                "type": "object",
+                "label": "Reserve",
+                "fields": [
+                  {
+                    "key": "keywords",
+                    "label": "Keywords",
+                    "type": "text"
+                  },
+                  {
+                    "key": "text",
+                    "label": "Text",
+                    "type": "textarea"
+                  },
+                  {
+                    "key": "linkHref",
+                    "label": "Link Href",
+                    "type": "url"
+                  },
+                  {
+                    "key": "linkLabel",
+                    "label": "Link Label",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "key": "testDrive",
+                "type": "object",
+                "label": "Test Drive",
+                "fields": [
+                  {
+                    "key": "keywords",
+                    "label": "Keywords",
+                    "type": "text"
+                  },
+                  {
+                    "key": "text",
+                    "label": "Text",
+                    "type": "textarea"
+                  },
+                  {
+                    "key": "linkHref",
+                    "label": "Link Href",
+                    "type": "url"
+                  },
+                  {
+                    "key": "linkLabel",
+                    "label": "Link Label",
+                    "type": "text"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "additionalPages",
+        "path": "additionalPages",
+        "type": "list",
+        "label": "Additional pages",
+        "itemLabel": "Page",
+        "fields": [
+          {
+            "key": "id",
+            "type": "text",
+            "label": "Page id"
+          },
+          {
+            "key": "label",
+            "type": "text",
+            "label": "Link label"
+          },
+          {
+            "key": "route",
+            "type": "text",
+            "label": "Route"
+          }
+        ]
+      }
+    ]
+  }
+}

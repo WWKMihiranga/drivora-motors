@@ -1,34 +1,35 @@
-/** Every brand detail lives here, so the demo can be re-skinned for a prospect in minutes. */
+import siteData from "@/data/site-data.json";
+
+/*
+ * Every brand detail lives in src/data/site-data.json (the Fivora content bank), so a dealer can
+ * re-skin the site from the Fivora editor and the demo can be re-skinned for a prospect in minutes.
+ * This object keeps the original `site` shape so the rest of the app reads it unchanged.
+ */
+const b = siteData.content.common.business;
+
 export const site = {
-  name: "Drivora Motors",
-  shortName: "Drivora",
-  tagline: "Verified cars. Honest prices.",
-  description:
-    "Reconditioned, used and brand-new cars in Sri Lanka with verified history, auction sheets and a leasing calculator that follows Central Bank rules.",
+  name: b.name,
+  shortName: b.shortName,
+  tagline: b.tagline,
+  description: b.description,
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://drivora-demo.vercel.app",
-  phone: "+94 11 234 5678",
-  phoneHref: "tel:+94112345678",
-  whatsapp: "94771234567",
-  email: "hello@drivora.lk",
+  phone: b.phone,
+  phoneHref: `tel:${b.phone.replace(/[^\d+]/g, "")}`,
+  whatsapp: b.whatsapp,
+  email: b.email,
   address: {
-    line1: "214 High Level Road",
-    city: "Nugegoda",
-    region: "Western Province",
-    postcode: "10250",
+    line1: b.addressLine1,
+    city: b.city,
+    region: b.region,
+    postcode: b.postcode,
     country: "LK",
   },
-  hours: "Mon–Sat 9.00–18.00 · Sun 10.00–14.00",
-  hoursShort: "Open today · 9–6",
-  registration: "PV 00264189 (demo)",
-  founded: 2011,
-  mapEmbed:
-    "https://www.google.com/maps?q=High+Level+Road+Nugegoda+Sri+Lanka&output=embed",
-  socials: {
-    facebook: "https://facebook.com",
-    instagram: "https://instagram.com",
-    youtube: "https://youtube.com",
-    tiktok: "https://tiktok.com",
-  },
+  hours: b.hours,
+  hoursShort: b.hoursShort,
+  registration: b.registration,
+  founded: b.founded,
+  mapEmbed: b.mapEmbedUrl,
+  socials: siteData.content.common.socials,
   stats: { years: 15, carsSold: 2400, happy: 98 },
 } as const;
 

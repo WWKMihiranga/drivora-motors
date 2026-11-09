@@ -1,10 +1,8 @@
 "use client";
 
 import type { Filters } from "./filters";
-import { bodyLabel, conditionLabel, fuelLabel } from "@/lib/format";
 import { cn } from "@/lib/cn";
-
-const priceSteps = [5, 7, 10, 15, 20, 25, 35, 50, 75, 100].map((m) => m * 1_000_000);
+import { Field, fill, LabelField, useContent, useList, useText } from "@/lib/site-data";
 
 export function FilterPanel({
   f,
@@ -17,6 +15,12 @@ export function FilterPanel({
   makes: string[];
   counts: { condition: Record<string, number>; fuel: Record<string, number>; body: Record<string, number>; make: Record<string, number> };
 }) {
+  const text = useText();
+  const labels = useContent().labels as Record<string, Record<string, string>> | undefined;
+  const keys = (group: string) => Object.keys(labels?.[group] ?? {});
+  const priceSteps = useList<number>("cars.filters.priceSteps").map((m) => m * 1_000_000);
+  const yearOptions = useList<number>("cars.filters.yearOptions");
+  const mileageOptions = useList<number>("cars.filters.mileageOptions");
   const toggle = (key: "condition" | "make" | "body" | "fuel" | "trans", val: string) => {
     const cur = f[key];
     set({ [key]: cur.includes(val) ? cur.filter((x) => x !== val) : [...cur, val] } as Partial<Filters>);
@@ -24,72 +28,80 @@ export function FilterPanel({
 
   return (
     <div className="space-y-7">
-      <Group title="Condition">
+      <Group title={<Field data-preview-field-path="cars.filters.condition" />}>
         <div className="flex flex-wrap gap-2">
-          {(Object.keys(conditionLabel) as (keyof typeof conditionLabel)[]).map((c) => (
+          {keys("condition").map((c) => (
             <Pill key={c} on={f.condition.includes(c)} onClick={() => toggle("condition", c)} count={counts.condition[c] ?? 0}>
-              {conditionLabel[c]}
+              <LabelField group="condition" value={c} />
             </Pill>
           ))}
         </div>
       </Group>
 
-      <Group title="Price (Rs)">
+      <Group title={<Field data-preview-field-path="cars.filters.price" />}>
         <div className="grid grid-cols-2 gap-2">
           <select
-            aria-label="Minimum price"
+            aria-label={text("cars.filters.minPriceLabel")}
+            data-preview-field-path="cars.filters.minPriceLabel"
+            data-preview-list-path="cars.filters.priceSteps"
             value={f.min ?? ""}
             onChange={(e) => set({ min: Number(e.target.value) || undefined })}
             className="field-select h-11 text-sm"
           >
-            <option value="">No min</option>
-            {priceSteps.map((p) => (
-              <option key={p} value={p}>
-                {p / 1_000_000}M
+            <option value="">{text("cars.filters.noMin")}</option>
+            {priceSteps.map((p, n) => (
+              <option
+                key={p}
+                value={p}
+                data-preview-item-path={`cars.filters.priceSteps[${n}]`}
+                data-preview-field-path={`cars.filters.priceSteps[${n}]`}
+              >
+                {fill(text("cars.filters.priceStepLabel"), { n: p / 1_000_000 })}
               </option>
             ))}
           </select>
           <select
-            aria-label="Maximum price"
+            aria-label={text("cars.filters.maxPriceLabel")}
+            data-preview-field-path="cars.filters.maxPriceLabel"
             value={f.max ?? ""}
             onChange={(e) => set({ max: Number(e.target.value) || undefined })}
             className="field-select h-11 text-sm"
           >
-            <option value="">No max</option>
+            <option value="">{text("cars.filters.noMax")}</option>
             {priceSteps.map((p) => (
               <option key={p} value={p}>
-                {p / 1_000_000}M
+                {fill(text("cars.filters.priceStepLabel"), { n: p / 1_000_000 })}
               </option>
             ))}
           </select>
         </div>
       </Group>
 
-      <Group title="Body type">
+      <Group title={<Field data-preview-field-path="cars.filters.body" />}>
         <div className="grid grid-cols-2 gap-2">
-          {(Object.keys(bodyLabel) as (keyof typeof bodyLabel)[])
+          {keys("body")
             .filter((b) => (counts.body[b] ?? 0) > 0 || f.body.includes(b))
             .map((b) => (
               <Pill key={b} on={f.body.includes(b)} onClick={() => toggle("body", b)} count={counts.body[b] ?? 0} block>
-                {bodyLabel[b]}
+                <LabelField group="body" value={b} />
               </Pill>
             ))}
         </div>
       </Group>
 
-      <Group title="Fuel">
+      <Group title={<Field data-preview-field-path="cars.filters.fuel" />}>
         <div className="flex flex-wrap gap-2">
-          {(Object.keys(fuelLabel) as (keyof typeof fuelLabel)[])
+          {keys("fuel")
             .filter((x) => (counts.fuel[x] ?? 0) > 0 || f.fuel.includes(x))
             .map((x) => (
               <Pill key={x} on={f.fuel.includes(x)} onClick={() => toggle("fuel", x)} count={counts.fuel[x] ?? 0}>
-                {fuelLabel[x]}
+                <LabelField group="fuel" value={x} />
               </Pill>
             ))}
         </div>
       </Group>
 
-      <Group title="Make">
+      <Group title={<Field data-preview-field-path="cars.filters.make" />}>
         <ul className="max-h-60 space-y-0.5 overflow-y-auto pr-1">
           {makes.map((m) => (
             <li key={m}>
@@ -100,7 +112,9 @@ export function FilterPanel({
                   checked={f.make.includes(m)}
                   onChange={() => toggle("make", m)}
                 />
-                <span className="flex-1">{m}</span>
+                <span className="flex-1" data-preview-static="Make name, generated from the cars in your inventory">
+                  {m}
+                </span>
                 <span className="text-xs text-muted">{counts.make[m] ?? 0}</span>
               </label>
             </li>
@@ -108,51 +122,65 @@ export function FilterPanel({
         </ul>
       </Group>
 
-      <Group title="Year from">
+      <Group title={<Field data-preview-field-path="cars.filters.yearFrom" />}>
         <select
-          aria-label="Year from"
+          aria-label={text("cars.filters.yearFrom")}
+          data-preview-field-path="cars.filters.anyYear"
+          data-preview-list-path="cars.filters.yearOptions"
           value={f.yearMin ?? ""}
           onChange={(e) => set({ yearMin: Number(e.target.value) || undefined })}
           className="field-select h-11 text-sm"
         >
-          <option value="">Any year</option>
-          {[2024, 2022, 2020, 2018, 2016].map((y) => (
-            <option key={y} value={y}>
-              {y} or newer
+          <option value="">{text("cars.filters.anyYear")}</option>
+          {yearOptions.map((y, n) => (
+            <option
+              key={y}
+              value={y}
+              data-preview-item-path={`cars.filters.yearOptions[${n}]`}
+              data-preview-field-path={`cars.filters.yearOptions[${n}]`}
+            >
+              {fill(text("cars.filters.yearOption"), { year: y })}
             </option>
           ))}
         </select>
       </Group>
 
-      <Group title="Mileage up to">
+      <Group title={<Field data-preview-field-path="cars.filters.mileage" />}>
         <select
-          aria-label="Maximum mileage"
+          aria-label={text("cars.filters.mileageLabel")}
+          data-preview-field-path="cars.filters.anyMileage"
+          data-preview-list-path="cars.filters.mileageOptions"
           value={f.kmMax ?? ""}
           onChange={(e) => set({ kmMax: Number(e.target.value) || undefined })}
           className="field-select h-11 text-sm"
         >
-          <option value="">Any mileage</option>
-          {[10_000, 25_000, 50_000, 75_000, 100_000].map((k) => (
-            <option key={k} value={k}>
-              {k.toLocaleString("en-LK")} km
+          <option value="">{text("cars.filters.anyMileage")}</option>
+          {mileageOptions.map((k, n) => (
+            <option
+              key={k}
+              value={k}
+              data-preview-item-path={`cars.filters.mileageOptions[${n}]`}
+              data-preview-field-path={`cars.filters.mileageOptions[${n}]`}
+            >
+              {fill(text("cars.filters.mileageOption"), { km: k.toLocaleString("en-LK") })}
             </option>
           ))}
         </select>
       </Group>
 
-      <Group title="Gearbox">
+      <Group title={<Field data-preview-field-path="cars.filters.gearbox" />}>
         <div className="flex gap-2">
           <Pill on={f.trans.includes("auto")} onClick={() => toggle("trans", "auto")}>
-            Automatic
+            <LabelField group="transmissionLong" value="auto" />
           </Pill>
           <Pill on={f.trans.includes("manual")} onClick={() => toggle("trans", "manual")}>
-            Manual
+            <LabelField group="transmissionLong" value="manual" />
           </Pill>
         </div>
       </Group>
 
       <label className="flex cursor-pointer items-center justify-between gap-3 text-sm">
-        Show sold cars
+        <Field data-preview-field-path="cars.filters.showSold" />
         <input
           type="checkbox"
           className="switch switch-primary"
@@ -164,7 +192,7 @@ export function FilterPanel({
   );
 }
 
-function Group({ title, children }: { title: string; children: React.ReactNode }) {
+function Group({ title, children }: { title: React.ReactNode; children: React.ReactNode }) {
   return (
     <fieldset>
       <legend className="mb-3 text-xs font-semibold tracking-[0.12em] text-muted uppercase">{title}</legend>
