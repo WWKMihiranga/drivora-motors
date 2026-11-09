@@ -1,0 +1,392 @@
+@import "tailwindcss";
+
+/* FlyonUI semantic components; built-in themes off, we register our own below. */
+@plugin "flyonui" {
+  themes: false;
+  logs: false;
+}
+
+@plugin "flyonui/theme" {
+  name: "drivora";
+  default: true;
+  color-scheme: light;
+  --color-base-100: #ffffff;
+  --color-base-200: #f3f4f6;
+  --color-base-300: #0e1116;
+  --color-base-content: #0e1116;
+  --color-primary: #0e1116;
+  --color-primary-content: #ffffff;
+  --color-secondary: #c2410c;
+  --color-secondary-content: #ffffff;
+  --color-accent: #c2410c;
+  --color-accent-content: #ffffff;
+  --color-neutral: #0e1116;
+  --color-neutral-content: #ffffff;
+  --color-info: #1d4ed8;
+  --color-info-content: #ffffff;
+  --color-success: #15803d;
+  --color-success-content: #ffffff;
+  --color-warning: #b45309;
+  --color-warning-content: #ffffff;
+  --color-error: #b91c1c;
+  --color-error-content: #ffffff;
+  --radius-selector: 2rem;
+  --radius-field: 0.75rem;
+  --radius-box: 1.25rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+/* Dark twin of the theme. Applied by setting data-theme="drivora-dark" on <html> (see ThemeScript). */
+@plugin "flyonui/theme" {
+  name: "drivora-dark";
+  color-scheme: dark;
+  --color-base-100: #0d0f13;
+  --color-base-200: #171a20;
+  --color-base-300: #eceef2;
+  --color-base-content: #eceef2;
+  --color-primary: #eceef2;
+  --color-primary-content: #0e1116;
+  --color-secondary: #e8662a;
+  --color-secondary-content: #ffffff;
+  --color-accent: #e8662a;
+  --color-accent-content: #ffffff;
+  --color-neutral: #eceef2;
+  --color-neutral-content: #0e1116;
+  --color-info: #6aa5ff;
+  --color-info-content: #0e1116;
+  --color-success: #34c77b;
+  --color-success-content: #0e1116;
+  --color-warning: #f0a53a;
+  --color-warning-content: #0e1116;
+  --color-error: #f47272;
+  --color-error-content: #0e1116;
+  --radius-selector: 2rem;
+  --radius-field: 0.75rem;
+  --radius-box: 1.25rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@custom-variant dark (&:where([data-theme="drivora-dark"], [data-theme="drivora-dark"] *));
+
+@theme {
+  --font-sans: var(--font-inter), var(--font-sinhala), var(--font-tamil), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-sora), var(--font-sinhala), var(--font-tamil), ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #0e1116;
+  --color-ink-soft: #1c2129;
+  /* ink = text + primary fills (flips in dark); on-ink = text sitting on an ink fill */
+  --color-on-ink: #ffffff;
+  /* paper = page and card background */
+  --color-paper: #ffffff;
+  /* night = bands, scrims and photo overlays that stay dark in both themes */
+  --color-night: #0e1116;
+  /* media = placeholder behind photos while they load */
+  --color-media: #e6e8ec;
+  --color-hero-glow: #ffffff;
+  --color-surface: #f3f4f6;
+  --color-hero-from: #e8ecf1;
+  --color-hero-to: #f8f9fb;
+  --color-line: #e5e7eb;
+  --color-muted: #6b7280;
+  --color-muted-strong: #4b5563;
+  --color-brand: #c2410c;
+  --color-brand-hover: #9a3412;
+  --color-brand-bright: #f97316;
+  --color-ok: #15803d;
+  --color-warn: #b45309;
+  --color-bad: #b91c1c;
+  --color-note: #1d4ed8;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out-soft: cubic-bezier(0.65, 0, 0.35, 1);
+
+  --animate-fade-up: fade-up 0.7s var(--ease-out-soft) both;
+  --animate-heart-pop: heart-pop 0.45s var(--ease-out-soft);
+  --animate-ping-slow: ping-slow 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
+  --animate-marquee: marquee 40s linear infinite;
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translate3d(0, 16px, 0); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes heart-pop {
+    0% { transform: scale(1); }
+    35% { transform: scale(1.35); }
+    100% { transform: scale(1); }
+  }
+  @keyframes ping-slow {
+    0% { transform: scale(1); opacity: 0.55; }
+    80%, 100% { transform: scale(1.9); opacity: 0; }
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+}
+
+/*
+ * Dark palette. Tailwind utilities read these variables, so flipping them re-themes every
+ * text-ink / bg-paper / border-line / text-muted in the app without per-component dark: classes.
+ * Surfaces step up in lightness (paper -> surface -> night) instead of relying on shadows.
+ */
+[data-theme="drivora-dark"] {
+  --color-ink: #eceef2;
+  --color-ink-soft: #d5d9e0;
+  --color-on-ink: #0e1116;
+  --color-paper: #0d0f13;
+  --color-surface: #171a20;
+  --color-night: #1a1e26;
+  --color-media: #1b1f26;
+  --color-hero-from: #0a0c10;
+  --color-hero-to: #0d0f13;
+  --color-hero-glow: #1c212b;
+  --color-line: #272c35;
+  --color-muted: #8d95a3;
+  --color-muted-strong: #b5bcc7;
+  --color-brand: #f0763a;
+  --color-brand-hover: #f59262;
+  --color-brand-bright: #fb923c;
+  --color-ok: #34c77b;
+  --color-warn: #f0a53a;
+  --color-bad: #f47272;
+  --color-note: #6aa5ff;
+}
+
+/* No colour transitions mid-switch, otherwise every element fades at its own speed. */
+html.theme-switching *, html.theme-switching *::before, html.theme-switching *::after {
+  transition: none !important;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+    font-feature-settings: "cv11", "ss01";
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight text-ink;
+    text-wrap: balance;
+  }
+  p { text-wrap: pretty; }
+  ::selection { background: var(--color-ink); color: var(--color-on-ink); }
+  :focus-visible { outline: 2px solid var(--color-brand); outline-offset: 3px; }
+  img { -webkit-user-drag: none; }
+  [data-num] { font-variant-numeric: tabular-nums; }
+}
+
+@utility container-x {
+  @apply mx-auto w-full max-w-7xl px-6 md:px-8 lg:px-10;
+}
+
+@utility eyebrow {
+  @apply font-sans text-xs font-semibold tracking-[0.14em] text-brand uppercase;
+}
+
+@utility eyebrow-dark {
+  @apply font-sans text-xs font-semibold tracking-[0.14em] text-brand-bright uppercase;
+}
+
+@utility section-title {
+  @apply font-display text-[1.65rem] leading-[1.15] font-semibold md:text-4xl;
+}
+
+@utility btn-pill {
+  @apply btn h-12 rounded-full px-6 text-[0.95rem] font-medium shadow-none;
+}
+
+@utility btn-ink {
+  @apply btn-pill btn-primary;
+}
+
+@utility btn-line {
+  @apply btn-pill btn-outline border-ink/20 text-ink hover:border-ink hover:bg-ink hover:text-on-ink;
+}
+
+@utility btn-light {
+  @apply btn-pill border-white bg-white text-night hover:bg-white/90;
+}
+
+@utility chip {
+  @apply inline-flex items-center gap-1.5 rounded-full border border-line bg-paper px-3 py-1 text-xs font-medium text-muted-strong;
+}
+
+@utility card-lift {
+  @apply transition-[transform,box-shadow] duration-300 ease-out-soft hover:-translate-y-1 hover:shadow-[0_18px_40px_-24px_rgba(14,17,22,0.35)];
+}
+
+@utility ghost-text {
+  @apply pointer-events-none font-display font-extrabold tracking-tighter whitespace-nowrap text-ink/4.5 select-none;
+}
+
+@utility field-label {
+  @apply mb-1.5 block text-sm font-medium text-ink;
+}
+
+@utility field {
+  @apply input h-12 w-full rounded-xl border-line bg-paper text-[16px] focus-within:border-ink;
+}
+
+@utility field-select {
+  @apply select h-12 w-full rounded-xl border-line bg-paper text-[16px];
+}
+
+@layer utilities {
+  .no-scrollbar { scrollbar-width: none; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .snap-x-mandatory { scroll-snap-type: x mandatory; }
+  .hero-gradient {
+    background:
+      radial-gradient(120% 80% at 70% 40%, var(--color-hero-glow) 0%, transparent 60%),
+      linear-gradient(180deg, var(--color-hero-from) 0%, var(--color-hero-to) 100%);
+  }
+  .floor-reflection {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(14, 17, 22, 0.22) 0%, rgba(14, 17, 22, 0) 70%);
+  }
+  .dotted-rule {
+    background-image: radial-gradient(circle, color-mix(in oklab, var(--color-ink) 35%, transparent) 1px, transparent 1.2px);
+    background-size: 6px 6px;
+  }
+  .grain {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.05'/%3E%3C/svg%3E");
+  }
+  .safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
+}
+
+/* Scroll-reveal: hidden until Providers.tsx animates it in (Web Animations API, fill: forwards). */
+[data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 18px, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  [data-reveal] { opacity: 1; transform: none; }
+}
+
+/* ---------- Splash: "headlights on" (2.4 s) ---------- */
+@property --splash-n {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+.splash { display: none; }
+html.splash-on .splash {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+html.splash-on.splash-done .splash { pointer-events: none; }
+.splash-door {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 50.5%;
+  background: #0e1116;
+  animation: splash-door-open 0.6s var(--ease-in-out-soft) 1.85s forwards;
+}
+.splash-door-top { top: 0; --door: -100%; }
+.splash-door-bottom { bottom: 0; --door: 100%; }
+.splash-beam {
+  position: absolute;
+  top: 38%;
+  left: 0;
+  width: 46vw;
+  height: 24vh;
+  border-radius: 9999px;
+  background: radial-gradient(closest-side, rgba(255, 244, 220, 0.38), rgba(255, 244, 220, 0));
+  filter: blur(8px);
+  opacity: 0;
+  transform: translate3d(-60vw, 0, 0) skewX(-18deg);
+  animation: splash-beam 0.95s cubic-bezier(0.3, 0.05, 0.2, 1) 0.32s forwards;
+}
+.splash-beam-b { top: 48%; animation-delay: 0.42s; }
+.splash-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: splash-content-out 0.35s ease-in 1.72s forwards;
+}
+.splash-draw {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: splash-draw 0.55s var(--ease-out-soft) 0.05s forwards;
+}
+.splash-draw-late { animation-delay: 0.3s; }
+.splash-letter {
+  display: inline-block;
+  transform: translate3d(0, 110%, 0);
+  animation: splash-rise 0.55s var(--ease-out-soft) calc(0.45s + var(--i) * 40ms) forwards;
+}
+.splash-sub, .splash-tagline { opacity: 0; animation: splash-fade 0.5s ease-out 0.85s forwards; }
+.splash-tagline { animation-delay: 1.15s; }
+.splash-road { transform: scaleX(0); animation: splash-road 0.75s var(--ease-in-out-soft) 1s forwards; }
+.splash-counter { animation: splash-count 0.75s var(--ease-in-out-soft) 1s forwards; counter-reset: n var(--splash-n); }
+.splash-counter::after { content: counter(n); }
+.splash-skip {
+  position: absolute;
+  top: max(1rem, env(safe-area-inset-top));
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.8rem;
+  animation: splash-content-out 0.3s ease-in 1.72s forwards;
+}
+.splash-skip:hover { color: #fff; border-color: rgba(255, 255, 255, 0.5); }
+html.splash-on .splash { transition: opacity 0.45s ease-out; }
+html.splash-done .splash { opacity: 0; }
+
+/* Lite version: reduced motion / data saver. Fade only. */
+html.splash-lite .splash-beam, html.splash-lite .splash-road, html.splash-lite .splash-counter { display: none; }
+html.splash-lite .splash-letter, html.splash-lite .splash-draw { animation: none; transform: none; stroke-dashoffset: 0; }
+html.splash-lite .splash-sub, html.splash-lite .splash-tagline { animation: none; opacity: 1; }
+html.splash-lite .splash-door { animation: splash-fade-out 0.5s ease-out 0.5s forwards; }
+html.splash-lite .splash-content { animation: splash-fade-out 0.4s ease-out 0.45s forwards; }
+
+/* Hero entrance waits for the doors when the splash is playing. */
+html.splash-on:not(.splash-lite) [data-hero-in] { animation-delay: 2.05s !important; }
+
+@keyframes splash-draw { to { stroke-dashoffset: 0; } }
+@keyframes splash-rise { to { transform: none; } }
+@keyframes splash-fade { to { opacity: 1; } }
+@keyframes splash-fade-out { to { opacity: 0; } }
+@keyframes splash-road { to { transform: scaleX(1); } }
+@keyframes splash-count { to { --splash-n: 100; } }
+@keyframes splash-content-out { to { opacity: 0; transform: translate3d(0, -8px, 0); } }
+@keyframes splash-door-open { to { transform: translate3d(0, var(--door), 0); } }
+@keyframes splash-beam {
+  0% { opacity: 0; transform: translate3d(-60vw, 0, 0) skewX(-18deg); }
+  25% { opacity: 1; }
+  100% { opacity: 0; transform: translate3d(130vw, 0, 0) skewX(-18deg); }
+}
+
+.hero-progress {
+  transform: scaleX(0);
+  animation: hero-progress 6.5s linear forwards;
+}
+@keyframes hero-progress { to { transform: scaleX(1); } }
