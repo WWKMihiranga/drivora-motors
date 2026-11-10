@@ -116,7 +116,7 @@ export function Hero() {
           {/* cars: the group blends into the backdrop, so each photo's white (or black) background vanishes */}
           <div
             data-preview-list-path="home.hero.slides"
-            className="hero-cars absolute inset-x-[0%] bottom-[12%] aspect-[2/1] sm:bottom-[14%] lg:inset-x-[5%] lg:bottom-[13%]"
+            className="hero-cars absolute inset-x-[0%] bottom-[12%] aspect-[2/1] sm:bottom-[14%] lg:right-[-2%] lg:bottom-[8%] lg:left-[-7%]"
           >
             {slides.map((sl, idx) => {
               const state = idx === cur ? "in" : idx === prev ? "out" : "wait";
@@ -270,7 +270,7 @@ export function Hero() {
             </div>
           )}
 
-          <div data-hero-in style={delay(420)} className="mt-9 flex animate-fade-up flex-col items-start gap-6">
+          <div data-hero-in style={delay(420)} className="mt-9 flex animate-fade-up flex-col items-center gap-5 lg:flex-row lg:gap-8">
             <Link
               href={text("home.hero.browseHref") || "/cars"}
               className="group inline-flex h-12 items-center gap-3 rounded-full bg-ink pr-2 pl-6 text-[0.95rem] font-medium text-on-ink transition-[transform,box-shadow] duration-300 ease-out-soft hover:-translate-y-0.5 hover:shadow-[0_16px_32px_-16px_rgba(14,17,22,0.55)]"
@@ -285,7 +285,7 @@ export function Hero() {
               <Link
                 key={cur}
                 href={s.linkHref || "/"}
-                className="group relative inline-flex items-center gap-2 pb-1.5 text-sm font-medium text-ink"
+                className="group relative inline-flex items-center gap-2 pb-1.5 text-sm font-medium text-ink lg:pt-1.5"
                 data-preview-field-path={`home.hero.slides[${cur}].linkHref`}
               >
                 <Field data-preview-field-path={`home.hero.slides[${cur}].linkLabel`} />
