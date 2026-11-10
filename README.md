@@ -1,4 +1,4 @@
-# Drivora Motors · car-sales reference site (Phase 1)
+# Drivora Motors · car-sales reference site
 
 A front-end-only demo dealer website for pitching the Dealer Digital Showroom to Sri Lankan car sale businesses.
 Drivora Motors is fictional; cars, prices, reviews and people are illustrative.
@@ -91,5 +91,16 @@ pnpm validate                        # DENEB strict preflight
 pnpm lab                             # local visual-editing lab (localhost:3001)
 pnpm validate-and-zip                # creates fivora-template.zip for the Fivora Developer Portal
 ```
+
+Fivora's build server uses **npm** (no pnpm) on **Node 20**: the manifest runs `npm ci` and `npm run build`, using
+`package-lock.json`, and `.npmrc` skips dependency install scripts (like pnpm does). Keep pnpm for local work, but after
+adding or updating a dependency, refresh the npm lockfile from a clean folder and run `pnpm validate`:
+
+```bash
+d=$(mktemp -d) && cp package.json .npmrc "$d" && (cd "$d" && npm install --package-lock-only --ignore-scripts) && cp "$d/package-lock.json" .
+```
+
+Every dependency must support Node 20 (the validator rejects ones that need Node 22+). The DENEB CLI is therefore not a
+project dependency; the `lab` / `validate` / `zip` scripts run it with `npx @deneb-ui/cli@2.0.131`.
 
 Upload `fivora-template.zip` with a 16:9 WebP thumbnail (`preview.png` is a 1600×900 screenshot to convert).

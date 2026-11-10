@@ -1918,15 +1918,14 @@
         "pauseLabel": "Pause slideshow",
         "prevLabel": "Previous slide",
         "nextLabel": "Next slide",
-        "inStockLabel": "In stock",
         "browseHref": "/cars",
         "browseLabel": "Browse cars",
         "slides": [
           {
-            "image": "https://images.unsplash.com/photo-1741905358565-5ae6835ac172",
-            "alt": "Black Land Rover Defender 110 lit in a dark studio",
-            "carHref": "/cars/land-rover-defender-110-2023",
-            "carLabel": "Land Rover Defender 110 · 2023",
+            "image": "https://images.unsplash.com/photo-1646960700481-c7be5224a7fc?rect=2400,7741,11773,5351",
+            "alt": "White saloon car, front three-quarter view, in a white photo studio",
+            "imageDark": "https://images.unsplash.com/photo-1646644434370-a23a5eaa6d05?rect=300,850,4400,2200",
+            "altDark": "White electric SUV, front view, under a spotlight in a dark studio",
             "eyebrow": "Reconditioned · grade 4 and above",
             "title": "Cars with nothing to hide.",
             "text": "Every car comes with its auction sheet or service history, a 150-point inspection, and a price that doesn't change at the desk.",
@@ -1934,10 +1933,10 @@
             "linkLabel": "Reconditioned stock"
           },
           {
-            "image": "https://images.unsplash.com/photo-1650530579355-7ad9d4766043",
-            "alt": "Dark grey Toyota Land Cruiser 200 parked in afternoon sun",
-            "carHref": "/cars/toyota-land-cruiser-200-2015",
-            "carLabel": "Toyota Land Cruiser 200 · 2015",
+            "image": "https://images.unsplash.com/photo-1624880056139-d1212d7ff347?rect=0,851,4678,2228",
+            "alt": "White sports coupe with red brake callipers, side view, in a white photo studio",
+            "imageDark": "https://images.unsplash.com/photo-1574124282542-3de3564a63a0?rect=0,526,5999,3000",
+            "altDark": "Silver convertible sports car lit by a single spotlight in a dark studio",
             "eyebrow": "Central Bank rules, built in",
             "title": "Know your monthly payment first.",
             "text": "Our leasing calculator applies the 2026 down-payment limits, and shows both the flat and the true rate.",
@@ -1945,10 +1944,10 @@
             "linkLabel": "Open the calculator"
           },
           {
-            "image": "https://images.unsplash.com/photo-1727098353953-929512ce7b90",
-            "alt": "White BYD Seal electric saloon at night, headlights on",
-            "carHref": "/cars/byd-seal-2025",
-            "carLabel": "BYD Seal · 2025",
+            "image": "https://images.unsplash.com/photo-1671691279941-71773546ab76?rect=0,7450,12700,5650",
+            "alt": "White saloon car, rear three-quarter view, in a white photo studio",
+            "imageDark": "https://images.unsplash.com/photo-1671155370435-89ff3c1c6b64?rect=1535,1050,10700,5350",
+            "altDark": "Dark blue SUV, rear three-quarter view, tail lights glowing in a dark studio",
             "eyebrow": "EV and hybrid",
             "title": "Electric, without the guesswork.",
             "text": "Battery health is tested and printed on every listing, and we arrange your home charger before delivery.",
@@ -1958,14 +1957,17 @@
         ],
         "stats": [
           {
+            "icon": "clock",
             "value": "15+",
             "label": "years in Nugegoda"
           },
           {
+            "icon": "car",
             "value": "2,400+",
             "label": "cars sold"
           },
           {
+            "icon": "star",
             "value": "98%",
             "label": "would buy again"
           }
