@@ -544,8 +544,8 @@
   },
   "siteDataFile": "src/data/site-data.json",
   "outputDirectory": "out",
-  "installCommand": "pnpm install --frozen-lockfile",
-  "buildCommand": "pnpm run build",
+  "installCommand": "npm ci",
+  "buildCommand": "npm run build",
   "basePathEnvVar": "NEXT_PUBLIC_SITE_BASE_PATH",
   "publicSiteUrlEnvVar": "NEXT_PUBLIC_SITE_URL",
   "pages": [
