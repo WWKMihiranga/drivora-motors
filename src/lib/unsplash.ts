@@ -20,10 +20,14 @@ export function u(id: string, opts: { fit?: "crop" | "max"; ar?: string } = {}) 
 
 /** Photo ids used outside the inventory, all checked by hand on unsplash.com. */
 export const IMG = {
-  // Hero slides use real stock (v01 Defender, v06 Land Cruiser, v02 BYD Seal) so every slide links to a car.
-  heroDefender: "1741905358565-5ae6835ac172",
-  heroLandCruiser: "1650530579355-7ad9d4766043",
-  heroSeal: "1727098353953-929512ce7b90",
+  // Hero studio: cars shot on a white background (blended into the studio backdrop). Cropped with `rect` in site-data.json.
+  heroStudioFront: "1646960700481-c7be5224a7fc", // Hyundai Motor Group
+  heroStudioSide: "1624880056139-d1212d7ff347", // Idzard Schiphof
+  heroStudioRear: "1671691279941-71773546ab76", // Hyundai Motor Group
+  // Dark-mode twins: cars shot on black (blended with screen).
+  heroDarkFront: "1646644434370-a23a5eaa6d05", // Hyundai Motor Group (Genesis GV60)
+  heroDarkSpot: "1574124282542-3de3564a63a0", // Patrick Gillespie
+  heroDarkRear: "1671155370435-89ff3c1c6b64", // Hyundai Motor Group (Genesis GV70)
   showroom: "1692406069831-0bb7ea297645",
   showroomLux: "1764013290175-2b76e9a00b2e",
   handoverKeys: "1761014586544-53fe5e1f1e25",

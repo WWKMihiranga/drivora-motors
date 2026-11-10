@@ -369,7 +369,7 @@ html.splash-lite .splash-door { animation: splash-fade-out 0.5s ease-out 0.5s fo
 html.splash-lite .splash-content { animation: splash-fade-out 0.4s ease-out 0.45s forwards; }
 
 /* Hero entrance waits for the doors when the splash is playing. */
-html.splash-on:not(.splash-lite) [data-hero-in] { animation-delay: 2.05s !important; }
+html.splash-on:not(.splash-lite) [data-hero-in] { animation-delay: calc(2.05s + var(--hero-d, 0ms)) !important; }
 
 @keyframes splash-draw { to { stroke-dashoffset: 0; } }
 @keyframes splash-rise { to { transform: none; } }
@@ -390,6 +390,123 @@ html.splash-on:not(.splash-lite) [data-hero-in] { animation-delay: 2.05s !import
   animation: hero-progress 6.5s linear forwards;
 }
 @keyframes hero-progress { to { transform: scaleX(1); } }
+
+/* ---------- Hero: studio ---------- */
+/*
+ * One continuous studio: the whole section is the backdrop (no panel), and the car photos blend
+ * straight into it. Light mode uses cars shot on white + multiply; dark mode uses cars shot on black
+ * + screen, under a warm brand-orange glow. --car-x / --car-y follow where the car sits.
+ */
+.hero-studio {
+  --car-x: 50%;
+  --car-y: 22%;
+  --floor-y: 29%;
+  background-color: var(--color-paper);
+  background-image:
+    radial-gradient(120% 95% at 100% 0%, rgb(255 255 255 / 0) 52%, rgb(255 255 255 / 0.7) 60%, rgb(255 255 255 / 0) 68%),
+    radial-gradient(62% 58% at var(--car-x) var(--car-y), #dadde3 0%, rgb(218 221 227 / 0.6) 45%, rgb(218 221 227 / 0) 100%),
+    linear-gradient(180deg, #eff1f3 0%, var(--color-paper) 92%);
+}
+@media (min-width: 1024px) {
+  .hero-studio { --car-x: 72%; --car-y: 50%; --floor-y: 64%; }
+}
+/* lights: key light from the top right and a pool of light on the floor under the car */
+.hero-studio::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(32% 20% at var(--car-x) var(--floor-y), rgb(255 255 255 / 0.95) 0%, rgb(255 255 255 / 0) 100%),
+    radial-gradient(30% 55% at 98% 0%, rgb(255 255 255 / 0.9) 0%, rgb(255 255 255 / 0) 100%);
+  animation: hero-lights 1.6s ease-out 0.1s both;
+}
+html.splash-on:not(.splash-lite) .hero-studio::before { animation-delay: 2s; }
+@keyframes hero-lights { from { opacity: 0; } }
+
+[data-theme="drivora-dark"] .hero-studio {
+  background-image:
+    radial-gradient(120% 95% at 100% 0%, rgb(255 255 255 / 0) 52%, rgb(255 255 255 / 0.03) 60%, rgb(255 255 255 / 0) 68%),
+    radial-gradient(65% 55% at var(--car-x) var(--car-y), #1a1d25 0%, rgb(26 29 37 / 0.6) 45%, rgb(26 29 37 / 0) 100%),
+    linear-gradient(180deg, #111319 0%, var(--color-paper) 92%);
+}
+[data-theme="drivora-dark"] .hero-studio::before {
+  background-image:
+    radial-gradient(34% 22% at var(--car-x) var(--floor-y), rgb(240 118 58 / 0.22) 0%, rgb(240 118 58 / 0) 100%),
+    radial-gradient(32% 60% at 98% 0%, rgb(240 118 58 / 0.13) 0%, rgb(240 118 58 / 0) 100%);
+}
+
+.hero-stage {
+  --hx: 0;
+  --hy: 0;
+}
+/* light-mode and dark-mode photos of each slide */
+.hero-shot-dark { display: none; }
+[data-theme="drivora-dark"] .hero-shot-light { display: none; }
+[data-theme="drivora-dark"] .hero-shot-dark { display: block; }
+/* dark studio photos have lit floors and walls, so they fade out over a wider margin */
+[data-theme="drivora-dark"] .hero-car {
+  -webkit-mask-image: radial-gradient(closest-side, #000 62%, transparent 100%);
+  mask-image: radial-gradient(closest-side, #000 62%, transparent 100%);
+  -webkit-mask-size: 100% 100%;
+}
+.hero-cars {
+  mix-blend-mode: multiply;
+  filter: brightness(1.05) contrast(1.04); /* lifts near-white studio walls to pure white */
+  transform: translate3d(calc(var(--hx) * -10px), calc(var(--hy) * -6px), 0);
+  transition: transform 0.9s var(--ease-out-soft);
+  animation: hero-drive-in 1.5s var(--ease-out-soft) 0.35s backwards;
+}
+/* dark mode: black studio backgrounds vanish instead; extra contrast pushes near-black to black */
+[data-theme="drivora-dark"] .hero-cars {
+  mix-blend-mode: screen;
+  filter: brightness(0.97) contrast(1.12);
+}
+html.splash-on:not(.splash-lite) .hero-cars { animation-delay: 2.4s; }
+@keyframes hero-drive-in {
+  from { opacity: 0; transform: translate3d(12%, 0, 0); }
+}
+/* slide change: the current car glides out to the left, the next one rolls in from the right */
+/* each photo fades out at its edges, so crops of the floor shadow and off-white studio walls never show a hard line */
+.hero-car {
+  will-change: transform, opacity;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 4%, #000 93%, transparent 100%), linear-gradient(180deg, transparent 0%, #000 15%, #000 88%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 4%, #000 93%, transparent 100%), linear-gradient(180deg, transparent 0%, #000 15%, #000 88%, transparent 100%);
+  mask-composite: intersect;
+}
+.hero-car[data-state="in"] {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.8s ease-out 0.15s, transform 1.3s var(--ease-out-soft) 0.1s;
+}
+.hero-car[data-state="out"] {
+  opacity: 0;
+  transform: translate3d(-8%, 0, 0);
+  transition: opacity 0.55s ease-in, transform 0.9s var(--ease-in-out-soft);
+}
+.hero-car[data-state="wait"] {
+  opacity: 0;
+  transform: translate3d(10%, 0, 0);
+  transition: none;
+}
+/* headline rises out of a mask */
+.hero-rise { animation: hero-rise 0.9s var(--ease-out-soft) both; }
+@keyframes hero-rise {
+  from { opacity: 0; transform: translate3d(0, 100%, 0); }
+  to { opacity: 1; transform: none; }
+}
+/* CTA arrow slides out and back in on hover */
+.group:hover .hero-arrow { animation: hero-arrow 0.55s var(--ease-out-soft); }
+@keyframes hero-arrow {
+  0% { transform: none; }
+  45% { transform: translate3d(150%, 0, 0); }
+  46% { transform: translate3d(-150%, 0, 0); }
+  100% { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-cars { transform: none; }
+}
 
 /*
  * ── DENEB / Fivora theme guard ─────────────────────────────────────────────────────────────

@@ -336,19 +336,15 @@
       "gallery.thumbLabel",
       "home.closing.imageAlt",
       "home.guides.readTime",
-      "home.hero.inStockLabel",
       "home.hero.playLabel",
       "home.hero.slideLabel",
       "home.hero.slides[*].alt",
-      "home.hero.slides[1].carHref",
-      "home.hero.slides[1].carLabel",
+      "home.hero.slides[*].altDark",
       "home.hero.slides[1].eyebrow",
       "home.hero.slides[1].linkHref",
       "home.hero.slides[1].linkLabel",
       "home.hero.slides[1].text",
       "home.hero.slides[1].title",
-      "home.hero.slides[2].carHref",
-      "home.hero.slides[2].carLabel",
       "home.hero.slides[2].eyebrow",
       "home.hero.slides[2].linkHref",
       "home.hero.slides[2].linkLabel",
@@ -2013,11 +2009,6 @@
                 "type": "text"
               },
               {
-                "key": "inStockLabel",
-                "label": "In Stock Label",
-                "type": "text"
-              },
-              {
                 "key": "browseHref",
                 "label": "Browse Href",
                 "type": "url"
@@ -2044,13 +2035,13 @@
                     "type": "text"
                   },
                   {
-                    "key": "carHref",
-                    "label": "Car Href",
-                    "type": "url"
+                    "key": "imageDark",
+                    "label": "Image Dark",
+                    "type": "image"
                   },
                   {
-                    "key": "carLabel",
-                    "label": "Car Label",
+                    "key": "altDark",
+                    "label": "Alt Dark",
                     "type": "text"
                   },
                   {
@@ -2086,6 +2077,11 @@
                 "label": "Stats",
                 "itemLabel": "Stat",
                 "fields": [
+                  {
+                    "key": "icon",
+                    "label": "Icon",
+                    "type": "text"
+                  },
                   {
                     "key": "value",
                     "label": "Value",
